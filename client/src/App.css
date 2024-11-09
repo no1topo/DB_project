@@ -116,3 +116,8 @@ font:
     background-position: 200% center;
   }
 }
+
+body {
+  height: 100%;
+  overflow-y: hidden;
+}
