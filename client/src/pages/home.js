@@ -109,6 +109,9 @@ export default function Home(){
                                 <br></br>
                                 <h4>Student Profile  | Home
                                 </h4>
+                                <div>
+                                    <span><h3>University Information</h3></span>
+                                </div>
                             </div>
                         </div>
                     </div>
