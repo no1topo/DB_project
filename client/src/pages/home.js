@@ -106,7 +106,9 @@ export default function Home(){
                         </div>
                         <div class="col-md-11">
                             <div class="container-fluid">
-                                <h4>Student Profile</h4>
+                                <br></br>
+                                <h4>Student Profile  | Home
+                                </h4>
                             </div>
                         </div>
                     </div>
