@@ -102,7 +102,306 @@ export default function Marks(){
                             </a>
                         </div>
                         <div class="col-md-11">
-                        <p>this is hOME</p>
+                            <div class="container-fluid">
+                                    <h4>Marks  |</h4>
+                                    {/* ////////////////////////////////////dropdown button////////////////////////////////////// */}
+                                    <br></br>
+                                    <div class="row">
+                                        <div class="col-md-5"></div>
+                                        <div class="col-md-2">
+                                            <div class="dropdown btn">
+                                                <button class="btn btn-secondary dropdown-toggle" type="button" id="SignIn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    Fall 2024
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                    <a class="dropdown-item" href="#">Fall 2024</a>
+                                                    <a class="dropdown-item" href="#">Summer 2024</a>
+                                                    <a class="dropdown-item" href="#">Spring 2024</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5"></div>
+                                    </div>
+                                    {/* ///////////////////////////////////////Registered Courses///////////////////////////////////////// */}
+                                    <div>
+                                        <h2>Student Marks</h2>
+                                        <ul class="nav nav-pills">
+                                            <li class="nav-item">
+                                            <a class="nav-link active" data-toggle="pill" href="#home">CL2005</a>
+                                            </li>
+                                            <li class="nav-item">
+                                            <a class="nav-link" data-toggle="pill" href="#menu1">CL2006</a>
+                                            </li>
+                                            <li class="nav-item">
+                                            <a class="nav-link" data-toggle="pill" href="#menu2">CL2007</a>
+                                            </li>
+                                            <li class="nav-item">
+                                            <a class="nav-link" data-toggle="pill" href="#menu3">CL2008</a>
+                                            </li>
+                                            <li class="nav-item">
+                                            <a class="nav-link" data-toggle="pill" href="#menu3">CL3004</a>
+                                            </li>
+                                            <li class="nav-item">
+                                            <a class="nav-link" data-toggle="pill" href="#menu3">CL3009</a>
+                                            </li>
+                                        </ul>
+                                        
+                                        <div class="tab-content">
+                                            <div id="home" class="tab-pane fade show active">
+                                                <h3>CL2005</h3>
+                                                {/* ///////////////collapsible box////////////////////// */}
+                                                <div>
+                                                    <div class="accordion" id="accordionExample">
+                                                        <div class="card">
+                                                        <div class="card-header" id="headingOne">
+                                                            <h4 class="mb-0">
+                                                            <a class="btn btn-link" data-toggle="collapse" data-bs-parent="#accordionExample" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                                Assignment
+                                                            </a>
+                                                            </h4>
+                                                        </div>
+                                                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                                            <div class="card-body">
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                    <table class="table table-hover">
+                                                                        <thead>
+                                                                            <tr>
+                                                                            <th scope="col">Assignment #</th>
+                                                                            <th scope="col">Weightage</th>
+                                                                            <th scope="col">Obtained Marks</th>
+                                                                            <th scope="col">Total Marks</th>
+                                                                            <th scope="col">Average</th>
+                                                                            <th scope="col">Standard Deviation</th>
+                                                                            <th scope="col">Minimum</th>
+                                                                            <th scope="col">Maximum</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                            <th scope="row">1</th>
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                            <th scope="row">2</th>
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                            <th scope="row">3</th>   
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </table>
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                        <div class="card">
+                                                        <div class="card-header" id="headingTwo">
+                                                            <h4 class="mb-0">
+                                                            <a class="btn btn-link collapsed" data-toggle="collapse" data-bs-parent="#accordionExample" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                                Quiz
+                                                            </a>
+                                                            </h4>
+                                                        </div>
+                                                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                                            <div class="card-body">
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                    <table class="table table-hover">
+                                                                        <thead>
+                                                                            <tr>
+                                                                            <th scope="col">Quiz #</th>
+                                                                            <th scope="col">Weightage</th>
+                                                                            <th scope="col">Obtained Marks</th>
+                                                                            <th scope="col">Total Marks</th>
+                                                                            <th scope="col">Average</th>
+                                                                            <th scope="col">Standard Deviation</th>
+                                                                            <th scope="col">Minimum</th>
+                                                                            <th scope="col">Maximum</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                            <th scope="row">1</th>
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                            <th scope="row">2</th>
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                            <th scope="row">3</th>   
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </table>
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                        <div class="card">
+                                                        <div class="card-header" id="headingThree">
+                                                            <h4 class="mb-0">
+                                                            <a class="btn btn-link collapsed" data-toggle="collapse" data-bs-parent="#accordionExample" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                                Sessional-I
+                                                            </a>
+                                                            </h4>
+                                                        </div>
+                                                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                                            <div class="card-body">
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                    <table class="table table-hover">
+                                                                        <thead>
+                                                                            <tr>
+                                                                            <th scope="col">Sessional I #</th>
+                                                                            <th scope="col">Weightage</th>
+                                                                            <th scope="col">Obtained Marks</th>
+                                                                            <th scope="col">Total Marks</th>
+                                                                            <th scope="col">Average</th>
+                                                                            <th scope="col">Standard Deviation</th>
+                                                                            <th scope="col">Minimum</th>
+                                                                            <th scope="col">Maximum</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                            <th scope="row">1</th>
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                            <th scope="row">2</th>
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                            <th scope="row">3</th>   
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </table>
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                        <div class="card">
+                                                        <div class="card-header" id="headingFour">
+                                                            <h4 class="mb-0">
+                                                            <a class="btn btn-link collapsed" data-toggle="collapse" data-bs-parent="#accordionExample" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                                                Sessional-II
+                                                            </a>
+                                                            </h4>
+                                                        </div>
+                                                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                                            <div class="card-body">
+                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                        <div class="card">
+                                                        <div class="card-header" id="headingFive">
+                                                            <h4 class="mb-0">
+                                                            <a class="btn btn-link collapsed" data-toggle="collapse" data-bs-parent="#accordionExample" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                                                Final Exam
+                                                            </a>
+                                                            </h4>
+                                                        </div>
+                                                        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                                                            <div class="card-body">
+                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                        <div class="card">
+                                                        <div class="card-header" id="headingSix">
+                                                            <h4 class="mb-0">
+                                                            <a class="btn btn-link collapsed" data-toggle="collapse" data-bs-parent="#accordionExample" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                                                Grand Total
+                                                            </a>
+                                                            </h4>
+                                                        </div>
+                                                        <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                                                            <div class="card-body">
+                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+                                                    </div>
+                                                {/* /////////////////// */}
+                                            </div>
+                                            <div id="menu1" class="tab-pane fade">
+                                                <h3>CL2006</h3>
+                                                
+                                            </div>
+                                            <div id="menu2" class="tab-pane fade">
+                                                <h3>CL2007</h3>
+                                                
+                                            </div>
+                                            <div id="menu3" class="tab-pane fade">
+                                                <h3>CL2008</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {/* ////////////////////////// */}
+                                </div>
                         </div>
                     </div>
                 </div>

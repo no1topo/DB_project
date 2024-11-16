@@ -102,12 +102,213 @@ export default function Attendance(){
                             </a>
                         </div>
                         <div class="col-md-11">
-                        <p>this is hOME</p>
+                        <div class="container-fluid">
+                                <h4>Attendance  |</h4>
+                                {/* ////////////////////////////////////dropdown button////////////////////////////////////// */}
+                                <br></br>
+                                <div class="row">
+                                    <div class="col-md-5"></div>
+                                    <div class="col-md-2">
+                                        <div class="dropdown btn">
+                                            <button class="btn btn-secondary dropdown-toggle" type="button" id="SignIn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                Fall 2024
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                <a class="dropdown-item" href="#">Fall 2024</a>
+                                                <a class="dropdown-item" href="#">Summer 2024</a>
+                                                <a class="dropdown-item" href="#">Spring 2024</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5"></div>
+                                </div>
+                                {/* ///////////////////////////////////////Registered Courses///////////////////////////////////////// */}
+                                <div>
+                                    <h2>Registered Courses</h2>
+                                    <ul class="nav nav-pills">
+                                        <li class="nav-item">
+                                        <a class="nav-link active" data-toggle="pill" href="#home">CL2005</a>
+                                        </li>
+                                        <li class="nav-item">
+                                        <a class="nav-link" data-toggle="pill" href="#menu1">CL2006</a>
+                                        </li>
+                                        <li class="nav-item">
+                                        <a class="nav-link" data-toggle="pill" href="#menu2">CL2007</a>
+                                        </li>
+                                        <li class="nav-item">
+                                        <a class="nav-link" data-toggle="pill" href="#menu3">CL2008</a>
+                                        </li>
+                                        <li class="nav-item">
+                                        <a class="nav-link" data-toggle="pill" href="#menu3">CL3004</a>
+                                        </li>
+                                        <li class="nav-item">
+                                        <a class="nav-link" data-toggle="pill" href="#menu3">CL3009</a>
+                                        </li>
+                                    </ul>
+                                    
+                                    <div class="tab-content">
+                                        <div id="home" class="tab-pane fade show active">
+                                            <h3>CL2005</h3>
+                                            <div class="table-responsive">
+                                                <table class="table">
+                                                    <table class="table table-hover">
+                                                        <thead>
+                                                            <tr>
+                                                            <th scope="col">Lecture No</th>
+                                                            <th scope="col">Date</th>
+                                                            <th scope="col">Duration</th>
+                                                            <th scope="col">Presence</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                            <th scope="row">1</th>
+                                                            <td>19-Aug-2024</td>
+                                                            <td>3</td>
+                                                            <td>A</td>
+                                                            </tr>
+                                                            <tr>
+                                                            <th scope="row">2</th>
+                                                            <td>20-Aug-2024</td>
+                                                            <td>1</td>
+                                                            <td>P</td>
+                                                            </tr>
+                                                            <tr>
+                                                            <th scope="row">3</th>   
+                                                            <td>21-Aug-2024</td>
+                                                            <td>1.5</td>
+                                                            <td>P</td>
+                                                            </tr>
+                                                            <tr>
+                                                            <th scope="row">1</th>
+                                                            <td>19-Aug-2024</td>
+                                                            <td>3</td>
+                                                            <td>A</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div id="menu1" class="tab-pane fade">
+                                        <h3>CL2005</h3>
+                                            <div class="table-responsive">
+                                                <table class="table">
+                                                    <table class="table table-hover">
+                                                        <thead>
+                                                            <tr>
+                                                            <th scope="col">Lecture No</th>
+                                                            <th scope="col">Date</th>
+                                                            <th scope="col">Duration</th>
+                                                            <th scope="col">Presence</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                            <th scope="row">1</th>
+                                                            <td>19-Aug-2024</td>
+                                                            <td>3</td>
+                                                            <td>A</td>
+                                                            </tr>
+                                                            <tr>
+                                                            <th scope="row">2</th>
+                                                            <td>20-Aug-2024</td>
+                                                            <td>1</td>
+                                                            <td>P</td>
+                                                            </tr>
+                                                            <tr>
+                                                            <th scope="row">3</th>   
+                                                            <td>21-Aug-2024</td>
+                                                            <td>1.5</td>
+                                                            <td>P</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div id="menu2" class="tab-pane fade">
+                                        <h3>CL2005</h3>
+                                            <div class="table-responsive">
+                                                <table class="table">
+                                                    <table class="table table-hover">
+                                                        <thead>
+                                                            <tr>
+                                                            <th scope="col">Lecture No</th>
+                                                            <th scope="col">Date</th>
+                                                            <th scope="col">Duration</th>
+                                                            <th scope="col">Presence</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                            <th scope="row">1</th>
+                                                            <td>19-Aug-2024</td>
+                                                            <td>3</td>
+                                                            <td>A</td>
+                                                            </tr>
+                                                            <tr>
+                                                            <th scope="row">2</th>
+                                                            <td>20-Aug-2024</td>
+                                                            <td>1</td>
+                                                            <td>P</td>
+                                                            </tr>
+                                                            <tr>
+                                                            <th scope="row">3</th>   
+                                                            <td>21-Aug-2024</td>
+                                                            <td>1.5</td>
+                                                            <td>P</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div id="menu3" class="tab-pane fade">
+                                        <h3>CL2005</h3>
+                                            <div class="table-responsive">
+                                                <table class="table">
+                                                    <table class="table table-hover">
+                                                        <thead>
+                                                            <tr>
+                                                            <th scope="col">Lecture No</th>
+                                                            <th scope="col">Date</th>
+                                                            <th scope="col">Duration</th>
+                                                            <th scope="col">Presence</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                            <th scope="row">1</th>
+                                                            <td>19-Aug-2024</td>
+                                                            <td>3</td>
+                                                            <td>A</td>
+                                                            </tr>
+                                                            <tr>
+                                                            <th scope="row">2</th>
+                                                            <td>20-Aug-2024</td>
+                                                            <td>1</td>
+                                                            <td>P</td>
+                                                            </tr>
+                                                            <tr>
+                                                            <th scope="row">3</th>   
+                                                            <td>21-Aug-2024</td>
+                                                            <td>1.5</td>
+                                                            <td>P</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {/* ////////////////////////// */}
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
     );
 };
 
