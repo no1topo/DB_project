@@ -351,7 +351,56 @@ export default function Marks(){
                                                         </div>
                                                         <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
                                                             <div class="card-body">
-                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                    <table class="table table-hover">
+                                                                        <thead>
+                                                                            <tr>
+                                                                            <th scope="col">Sessional I #</th>
+                                                                            <th scope="col">Weightage</th>
+                                                                            <th scope="col">Obtained Marks</th>
+                                                                            <th scope="col">Total Marks</th>
+                                                                            <th scope="col">Average</th>
+                                                                            <th scope="col">Standard Deviation</th>
+                                                                            <th scope="col">Minimum</th>
+                                                                            <th scope="col">Maximum</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                            <th scope="row">1</th>
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                            <th scope="row">2</th>
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                            <th scope="row">3</th>   
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </table>
+                                                            </div>
                                                             </div>
                                                         </div>
                                                         </div>
