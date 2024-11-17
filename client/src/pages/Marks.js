@@ -139,10 +139,10 @@ export default function Marks(){
                                             <a class="nav-link" data-toggle="pill" href="#menu3">CL2008</a>
                                             </li>
                                             <li class="nav-item">
-                                            <a class="nav-link" data-toggle="pill" href="#menu3">CL3004</a>
+                                            <a class="nav-link" data-toggle="pill" href="#menu4">CL3004</a>
                                             </li>
                                             <li class="nav-item">
-                                            <a class="nav-link" data-toggle="pill" href="#menu3">CL3009</a>
+                                            <a class="nav-link" data-toggle="pill" href="#menu5">CL3009</a>
                                             </li>
                                         </ul>
                                         
@@ -165,7 +165,7 @@ export default function Marks(){
                                                             <div class="table-responsive">
                                                                 <table class="table">
                                                                     <table class="table table-hover">
-                                                                        <thead>
+                                                                        <thead class="TableHeader">
                                                                             <tr>
                                                                             <th scope="col">Assignment #</th>
                                                                             <th scope="col">Weightage</th>
@@ -228,7 +228,7 @@ export default function Marks(){
                                                             <div class="table-responsive">
                                                                 <table class="table">
                                                                     <table class="table table-hover">
-                                                                        <thead>
+                                                                        <thead class="TableHeader">
                                                                             <tr>
                                                                             <th scope="col">Quiz #</th>
                                                                             <th scope="col">Weightage</th>
@@ -291,7 +291,7 @@ export default function Marks(){
                                                             <div class="table-responsive">
                                                                 <table class="table">
                                                                     <table class="table table-hover">
-                                                                        <thead>
+                                                                        <thead class="TableHeader">
                                                                             <tr>
                                                                             <th scope="col">Sessional I #</th>
                                                                             <th scope="col">Weightage</th>
@@ -354,7 +354,7 @@ export default function Marks(){
                                                             <div class="table-responsive">
                                                                 <table class="table">
                                                                     <table class="table table-hover">
-                                                                        <thead>
+                                                                        <thead class="TableHeader">
                                                                             <tr>
                                                                             <th scope="col">Sessional I #</th>
                                                                             <th scope="col">Weightage</th>
@@ -414,7 +414,56 @@ export default function Marks(){
                                                         </div>
                                                         <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
                                                             <div class="card-body">
-                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                    <table class="table table-hover">
+                                                                        <thead class="TableHeader">
+                                                                            <tr>
+                                                                            <th scope="col">Final Exam #</th>
+                                                                            <th scope="col">Weightage</th>
+                                                                            <th scope="col">Obtained Marks</th>
+                                                                            <th scope="col">Total Marks</th>
+                                                                            <th scope="col">Average</th>
+                                                                            <th scope="col">Standard Deviation</th>
+                                                                            <th scope="col">Minimum</th>
+                                                                            <th scope="col">Maximum</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                            <th scope="row">1</th>
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                            <th scope="row">2</th>
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                            <th scope="row">3</th>   
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </table>
+                                                            </div>
                                                             </div>
                                                         </div>
                                                         </div>
@@ -428,24 +477,1849 @@ export default function Marks(){
                                                         </div>
                                                         <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
                                                             <div class="card-body">
-                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                    <table class="table table-hover">
+                                                                        <thead class="TableHeader">
+                                                                            <tr>
+                                                                            <th scope="col">Total Marks</th>
+                                                                            <th scope="col">Obtained Marks</th>
+                                                                            <th scope="col">Average</th>
+                                                                            <th scope="col">Standard Deviation</th>
+                                                                            <th scope="col">Minimum</th>
+                                                                            <th scope="col">Maximum</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                            <th scope="row">100</th>
+                                                                            <td>86</td>
+                                                                            <td>67</td>
+                                                                            <td>17</td>
+                                                                            <td>50</td>
+                                                                            <td>92</td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </table>
+                                                            </div>
                                                             </div>
                                                         </div>
                                                         </div>
                                                     </div>
-                                                    </div>
+                                                </div>
                                                 {/* /////////////////// */}
                                             </div>
                                             <div id="menu1" class="tab-pane fade">
                                                 <h3>CL2006</h3>
-                                                
+                                                    {/* ///////////////collapsible box////////////////////// */}
+                                                <div>
+                                                    <div class="accordion" id="accordionExample">
+                                                        <div class="card">
+                                                        <div class="card-header" id="headingOne">
+                                                            <h4 class="mb-0">
+                                                            <a class="btn btn-link" data-toggle="collapse" data-bs-parent="#accordionExample" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                                Assignment
+                                                            </a>
+                                                            </h4>
+                                                        </div>
+                                                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                                            <div class="card-body">
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                    <table class="table table-hover">
+                                                                        <thead class="TableHeader">
+                                                                            <tr>
+                                                                            <th scope="col">Assignment #</th>
+                                                                            <th scope="col">Weightage</th>
+                                                                            <th scope="col">Obtained Marks</th>
+                                                                            <th scope="col">Total Marks</th>
+                                                                            <th scope="col">Average</th>
+                                                                            <th scope="col">Standard Deviation</th>
+                                                                            <th scope="col">Minimum</th>
+                                                                            <th scope="col">Maximum</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                            <th scope="row">1</th>
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                            <th scope="row">2</th>
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                            <th scope="row">3</th>   
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </table>
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                        <div class="card">
+                                                        <div class="card-header" id="headingTwo">
+                                                            <h4 class="mb-0">
+                                                            <a class="btn btn-link collapsed" data-toggle="collapse" data-bs-parent="#accordionExample" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                                Quiz
+                                                            </a>
+                                                            </h4>
+                                                        </div>
+                                                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                                            <div class="card-body">
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                    <table class="table table-hover">
+                                                                        <thead class="TableHeader">
+                                                                            <tr>
+                                                                            <th scope="col">Quiz #</th>
+                                                                            <th scope="col">Weightage</th>
+                                                                            <th scope="col">Obtained Marks</th>
+                                                                            <th scope="col">Total Marks</th>
+                                                                            <th scope="col">Average</th>
+                                                                            <th scope="col">Standard Deviation</th>
+                                                                            <th scope="col">Minimum</th>
+                                                                            <th scope="col">Maximum</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                            <th scope="row">1</th>
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                            <th scope="row">2</th>
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                            <th scope="row">3</th>   
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </table>
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                        <div class="card">
+                                                        <div class="card-header" id="headingThree">
+                                                            <h4 class="mb-0">
+                                                            <a class="btn btn-link collapsed" data-toggle="collapse" data-bs-parent="#accordionExample" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                                Sessional-I
+                                                            </a>
+                                                            </h4>
+                                                        </div>
+                                                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                                            <div class="card-body">
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                    <table class="table table-hover">
+                                                                        <thead class="TableHeader">
+                                                                            <tr>
+                                                                            <th scope="col">Sessional I #</th>
+                                                                            <th scope="col">Weightage</th>
+                                                                            <th scope="col">Obtained Marks</th>
+                                                                            <th scope="col">Total Marks</th>
+                                                                            <th scope="col">Average</th>
+                                                                            <th scope="col">Standard Deviation</th>
+                                                                            <th scope="col">Minimum</th>
+                                                                            <th scope="col">Maximum</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                            <th scope="row">1</th>
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                            <th scope="row">2</th>
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                            <th scope="row">3</th>   
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </table>
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                        <div class="card">
+                                                        <div class="card-header" id="headingFour">
+                                                            <h4 class="mb-0">
+                                                            <a class="btn btn-link collapsed" data-toggle="collapse" data-bs-parent="#accordionExample" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                                                Sessional-II
+                                                            </a>
+                                                            </h4>
+                                                        </div>
+                                                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                                            <div class="card-body">
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                    <table class="table table-hover">
+                                                                        <thead class="TableHeader">
+                                                                            <tr>
+                                                                            <th scope="col">Sessional I #</th>
+                                                                            <th scope="col">Weightage</th>
+                                                                            <th scope="col">Obtained Marks</th>
+                                                                            <th scope="col">Total Marks</th>
+                                                                            <th scope="col">Average</th>
+                                                                            <th scope="col">Standard Deviation</th>
+                                                                            <th scope="col">Minimum</th>
+                                                                            <th scope="col">Maximum</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                            <th scope="row">1</th>
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                            <th scope="row">2</th>
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                            <th scope="row">3</th>   
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </table>
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                        <div class="card">
+                                                        <div class="card-header" id="headingFive">
+                                                            <h4 class="mb-0">
+                                                            <a class="btn btn-link collapsed" data-toggle="collapse" data-bs-parent="#accordionExample" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                                                Final Exam
+                                                            </a>
+                                                            </h4>
+                                                        </div>
+                                                        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                                                            <div class="card-body">
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                    <table class="table table-hover">
+                                                                        <thead class="TableHeader">
+                                                                            <tr>
+                                                                            <th scope="col">Final Exam #</th>
+                                                                            <th scope="col">Weightage</th>
+                                                                            <th scope="col">Obtained Marks</th>
+                                                                            <th scope="col">Total Marks</th>
+                                                                            <th scope="col">Average</th>
+                                                                            <th scope="col">Standard Deviation</th>
+                                                                            <th scope="col">Minimum</th>
+                                                                            <th scope="col">Maximum</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                            <th scope="row">1</th>
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                            <th scope="row">2</th>
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                            <th scope="row">3</th>   
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </table>
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                        <div class="card">
+                                                        <div class="card-header" id="headingSix">
+                                                            <h4 class="mb-0">
+                                                            <a class="btn btn-link collapsed" data-toggle="collapse" data-bs-parent="#accordionExample" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                                                Grand Total
+                                                            </a>
+                                                            </h4>
+                                                        </div>
+                                                        <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                                                            <div class="card-body">
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                    <table class="table table-hover">
+                                                                        <thead class="TableHeader">
+                                                                            <tr>
+                                                                            <th scope="col">Total Marks</th>
+                                                                            <th scope="col">Obtained Marks</th>
+                                                                            <th scope="col">Average</th>
+                                                                            <th scope="col">Standard Deviation</th>
+                                                                            <th scope="col">Minimum</th>
+                                                                            <th scope="col">Maximum</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                            <th scope="row">100</th>
+                                                                            <td>86</td>
+                                                                            <td>67</td>
+                                                                            <td>17</td>
+                                                                            <td>50</td>
+                                                                            <td>92</td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </table>
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {/* /////////////////// */}
                                             </div>
                                             <div id="menu2" class="tab-pane fade">
                                                 <h3>CL2007</h3>
-                                                
+                                                <div>
+                                                    <div class="accordion" id="accordionExample">
+                                                        <div class="card">
+                                                        <div class="card-header" id="headingOne">
+                                                            <h4 class="mb-0">
+                                                            <a class="btn btn-link" data-toggle="collapse" data-bs-parent="#accordionExample" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                                Assignment
+                                                            </a>
+                                                            </h4>
+                                                        </div>
+                                                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                                            <div class="card-body">
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                    <table class="table table-hover">
+                                                                        <thead class="TableHeader">
+                                                                            <tr>
+                                                                            <th scope="col">Assignment #</th>
+                                                                            <th scope="col">Weightage</th>
+                                                                            <th scope="col">Obtained Marks</th>
+                                                                            <th scope="col">Total Marks</th>
+                                                                            <th scope="col">Average</th>
+                                                                            <th scope="col">Standard Deviation</th>
+                                                                            <th scope="col">Minimum</th>
+                                                                            <th scope="col">Maximum</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                            <th scope="row">1</th>
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                            <th scope="row">2</th>
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                            <th scope="row">3</th>   
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </table>
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                        <div class="card">
+                                                        <div class="card-header" id="headingTwo">
+                                                            <h4 class="mb-0">
+                                                            <a class="btn btn-link collapsed" data-toggle="collapse" data-bs-parent="#accordionExample" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                                Quiz
+                                                            </a>
+                                                            </h4>
+                                                        </div>
+                                                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                                            <div class="card-body">
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                    <table class="table table-hover">
+                                                                        <thead class="TableHeader">
+                                                                            <tr>
+                                                                            <th scope="col">Quiz #</th>
+                                                                            <th scope="col">Weightage</th>
+                                                                            <th scope="col">Obtained Marks</th>
+                                                                            <th scope="col">Total Marks</th>
+                                                                            <th scope="col">Average</th>
+                                                                            <th scope="col">Standard Deviation</th>
+                                                                            <th scope="col">Minimum</th>
+                                                                            <th scope="col">Maximum</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                            <th scope="row">1</th>
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                            <th scope="row">2</th>
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                            <th scope="row">3</th>   
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </table>
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                        <div class="card">
+                                                        <div class="card-header" id="headingThree">
+                                                            <h4 class="mb-0">
+                                                            <a class="btn btn-link collapsed" data-toggle="collapse" data-bs-parent="#accordionExample" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                                Sessional-I
+                                                            </a>
+                                                            </h4>
+                                                        </div>
+                                                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                                            <div class="card-body">
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                    <table class="table table-hover">
+                                                                        <thead class="TableHeader">
+                                                                            <tr>
+                                                                            <th scope="col">Sessional I #</th>
+                                                                            <th scope="col">Weightage</th>
+                                                                            <th scope="col">Obtained Marks</th>
+                                                                            <th scope="col">Total Marks</th>
+                                                                            <th scope="col">Average</th>
+                                                                            <th scope="col">Standard Deviation</th>
+                                                                            <th scope="col">Minimum</th>
+                                                                            <th scope="col">Maximum</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                            <th scope="row">1</th>
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                            <th scope="row">2</th>
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                            <th scope="row">3</th>   
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </table>
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                        <div class="card">
+                                                        <div class="card-header" id="headingFour">
+                                                            <h4 class="mb-0">
+                                                            <a class="btn btn-link collapsed" data-toggle="collapse" data-bs-parent="#accordionExample" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                                                Sessional-II
+                                                            </a>
+                                                            </h4>
+                                                        </div>
+                                                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                                            <div class="card-body">
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                    <table class="table table-hover">
+                                                                        <thead class="TableHeader">
+                                                                            <tr>
+                                                                            <th scope="col">Sessional I #</th>
+                                                                            <th scope="col">Weightage</th>
+                                                                            <th scope="col">Obtained Marks</th>
+                                                                            <th scope="col">Total Marks</th>
+                                                                            <th scope="col">Average</th>
+                                                                            <th scope="col">Standard Deviation</th>
+                                                                            <th scope="col">Minimum</th>
+                                                                            <th scope="col">Maximum</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                            <th scope="row">1</th>
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                            <th scope="row">2</th>
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                            <th scope="row">3</th>   
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </table>
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                        <div class="card">
+                                                        <div class="card-header" id="headingFive">
+                                                            <h4 class="mb-0">
+                                                            <a class="btn btn-link collapsed" data-toggle="collapse" data-bs-parent="#accordionExample" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                                                Final Exam
+                                                            </a>
+                                                            </h4>
+                                                        </div>
+                                                        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                                                            <div class="card-body">
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                    <table class="table table-hover">
+                                                                        <thead class="TableHeader">
+                                                                            <tr>
+                                                                            <th scope="col">Final Exam #</th>
+                                                                            <th scope="col">Weightage</th>
+                                                                            <th scope="col">Obtained Marks</th>
+                                                                            <th scope="col">Total Marks</th>
+                                                                            <th scope="col">Average</th>
+                                                                            <th scope="col">Standard Deviation</th>
+                                                                            <th scope="col">Minimum</th>
+                                                                            <th scope="col">Maximum</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                            <th scope="row">1</th>
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                            <th scope="row">2</th>
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                            <th scope="row">3</th>   
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </table>
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                        <div class="card">
+                                                        <div class="card-header" id="headingSix">
+                                                            <h4 class="mb-0">
+                                                            <a class="btn btn-link collapsed" data-toggle="collapse" data-bs-parent="#accordionExample" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                                                Grand Total
+                                                            </a>
+                                                            </h4>
+                                                        </div>
+                                                        <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                                                            <div class="card-body">
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                    <table class="table table-hover">
+                                                                        <thead class="TableHeader">
+                                                                            <tr>
+                                                                            <th scope="col">Total Marks</th>
+                                                                            <th scope="col">Obtained Marks</th>
+                                                                            <th scope="col">Average</th>
+                                                                            <th scope="col">Standard Deviation</th>
+                                                                            <th scope="col">Minimum</th>
+                                                                            <th scope="col">Maximum</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                            <th scope="row">100</th>
+                                                                            <td>86</td>
+                                                                            <td>67</td>
+                                                                            <td>17</td>
+                                                                            <td>50</td>
+                                                                            <td>92</td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </table>
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {/* /////////////////// */}
                                             </div>
                                             <div id="menu3" class="tab-pane fade">
                                                 <h3>CL2008</h3>
+                                                <div>
+                                                    <div class="accordion" id="accordionExample">
+                                                        <div class="card">
+                                                        <div class="card-header" id="headingOne">
+                                                            <h4 class="mb-0">
+                                                            <a class="btn btn-link" data-toggle="collapse" data-bs-parent="#accordionExample" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                                Assignment
+                                                            </a>
+                                                            </h4>
+                                                        </div>
+                                                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                                            <div class="card-body">
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                    <table class="table table-hover">
+                                                                        <thead class="TableHeader">
+                                                                            <tr>
+                                                                            <th scope="col">Assignment #</th>
+                                                                            <th scope="col">Weightage</th>
+                                                                            <th scope="col">Obtained Marks</th>
+                                                                            <th scope="col">Total Marks</th>
+                                                                            <th scope="col">Average</th>
+                                                                            <th scope="col">Standard Deviation</th>
+                                                                            <th scope="col">Minimum</th>
+                                                                            <th scope="col">Maximum</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                            <th scope="row">1</th>
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                            <th scope="row">2</th>
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                            <th scope="row">3</th>   
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </table>
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                        <div class="card">
+                                                        <div class="card-header" id="headingTwo">
+                                                            <h4 class="mb-0">
+                                                            <a class="btn btn-link collapsed" data-toggle="collapse" data-bs-parent="#accordionExample" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                                Quiz
+                                                            </a>
+                                                            </h4>
+                                                        </div>
+                                                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                                            <div class="card-body">
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                    <table class="table table-hover">
+                                                                        <thead class="TableHeader">
+                                                                            <tr>
+                                                                            <th scope="col">Quiz #</th>
+                                                                            <th scope="col">Weightage</th>
+                                                                            <th scope="col">Obtained Marks</th>
+                                                                            <th scope="col">Total Marks</th>
+                                                                            <th scope="col">Average</th>
+                                                                            <th scope="col">Standard Deviation</th>
+                                                                            <th scope="col">Minimum</th>
+                                                                            <th scope="col">Maximum</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                            <th scope="row">1</th>
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                            <th scope="row">2</th>
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                            <th scope="row">3</th>   
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </table>
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                        <div class="card">
+                                                        <div class="card-header" id="headingThree">
+                                                            <h4 class="mb-0">
+                                                            <a class="btn btn-link collapsed" data-toggle="collapse" data-bs-parent="#accordionExample" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                                Sessional-I
+                                                            </a>
+                                                            </h4>
+                                                        </div>
+                                                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                                            <div class="card-body">
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                    <table class="table table-hover">
+                                                                        <thead class="TableHeader">
+                                                                            <tr>
+                                                                            <th scope="col">Sessional I #</th>
+                                                                            <th scope="col">Weightage</th>
+                                                                            <th scope="col">Obtained Marks</th>
+                                                                            <th scope="col">Total Marks</th>
+                                                                            <th scope="col">Average</th>
+                                                                            <th scope="col">Standard Deviation</th>
+                                                                            <th scope="col">Minimum</th>
+                                                                            <th scope="col">Maximum</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                            <th scope="row">1</th>
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                            <th scope="row">2</th>
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                            <th scope="row">3</th>   
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </table>
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                        <div class="card">
+                                                        <div class="card-header" id="headingFour">
+                                                            <h4 class="mb-0">
+                                                            <a class="btn btn-link collapsed" data-toggle="collapse" data-bs-parent="#accordionExample" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                                                Sessional-II
+                                                            </a>
+                                                            </h4>
+                                                        </div>
+                                                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                                            <div class="card-body">
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                    <table class="table table-hover">
+                                                                        <thead class="TableHeader">
+                                                                            <tr>
+                                                                            <th scope="col">Sessional I #</th>
+                                                                            <th scope="col">Weightage</th>
+                                                                            <th scope="col">Obtained Marks</th>
+                                                                            <th scope="col">Total Marks</th>
+                                                                            <th scope="col">Average</th>
+                                                                            <th scope="col">Standard Deviation</th>
+                                                                            <th scope="col">Minimum</th>
+                                                                            <th scope="col">Maximum</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                            <th scope="row">1</th>
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                            <th scope="row">2</th>
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                            <th scope="row">3</th>   
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </table>
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                        <div class="card">
+                                                        <div class="card-header" id="headingFive">
+                                                            <h4 class="mb-0">
+                                                            <a class="btn btn-link collapsed" data-toggle="collapse" data-bs-parent="#accordionExample" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                                                Final Exam
+                                                            </a>
+                                                            </h4>
+                                                        </div>
+                                                        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                                                            <div class="card-body">
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                    <table class="table table-hover">
+                                                                        <thead class="TableHeader">
+                                                                            <tr>
+                                                                            <th scope="col">Final Exam #</th>
+                                                                            <th scope="col">Weightage</th>
+                                                                            <th scope="col">Obtained Marks</th>
+                                                                            <th scope="col">Total Marks</th>
+                                                                            <th scope="col">Average</th>
+                                                                            <th scope="col">Standard Deviation</th>
+                                                                            <th scope="col">Minimum</th>
+                                                                            <th scope="col">Maximum</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                            <th scope="row">1</th>
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                            <th scope="row">2</th>
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                            <th scope="row">3</th>   
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </table>
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                        <div class="card">
+                                                        <div class="card-header" id="headingSix">
+                                                            <h4 class="mb-0">
+                                                            <a class="btn btn-link collapsed" data-toggle="collapse" data-bs-parent="#accordionExample" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                                                Grand Total
+                                                            </a>
+                                                            </h4>
+                                                        </div>
+                                                        <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                                                            <div class="card-body">
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                    <table class="table table-hover">
+                                                                        <thead class="TableHeader">
+                                                                            <tr>
+                                                                            <th scope="col">Total Marks</th>
+                                                                            <th scope="col">Obtained Marks</th>
+                                                                            <th scope="col">Average</th>
+                                                                            <th scope="col">Standard Deviation</th>
+                                                                            <th scope="col">Minimum</th>
+                                                                            <th scope="col">Maximum</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                            <th scope="row">100</th>
+                                                                            <td>86</td>
+                                                                            <td>67</td>
+                                                                            <td>17</td>
+                                                                            <td>50</td>
+                                                                            <td>92</td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </table>
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {/* /////////////////// */}
+                                            </div>
+                                            <div id="menu4" class="tab-pane fade">
+                                                <h3>CL3004</h3>
+                                                <div>
+                                                    <div class="accordion" id="accordionExample">
+                                                        <div class="card">
+                                                        <div class="card-header" id="headingOne">
+                                                            <h4 class="mb-0">
+                                                            <a class="btn btn-link" data-toggle="collapse" data-bs-parent="#accordionExample" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                                Assignment
+                                                            </a>
+                                                            </h4>
+                                                        </div>
+                                                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                                            <div class="card-body">
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                    <table class="table table-hover">
+                                                                        <thead class="TableHeader">
+                                                                            <tr>
+                                                                            <th scope="col">Assignment #</th>
+                                                                            <th scope="col">Weightage</th>
+                                                                            <th scope="col">Obtained Marks</th>
+                                                                            <th scope="col">Total Marks</th>
+                                                                            <th scope="col">Average</th>
+                                                                            <th scope="col">Standard Deviation</th>
+                                                                            <th scope="col">Minimum</th>
+                                                                            <th scope="col">Maximum</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                            <th scope="row">1</th>
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                            <th scope="row">2</th>
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                            <th scope="row">3</th>   
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </table>
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                        <div class="card">
+                                                        <div class="card-header" id="headingTwo">
+                                                            <h4 class="mb-0">
+                                                            <a class="btn btn-link collapsed" data-toggle="collapse" data-bs-parent="#accordionExample" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                                Quiz
+                                                            </a>
+                                                            </h4>
+                                                        </div>
+                                                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                                            <div class="card-body">
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                    <table class="table table-hover">
+                                                                        <thead class="TableHeader">
+                                                                            <tr>
+                                                                            <th scope="col">Quiz #</th>
+                                                                            <th scope="col">Weightage</th>
+                                                                            <th scope="col">Obtained Marks</th>
+                                                                            <th scope="col">Total Marks</th>
+                                                                            <th scope="col">Average</th>
+                                                                            <th scope="col">Standard Deviation</th>
+                                                                            <th scope="col">Minimum</th>
+                                                                            <th scope="col">Maximum</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                            <th scope="row">1</th>
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                            <th scope="row">2</th>
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                            <th scope="row">3</th>   
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </table>
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                        <div class="card">
+                                                        <div class="card-header" id="headingThree">
+                                                            <h4 class="mb-0">
+                                                            <a class="btn btn-link collapsed" data-toggle="collapse" data-bs-parent="#accordionExample" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                                Sessional-I
+                                                            </a>
+                                                            </h4>
+                                                        </div>
+                                                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                                            <div class="card-body">
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                    <table class="table table-hover">
+                                                                        <thead class="TableHeader">
+                                                                            <tr>
+                                                                            <th scope="col">Sessional I #</th>
+                                                                            <th scope="col">Weightage</th>
+                                                                            <th scope="col">Obtained Marks</th>
+                                                                            <th scope="col">Total Marks</th>
+                                                                            <th scope="col">Average</th>
+                                                                            <th scope="col">Standard Deviation</th>
+                                                                            <th scope="col">Minimum</th>
+                                                                            <th scope="col">Maximum</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                            <th scope="row">1</th>
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                            <th scope="row">2</th>
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                            <th scope="row">3</th>   
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </table>
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                        <div class="card">
+                                                        <div class="card-header" id="headingFour">
+                                                            <h4 class="mb-0">
+                                                            <a class="btn btn-link collapsed" data-toggle="collapse" data-bs-parent="#accordionExample" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                                                Sessional-II
+                                                            </a>
+                                                            </h4>
+                                                        </div>
+                                                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                                            <div class="card-body">
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                    <table class="table table-hover">
+                                                                        <thead class="TableHeader">
+                                                                            <tr>
+                                                                            <th scope="col">Sessional I #</th>
+                                                                            <th scope="col">Weightage</th>
+                                                                            <th scope="col">Obtained Marks</th>
+                                                                            <th scope="col">Total Marks</th>
+                                                                            <th scope="col">Average</th>
+                                                                            <th scope="col">Standard Deviation</th>
+                                                                            <th scope="col">Minimum</th>
+                                                                            <th scope="col">Maximum</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                            <th scope="row">1</th>
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                            <th scope="row">2</th>
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                            <th scope="row">3</th>   
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </table>
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                        <div class="card">
+                                                        <div class="card-header" id="headingFive">
+                                                            <h4 class="mb-0">
+                                                            <a class="btn btn-link collapsed" data-toggle="collapse" data-bs-parent="#accordionExample" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                                                Final Exam
+                                                            </a>
+                                                            </h4>
+                                                        </div>
+                                                        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                                                            <div class="card-body">
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                    <table class="table table-hover">
+                                                                        <thead class="TableHeader">
+                                                                            <tr>
+                                                                            <th scope="col">Final Exam #</th>
+                                                                            <th scope="col">Weightage</th>
+                                                                            <th scope="col">Obtained Marks</th>
+                                                                            <th scope="col">Total Marks</th>
+                                                                            <th scope="col">Average</th>
+                                                                            <th scope="col">Standard Deviation</th>
+                                                                            <th scope="col">Minimum</th>
+                                                                            <th scope="col">Maximum</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                            <th scope="row">1</th>
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                            <th scope="row">2</th>
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                            <th scope="row">3</th>   
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </table>
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                        <div class="card">
+                                                        <div class="card-header" id="headingSix">
+                                                            <h4 class="mb-0">
+                                                            <a class="btn btn-link collapsed" data-toggle="collapse" data-bs-parent="#accordionExample" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                                                Grand Total
+                                                            </a>
+                                                            </h4>
+                                                        </div>
+                                                        <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                                                            <div class="card-body">
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                    <table class="table table-hover">
+                                                                        <thead class="TableHeader">
+                                                                            <tr>
+                                                                            <th scope="col">Total Marks</th>
+                                                                            <th scope="col">Obtained Marks</th>
+                                                                            <th scope="col">Average</th>
+                                                                            <th scope="col">Standard Deviation</th>
+                                                                            <th scope="col">Minimum</th>
+                                                                            <th scope="col">Maximum</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                            <th scope="row">100</th>
+                                                                            <td>86</td>
+                                                                            <td>67</td>
+                                                                            <td>17</td>
+                                                                            <td>50</td>
+                                                                            <td>92</td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </table>
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {/* /////////////////// */}
+                                            </div>
+                                            <div id="menu5" class="tab-pane fade">
+                                                <h3>CL3009</h3>
+                                                <div>
+                                                    <div class="accordion" id="accordionExample">
+                                                        <div class="card">
+                                                        <div class="card-header" id="headingOne">
+                                                            <h4 class="mb-0">
+                                                            <a class="btn btn-link" data-toggle="collapse" data-bs-parent="#accordionExample" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                                Assignment
+                                                            </a>
+                                                            </h4>
+                                                        </div>
+                                                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                                            <div class="card-body">
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                    <table class="table table-hover">
+                                                                        <thead class="TableHeader">
+                                                                            <tr>
+                                                                            <th scope="col">Assignment #</th>
+                                                                            <th scope="col">Weightage</th>
+                                                                            <th scope="col">Obtained Marks</th>
+                                                                            <th scope="col">Total Marks</th>
+                                                                            <th scope="col">Average</th>
+                                                                            <th scope="col">Standard Deviation</th>
+                                                                            <th scope="col">Minimum</th>
+                                                                            <th scope="col">Maximum</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                            <th scope="row">1</th>
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                            <th scope="row">2</th>
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                            <th scope="row">3</th>   
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </table>
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                        <div class="card">
+                                                        <div class="card-header" id="headingTwo">
+                                                            <h4 class="mb-0">
+                                                            <a class="btn btn-link collapsed" data-toggle="collapse" data-bs-parent="#accordionExample" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                                Quiz
+                                                            </a>
+                                                            </h4>
+                                                        </div>
+                                                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                                            <div class="card-body">
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                    <table class="table table-hover">
+                                                                        <thead class="TableHeader">
+                                                                            <tr>
+                                                                            <th scope="col">Quiz #</th>
+                                                                            <th scope="col">Weightage</th>
+                                                                            <th scope="col">Obtained Marks</th>
+                                                                            <th scope="col">Total Marks</th>
+                                                                            <th scope="col">Average</th>
+                                                                            <th scope="col">Standard Deviation</th>
+                                                                            <th scope="col">Minimum</th>
+                                                                            <th scope="col">Maximum</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                            <th scope="row">1</th>
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                            <th scope="row">2</th>
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                            <th scope="row">3</th>   
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </table>
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                        <div class="card">
+                                                        <div class="card-header" id="headingThree">
+                                                            <h4 class="mb-0">
+                                                            <a class="btn btn-link collapsed" data-toggle="collapse" data-bs-parent="#accordionExample" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                                Sessional-I
+                                                            </a>
+                                                            </h4>
+                                                        </div>
+                                                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                                            <div class="card-body">
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                    <table class="table table-hover">
+                                                                        <thead class="TableHeader">
+                                                                            <tr>
+                                                                            <th scope="col">Sessional I #</th>
+                                                                            <th scope="col">Weightage</th>
+                                                                            <th scope="col">Obtained Marks</th>
+                                                                            <th scope="col">Total Marks</th>
+                                                                            <th scope="col">Average</th>
+                                                                            <th scope="col">Standard Deviation</th>
+                                                                            <th scope="col">Minimum</th>
+                                                                            <th scope="col">Maximum</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                            <th scope="row">1</th>
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                            <th scope="row">2</th>
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                            <th scope="row">3</th>   
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </table>
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                        <div class="card">
+                                                        <div class="card-header" id="headingFour">
+                                                            <h4 class="mb-0">
+                                                            <a class="btn btn-link collapsed" data-toggle="collapse" data-bs-parent="#accordionExample" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                                                Sessional-II
+                                                            </a>
+                                                            </h4>
+                                                        </div>
+                                                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                                            <div class="card-body">
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                    <table class="table table-hover">
+                                                                        <thead class="TableHeader">
+                                                                            <tr>
+                                                                            <th scope="col">Sessional I #</th>
+                                                                            <th scope="col">Weightage</th>
+                                                                            <th scope="col">Obtained Marks</th>
+                                                                            <th scope="col">Total Marks</th>
+                                                                            <th scope="col">Average</th>
+                                                                            <th scope="col">Standard Deviation</th>
+                                                                            <th scope="col">Minimum</th>
+                                                                            <th scope="col">Maximum</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                            <th scope="row">1</th>
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                            <th scope="row">2</th>
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                            <th scope="row">3</th>   
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </table>
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                        <div class="card">
+                                                        <div class="card-header" id="headingFive">
+                                                            <h4 class="mb-0">
+                                                            <a class="btn btn-link collapsed" data-toggle="collapse" data-bs-parent="#accordionExample" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                                                Final Exam
+                                                            </a>
+                                                            </h4>
+                                                        </div>
+                                                        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                                                            <div class="card-body">
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                    <table class="table table-hover">
+                                                                        <thead class="TableHeader">
+                                                                            <tr>
+                                                                            <th scope="col">Final Exam #</th>
+                                                                            <th scope="col">Weightage</th>
+                                                                            <th scope="col">Obtained Marks</th>
+                                                                            <th scope="col">Total Marks</th>
+                                                                            <th scope="col">Average</th>
+                                                                            <th scope="col">Standard Deviation</th>
+                                                                            <th scope="col">Minimum</th>
+                                                                            <th scope="col">Maximum</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                            <th scope="row">1</th>
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                            <th scope="row">2</th>
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                            <th scope="row">3</th>   
+                                                                            <td>5</td>
+                                                                            <td>3</td>
+                                                                            <td>10</td>
+                                                                            <td>6</td>
+                                                                            <td>0</td>
+                                                                            <td>1</td>
+                                                                            <td>10</td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </table>
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                        <div class="card">
+                                                        <div class="card-header" id="headingSix">
+                                                            <h4 class="mb-0">
+                                                            <a class="btn btn-link collapsed" data-toggle="collapse" data-bs-parent="#accordionExample" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                                                Grand Total
+                                                            </a>
+                                                            </h4>
+                                                        </div>
+                                                        <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                                                            <div class="card-body">
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                    <table class="table table-hover">
+                                                                        <thead class="TableHeader">
+                                                                            <tr>
+                                                                            <th scope="col">Total Marks</th>
+                                                                            <th scope="col">Obtained Marks</th>
+                                                                            <th scope="col">Average</th>
+                                                                            <th scope="col">Standard Deviation</th>
+                                                                            <th scope="col">Minimum</th>
+                                                                            <th scope="col">Maximum</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                            <th scope="row">100</th>
+                                                                            <td>86</td>
+                                                                            <td>67</td>
+                                                                            <td>17</td>
+                                                                            <td>50</td>
+                                                                            <td>92</td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </table>
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {/* /////////////////// */}
                                             </div>
                                         </div>
                                     </div>

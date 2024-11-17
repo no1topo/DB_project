@@ -21,8 +21,11 @@
 .leftBar{
     color: black;
     background-color: #2b363c;
-    height:100vh;
-    width: 100%;
+    position: sticky;
+}
+
+.leftBarAttendance{
+    height: 100vh;
 }
 
 .leftBarButtons:hover{
@@ -68,3 +71,7 @@
     color: whitesmoke;
 }
 
+.TableHeader{
+    color: whitesmoke;
+    background-color: #4481eb;
+}

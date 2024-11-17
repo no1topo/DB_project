@@ -102,7 +102,820 @@ export default function Transcript(){
                             </a>
                         </div>
                         <div class="col-md-11">
-                        <p>this is hOME</p>
+                            <div class="container-fluid">
+                                <h4>Transcript  | 
+                                </h4>
+                                <br></br>
+                                {/* ////////////////////////////Transcript Upper info row//////////////////////////// */}
+                                <div class="HomeTextBox">
+                                    <br></br>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="row">
+                                                <div class="col-md-2"></div>
+                                                <div class="col-md-10">
+                                                    <p><b>Roll No:</b> 22K-5024</p>
+                                                </div>
+                                            </div>  
+                                        </div>
+                                        <div class="col-md-4">
+                                            <p><b>Degree:</b> BS(CS) (Robotics & Automation)</p>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <p><b>Batch:</b> Fall 2022</p>
+                                        </div>
+                                    </div>
+                                    <br></br>
+                                </div>
+                                {/* ////////////////////// Transcipt///////////////////////*/}
+                                {/* ////////////////////first row////////////////////// */}
+                                <br></br>
+                                <div class="HomeTextBox">
+                                    <br></br>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="row">
+                                                <div class="col-md-2">
+                                                    <p><b>Fall 2022 </b></p>
+                                                </div>
+                                                <div class="col-md-5">
+
+                                                </div>
+                                                <div class="col-md-5 text-right">
+                                                    <span>Cr. Att:14   Cr. Ernd:14   CGPA:3.38   SGPA:3.38</span>
+                                                </div>
+                                            </div>
+                                        <div class="table-responsive">
+                                                <table class="table">
+                                                    <table class="table table-hover">
+                                                        <thead class="TableHeader">
+                                                            <tr>
+                                                            <th scope="col">Code</th>
+                                                            <th scope="col">Course Name</th>
+                                                            <th scope="col">Section</th>
+                                                            <th scope="col">CrdHrs</th>
+                                                            <th scope="col">Grade</th>
+                                                            <th scope="col">Points</th>
+                                                            <th scope="col">Type</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                            <th scope="row">CL1000</th>
+                                                            <td>Introduction to Information and Communication Technology</td>
+                                                            <td>BSR-1C</td>
+                                                            <td>1</td>
+                                                            <td>B</td>
+                                                            <td>3</td>
+                                                            <td>Core</td>
+                                                            </tr>
+                                                            <tr>
+                                                            <th scope="row">CL1000</th>
+                                                            <td>Programming Fundamentals</td>
+                                                            <td>BSR-1C</td>
+                                                            <td>1</td>
+                                                            <td>B</td>
+                                                            <td>3</td>
+                                                            <td>Core</td>
+                                                            </tr>
+                                                            <tr>
+                                                            <th scope="row">CL1000</th>   
+                                                            <td>Programming Fundamentals - Lab</td>
+                                                            <td>BSR-1C</td>
+                                                            <td>1</td>
+                                                            <td>B</td>
+                                                            <td>3</td>
+                                                            <td>Core</td>
+                                                            </tr>
+                                                            <tr>
+                                                            <th scope="row">CL1000</th>
+                                                            <td>Programming Fundamentals</td>
+                                                            <td>BSR-1C</td>
+                                                            <td>1</td>
+                                                            <td>B</td>
+                                                            <td>3</td>
+                                                            <td>Core</td>
+                                                            </tr>
+                                                            <tr>
+                                                            <th scope="row">CL1000</th>
+                                                            <td>Programming Fundamentals</td>
+                                                            <td>BSR-1C</td>
+                                                            <td>1</td>
+                                                            <td>B</td>
+                                                            <td>3</td>
+                                                            <td>Core</td>
+                                                            </tr>
+                                                            <tr>
+                                                            <th scope="row">CL1000</th>
+                                                            <td>Programming Fundamentals</td>
+                                                            <td>BSR-1C</td>
+                                                            <td>1</td>
+                                                            <td>B</td>
+                                                            <td>3</td>
+                                                            <td>Core</td>
+                                                            </tr>
+                                                            <tr>
+                                                            <th scope="row">CL1000</th>
+                                                            <td>Programming Fundamentals</td>
+                                                            <td>BSR-1C</td>
+                                                            <td>1</td>
+                                                            <td>B</td>
+                                                            <td>3</td>
+                                                            <td>Core</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                        <div class="row">
+                                                <div class="col-md-2">
+                                                    <p><b>Fall 2022 </b></p>
+                                                </div>
+                                                <div class="col-md-5">
+
+                                                </div>
+                                                <div class="col-md-5 text-right">
+                                                    <span>Cr. Att:14   Cr. Ernd:14   CGPA:3.38   SGPA:3.38</span>
+                                                </div>
+                                            </div>
+                                        <div class="table-responsive">
+                                                <table class="table">
+                                                    <table class="table table-hover">
+                                                        <thead class="TableHeader">
+                                                            <tr>
+                                                            <th scope="col">Code</th>
+                                                            <th scope="col">Course Name</th>
+                                                            <th scope="col">Section</th>
+                                                            <th scope="col">CrdHrs</th>
+                                                            <th scope="col">Grade</th>
+                                                            <th scope="col">Points</th>
+                                                            <th scope="col">Type</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                            <th scope="row">CL1000</th>
+                                                            <td>Introduction to Information and Communication Technology</td>
+                                                            <td>BSR-1C</td>
+                                                            <td>1</td>
+                                                            <td>B</td>
+                                                            <td>3</td>
+                                                            <td>Core</td>
+                                                            </tr>
+                                                            <tr>
+                                                            <th scope="row">CL1000</th>
+                                                            <td>Programming Fundamentals</td>
+                                                            <td>BSR-1C</td>
+                                                            <td>1</td>
+                                                            <td>B</td>
+                                                            <td>3</td>
+                                                            <td>Core</td>
+                                                            </tr>
+                                                            <tr>
+                                                            <th scope="row">CL1000</th>   
+                                                            <td>Programming Fundamentals - Lab</td>
+                                                            <td>BSR-1C</td>
+                                                            <td>1</td>
+                                                            <td>B</td>
+                                                            <td>3</td>
+                                                            <td>Core</td>
+                                                            </tr>
+                                                            <tr>
+                                                            <th scope="row">CL1000</th>
+                                                            <td>Programming Fundamentals</td>
+                                                            <td>BSR-1C</td>
+                                                            <td>1</td>
+                                                            <td>B</td>
+                                                            <td>3</td>
+                                                            <td>Core</td>
+                                                            </tr>
+                                                            <tr>
+                                                            <th scope="row">CL1000</th>
+                                                            <td>Programming Fundamentals</td>
+                                                            <td>BSR-1C</td>
+                                                            <td>1</td>
+                                                            <td>B</td>
+                                                            <td>3</td>
+                                                            <td>Core</td>
+                                                            </tr>
+                                                            <tr>
+                                                            <th scope="row">CL1000</th>
+                                                            <td>Programming Fundamentals</td>
+                                                            <td>BSR-1C</td>
+                                                            <td>1</td>
+                                                            <td>B</td>
+                                                            <td>3</td>
+                                                            <td>Core</td>
+                                                            </tr>
+                                                            <tr>
+                                                            <th scope="row">CL1000</th>
+                                                            <td>Programming Fundamentals</td>
+                                                            <td>BSR-1C</td>
+                                                            <td>1</td>
+                                                            <td>B</td>
+                                                            <td>3</td>
+                                                            <td>Core</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br></br>
+                                     {/* /////////////////////////////// second row///////////////////*/}
+                                     <hr></hr>
+                                     <br></br>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="row">
+                                                <div class="col-md-2">
+                                                    <p><b>Fall 2022 </b></p>
+                                                </div>
+                                                <div class="col-md-5">
+
+                                                </div>
+                                                <div class="col-md-5 text-right">
+                                                    <span>Cr. Att:14   Cr. Ernd:14   CGPA:3.38   SGPA:3.38</span>
+                                                </div>
+                                            </div>
+                                        <div class="table-responsive">
+                                                <table class="table">
+                                                    <table class="table table-hover">
+                                                        <thead class="TableHeader">
+                                                            <tr>
+                                                            <th scope="col">Code</th>
+                                                            <th scope="col">Course Name</th>
+                                                            <th scope="col">Section</th>
+                                                            <th scope="col">CrdHrs</th>
+                                                            <th scope="col">Grade</th>
+                                                            <th scope="col">Points</th>
+                                                            <th scope="col">Type</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                            <th scope="row">CL1000</th>
+                                                            <td>Introduction to Information and Communication Technology</td>
+                                                            <td>BSR-1C</td>
+                                                            <td>1</td>
+                                                            <td>B</td>
+                                                            <td>3</td>
+                                                            <td>Core</td>
+                                                            </tr>
+                                                            <tr>
+                                                            <th scope="row">CL1000</th>
+                                                            <td>Programming Fundamentals</td>
+                                                            <td>BSR-1C</td>
+                                                            <td>1</td>
+                                                            <td>B</td>
+                                                            <td>3</td>
+                                                            <td>Core</td>
+                                                            </tr>
+                                                            <tr>
+                                                            <th scope="row">CL1000</th>   
+                                                            <td>Programming Fundamentals - Lab</td>
+                                                            <td>BSR-1C</td>
+                                                            <td>1</td>
+                                                            <td>B</td>
+                                                            <td>3</td>
+                                                            <td>Core</td>
+                                                            </tr>
+                                                            <tr>
+                                                            <th scope="row">CL1000</th>
+                                                            <td>Programming Fundamentals</td>
+                                                            <td>BSR-1C</td>
+                                                            <td>1</td>
+                                                            <td>B</td>
+                                                            <td>3</td>
+                                                            <td>Core</td>
+                                                            </tr>
+                                                            <tr>
+                                                            <th scope="row">CL1000</th>
+                                                            <td>Programming Fundamentals</td>
+                                                            <td>BSR-1C</td>
+                                                            <td>1</td>
+                                                            <td>B</td>
+                                                            <td>3</td>
+                                                            <td>Core</td>
+                                                            </tr>
+                                                            <tr>
+                                                            <th scope="row">CL1000</th>
+                                                            <td>Programming Fundamentals</td>
+                                                            <td>BSR-1C</td>
+                                                            <td>1</td>
+                                                            <td>B</td>
+                                                            <td>3</td>
+                                                            <td>Core</td>
+                                                            </tr>
+                                                            <tr>
+                                                            <th scope="row">CL1000</th>
+                                                            <td>Programming Fundamentals</td>
+                                                            <td>BSR-1C</td>
+                                                            <td>1</td>
+                                                            <td>B</td>
+                                                            <td>3</td>
+                                                            <td>Core</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                        <div class="row">
+                                                <div class="col-md-2">
+                                                    <p><b>Fall 2022 </b></p>
+                                                </div>
+                                                <div class="col-md-5">
+
+                                                </div>
+                                                <div class="col-md-5 text-right">
+                                                    <span>Cr. Att:14   Cr. Ernd:14   CGPA:3.38   SGPA:3.38</span>
+                                                </div>
+                                            </div>
+                                        <div class="table-responsive">
+                                                <table class="table">
+                                                    <table class="table table-hover">
+                                                        <thead class="TableHeader">
+                                                            <tr>
+                                                            <th scope="col">Code</th>
+                                                            <th scope="col">Course Name</th>
+                                                            <th scope="col">Section</th>
+                                                            <th scope="col">CrdHrs</th>
+                                                            <th scope="col">Grade</th>
+                                                            <th scope="col">Points</th>
+                                                            <th scope="col">Type</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                            <th scope="row">CL1000</th>
+                                                            <td>Introduction to Information and Communication Technology</td>
+                                                            <td>BSR-1C</td>
+                                                            <td>1</td>
+                                                            <td>B</td>
+                                                            <td>3</td>
+                                                            <td>Core</td>
+                                                            </tr>
+                                                            <tr>
+                                                            <th scope="row">CL1000</th>
+                                                            <td>Programming Fundamentals</td>
+                                                            <td>BSR-1C</td>
+                                                            <td>1</td>
+                                                            <td>B</td>
+                                                            <td>3</td>
+                                                            <td>Core</td>
+                                                            </tr>
+                                                            <tr>
+                                                            <th scope="row">CL1000</th>   
+                                                            <td>Programming Fundamentals - Lab</td>
+                                                            <td>BSR-1C</td>
+                                                            <td>1</td>
+                                                            <td>B</td>
+                                                            <td>3</td>
+                                                            <td>Core</td>
+                                                            </tr>
+                                                            <tr>
+                                                            <th scope="row">CL1000</th>
+                                                            <td>Programming Fundamentals</td>
+                                                            <td>BSR-1C</td>
+                                                            <td>1</td>
+                                                            <td>B</td>
+                                                            <td>3</td>
+                                                            <td>Core</td>
+                                                            </tr>
+                                                            <tr>
+                                                            <th scope="row">CL1000</th>
+                                                            <td>Programming Fundamentals</td>
+                                                            <td>BSR-1C</td>
+                                                            <td>1</td>
+                                                            <td>B</td>
+                                                            <td>3</td>
+                                                            <td>Core</td>
+                                                            </tr>
+                                                            <tr>
+                                                            <th scope="row">CL1000</th>
+                                                            <td>Programming Fundamentals</td>
+                                                            <td>BSR-1C</td>
+                                                            <td>1</td>
+                                                            <td>B</td>
+                                                            <td>3</td>
+                                                            <td>Core</td>
+                                                            </tr>
+                                                            <tr>
+                                                            <th scope="row">CL1000</th>
+                                                            <td>Programming Fundamentals</td>
+                                                            <td>BSR-1C</td>
+                                                            <td>1</td>
+                                                            <td>B</td>
+                                                            <td>3</td>
+                                                            <td>Core</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br></br>
+                                    {/* /////////////////////////third row//////////////////////// */}
+                                    <hr></hr>
+                                     <br></br>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="row">
+                                                <div class="col-md-2">
+                                                    <p><b>Fall 2022 </b></p>
+                                                </div>
+                                                <div class="col-md-5">
+
+                                                </div>
+                                                <div class="col-md-5 text-right">
+                                                    <span>Cr. Att:14   Cr. Ernd:14   CGPA:3.38   SGPA:3.38</span>
+                                                </div>
+                                            </div>
+                                        <div class="table-responsive">
+                                                <table class="table">
+                                                    <table class="table table-hover">
+                                                        <thead class="TableHeader">
+                                                            <tr>
+                                                            <th scope="col">Code</th>
+                                                            <th scope="col">Course Name</th>
+                                                            <th scope="col">Section</th>
+                                                            <th scope="col">CrdHrs</th>
+                                                            <th scope="col">Grade</th>
+                                                            <th scope="col">Points</th>
+                                                            <th scope="col">Type</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                            <th scope="row">CL1000</th>
+                                                            <td>Introduction to Information and Communication Technology</td>
+                                                            <td>BSR-1C</td>
+                                                            <td>1</td>
+                                                            <td>B</td>
+                                                            <td>3</td>
+                                                            <td>Core</td>
+                                                            </tr>
+                                                            <tr>
+                                                            <th scope="row">CL1000</th>
+                                                            <td>Programming Fundamentals</td>
+                                                            <td>BSR-1C</td>
+                                                            <td>1</td>
+                                                            <td>B</td>
+                                                            <td>3</td>
+                                                            <td>Core</td>
+                                                            </tr>
+                                                            <tr>
+                                                            <th scope="row">CL1000</th>   
+                                                            <td>Programming Fundamentals - Lab</td>
+                                                            <td>BSR-1C</td>
+                                                            <td>1</td>
+                                                            <td>B</td>
+                                                            <td>3</td>
+                                                            <td>Core</td>
+                                                            </tr>
+                                                            <tr>
+                                                            <th scope="row">CL1000</th>
+                                                            <td>Programming Fundamentals</td>
+                                                            <td>BSR-1C</td>
+                                                            <td>1</td>
+                                                            <td>B</td>
+                                                            <td>3</td>
+                                                            <td>Core</td>
+                                                            </tr>
+                                                            <tr>
+                                                            <th scope="row">CL1000</th>
+                                                            <td>Programming Fundamentals</td>
+                                                            <td>BSR-1C</td>
+                                                            <td>1</td>
+                                                            <td>B</td>
+                                                            <td>3</td>
+                                                            <td>Core</td>
+                                                            </tr>
+                                                            <tr>
+                                                            <th scope="row">CL1000</th>
+                                                            <td>Programming Fundamentals</td>
+                                                            <td>BSR-1C</td>
+                                                            <td>1</td>
+                                                            <td>B</td>
+                                                            <td>3</td>
+                                                            <td>Core</td>
+                                                            </tr>
+                                                            <tr>
+                                                            <th scope="row">CL1000</th>
+                                                            <td>Programming Fundamentals</td>
+                                                            <td>BSR-1C</td>
+                                                            <td>1</td>
+                                                            <td>B</td>
+                                                            <td>3</td>
+                                                            <td>Core</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                        <div class="row">
+                                                <div class="col-md-2">
+                                                    <p><b>Fall 2022 </b></p>
+                                                </div>
+                                                <div class="col-md-5">
+
+                                                </div>
+                                                <div class="col-md-5 text-right">
+                                                    <span>Cr. Att:14   Cr. Ernd:14   CGPA:3.38   SGPA:3.38</span>
+                                                </div>
+                                            </div>
+                                        <div class="table-responsive">
+                                                <table class="table">
+                                                    <table class="table table-hover">
+                                                        <thead class="TableHeader">
+                                                            <tr>
+                                                            <th scope="col">Code</th>
+                                                            <th scope="col">Course Name</th>
+                                                            <th scope="col">Section</th>
+                                                            <th scope="col">CrdHrs</th>
+                                                            <th scope="col">Grade</th>
+                                                            <th scope="col">Points</th>
+                                                            <th scope="col">Type</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                            <th scope="row">CL1000</th>
+                                                            <td>Introduction to Information and Communication Technology</td>
+                                                            <td>BSR-1C</td>
+                                                            <td>1</td>
+                                                            <td>B</td>
+                                                            <td>3</td>
+                                                            <td>Core</td>
+                                                            </tr>
+                                                            <tr>
+                                                            <th scope="row">CL1000</th>
+                                                            <td>Programming Fundamentals</td>
+                                                            <td>BSR-1C</td>
+                                                            <td>1</td>
+                                                            <td>B</td>
+                                                            <td>3</td>
+                                                            <td>Core</td>
+                                                            </tr>
+                                                            <tr>
+                                                            <th scope="row">CL1000</th>   
+                                                            <td>Programming Fundamentals - Lab</td>
+                                                            <td>BSR-1C</td>
+                                                            <td>1</td>
+                                                            <td>B</td>
+                                                            <td>3</td>
+                                                            <td>Core</td>
+                                                            </tr>
+                                                            <tr>
+                                                            <th scope="row">CL1000</th>
+                                                            <td>Programming Fundamentals</td>
+                                                            <td>BSR-1C</td>
+                                                            <td>1</td>
+                                                            <td>B</td>
+                                                            <td>3</td>
+                                                            <td>Core</td>
+                                                            </tr>
+                                                            <tr>
+                                                            <th scope="row">CL1000</th>
+                                                            <td>Programming Fundamentals</td>
+                                                            <td>BSR-1C</td>
+                                                            <td>1</td>
+                                                            <td>B</td>
+                                                            <td>3</td>
+                                                            <td>Core</td>
+                                                            </tr>
+                                                            <tr>
+                                                            <th scope="row">CL1000</th>
+                                                            <td>Programming Fundamentals</td>
+                                                            <td>BSR-1C</td>
+                                                            <td>1</td>
+                                                            <td>B</td>
+                                                            <td>3</td>
+                                                            <td>Core</td>
+                                                            </tr>
+                                                            <tr>
+                                                            <th scope="row">CL1000</th>
+                                                            <td>Programming Fundamentals</td>
+                                                            <td>BSR-1C</td>
+                                                            <td>1</td>
+                                                            <td>B</td>
+                                                            <td>3</td>
+                                                            <td>Core</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br></br>
+                                    {/* /////////////////////////////fourth row///////////////// */}
+                                    <hr></hr>
+                                     <br></br>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="row">
+                                                <div class="col-md-2">
+                                                    <p><b>Fall 2022 </b></p>
+                                                </div>
+                                                <div class="col-md-5">
+
+                                                </div>
+                                                <div class="col-md-5 text-right">
+                                                    <span>Cr. Att:14   Cr. Ernd:14   CGPA:3.38   SGPA:3.38</span>
+                                                </div>
+                                            </div>
+                                        <div class="table-responsive">
+                                                <table class="table">
+                                                    <table class="table table-hover">
+                                                        <thead class="TableHeader">
+                                                            <tr>
+                                                            <th scope="col">Code</th>
+                                                            <th scope="col">Course Name</th>
+                                                            <th scope="col">Section</th>
+                                                            <th scope="col">CrdHrs</th>
+                                                            <th scope="col">Grade</th>
+                                                            <th scope="col">Points</th>
+                                                            <th scope="col">Type</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                            <th scope="row">CL1000</th>
+                                                            <td>Introduction to Information and Communication Technology</td>
+                                                            <td>BSR-1C</td>
+                                                            <td>1</td>
+                                                            <td>B</td>
+                                                            <td>3</td>
+                                                            <td>Core</td>
+                                                            </tr>
+                                                            <tr>
+                                                            <th scope="row">CL1000</th>
+                                                            <td>Programming Fundamentals</td>
+                                                            <td>BSR-1C</td>
+                                                            <td>1</td>
+                                                            <td>B</td>
+                                                            <td>3</td>
+                                                            <td>Core</td>
+                                                            </tr>
+                                                            <tr>
+                                                            <th scope="row">CL1000</th>   
+                                                            <td>Programming Fundamentals - Lab</td>
+                                                            <td>BSR-1C</td>
+                                                            <td>1</td>
+                                                            <td>B</td>
+                                                            <td>3</td>
+                                                            <td>Core</td>
+                                                            </tr>
+                                                            <tr>
+                                                            <th scope="row">CL1000</th>
+                                                            <td>Programming Fundamentals</td>
+                                                            <td>BSR-1C</td>
+                                                            <td>1</td>
+                                                            <td>B</td>
+                                                            <td>3</td>
+                                                            <td>Core</td>
+                                                            </tr>
+                                                            <tr>
+                                                            <th scope="row">CL1000</th>
+                                                            <td>Programming Fundamentals</td>
+                                                            <td>BSR-1C</td>
+                                                            <td>1</td>
+                                                            <td>B</td>
+                                                            <td>3</td>
+                                                            <td>Core</td>
+                                                            </tr>
+                                                            <tr>
+                                                            <th scope="row">CL1000</th>
+                                                            <td>Programming Fundamentals</td>
+                                                            <td>BSR-1C</td>
+                                                            <td>1</td>
+                                                            <td>B</td>
+                                                            <td>3</td>
+                                                            <td>Core</td>
+                                                            </tr>
+                                                            <tr>
+                                                            <th scope="row">CL1000</th>
+                                                            <td>Programming Fundamentals</td>
+                                                            <td>BSR-1C</td>
+                                                            <td>1</td>
+                                                            <td>B</td>
+                                                            <td>3</td>
+                                                            <td>Core</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                        <div class="row">
+                                                <div class="col-md-2">
+                                                    <p><b>Fall 2022 </b></p>
+                                                </div>
+                                                <div class="col-md-5">
+
+                                                </div>
+                                                <div class="col-md-5 text-right">
+                                                    <span>Cr. Att:14   Cr. Ernd:14   CGPA:3.38   SGPA:3.38</span>
+                                                </div>
+                                            </div>
+                                        <div class="table-responsive">
+                                                <table class="table">
+                                                    <table class="table table-hover">
+                                                        <thead class="TableHeader">
+                                                            <tr>
+                                                            <th scope="col">Code</th>
+                                                            <th scope="col">Course Name</th>
+                                                            <th scope="col">Section</th>
+                                                            <th scope="col">CrdHrs</th>
+                                                            <th scope="col">Grade</th>
+                                                            <th scope="col">Points</th>
+                                                            <th scope="col">Type</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                            <th scope="row">CL1000</th>
+                                                            <td>Introduction to Information and Communication Technology</td>
+                                                            <td>BSR-1C</td>
+                                                            <td>1</td>
+                                                            <td>B</td>
+                                                            <td>3</td>
+                                                            <td>Core</td>
+                                                            </tr>
+                                                            <tr>
+                                                            <th scope="row">CL1000</th>
+                                                            <td>Programming Fundamentals</td>
+                                                            <td>BSR-1C</td>
+                                                            <td>1</td>
+                                                            <td>B</td>
+                                                            <td>3</td>
+                                                            <td>Core</td>
+                                                            </tr>
+                                                            <tr>
+                                                            <th scope="row">CL1000</th>   
+                                                            <td>Programming Fundamentals - Lab</td>
+                                                            <td>BSR-1C</td>
+                                                            <td>1</td>
+                                                            <td>B</td>
+                                                            <td>3</td>
+                                                            <td>Core</td>
+                                                            </tr>
+                                                            <tr>
+                                                            <th scope="row">CL1000</th>
+                                                            <td>Programming Fundamentals</td>
+                                                            <td>BSR-1C</td>
+                                                            <td>1</td>
+                                                            <td>B</td>
+                                                            <td>3</td>
+                                                            <td>Core</td>
+                                                            </tr>
+                                                            <tr>
+                                                            <th scope="row">CL1000</th>
+                                                            <td>Programming Fundamentals</td>
+                                                            <td>BSR-1C</td>
+                                                            <td>1</td>
+                                                            <td>B</td>
+                                                            <td>3</td>
+                                                            <td>Core</td>
+                                                            </tr>
+                                                            <tr>
+                                                            <th scope="row">CL1000</th>
+                                                            <td>Programming Fundamentals</td>
+                                                            <td>BSR-1C</td>
+                                                            <td>1</td>
+                                                            <td>B</td>
+                                                            <td>3</td>
+                                                            <td>Core</td>
+                                                            </tr>
+                                                            <tr>
+                                                            <th scope="row">CL1000</th>
+                                                            <td>Programming Fundamentals</td>
+                                                            <td>BSR-1C</td>
+                                                            <td>1</td>
+                                                            <td>B</td>
+                                                            <td>3</td>
+                                                            <td>Core</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br></br>
+                                </div>   
+                                <br></br>
+                            </div>
                         </div>
                     </div>
                 </div>

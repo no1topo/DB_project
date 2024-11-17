@@ -59,7 +59,7 @@ export default function Attendance(){
                 {/* //______________________________________BODY___________________________________________// */}
                 <div class="container-fluid BodyDiv">
                     <div class="row">
-                        <div class="col-md-1 text-center leftBar" >
+                        <div class="col-md-1 text-center leftBar leftBarAttendance" >
                             <br></br>
                             <a class="leftBarButtons" href="#" onClick={()=>NavHome()}><span class="fa fa-home HomeIcon">
                             </span>
@@ -152,7 +152,7 @@ export default function Attendance(){
                                             <div class="table-responsive">
                                                 <table class="table">
                                                     <table class="table table-hover">
-                                                        <thead>
+                                                        <thead class="TableHeader">
                                                             <tr>
                                                             <th scope="col">Lecture No</th>
                                                             <th scope="col">Date</th>
@@ -195,7 +195,7 @@ export default function Attendance(){
                                             <div class="table-responsive">
                                                 <table class="table">
                                                     <table class="table table-hover">
-                                                        <thead>
+                                                        <thead class="TableHeader">
                                                             <tr>
                                                             <th scope="col">Lecture No</th>
                                                             <th scope="col">Date</th>
@@ -232,7 +232,7 @@ export default function Attendance(){
                                             <div class="table-responsive">
                                                 <table class="table">
                                                     <table class="table table-hover">
-                                                        <thead>
+                                                        <thead class="TableHeader">
                                                             <tr>
                                                             <th scope="col">Lecture No</th>
                                                             <th scope="col">Date</th>
@@ -269,7 +269,7 @@ export default function Attendance(){
                                             <div class="table-responsive">
                                                 <table class="table">
                                                     <table class="table table-hover">
-                                                        <thead>
+                                                        <thead class="TableHeader">
                                                             <tr>
                                                             <th scope="col">Lecture No</th>
                                                             <th scope="col">Date</th>
