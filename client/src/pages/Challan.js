@@ -102,7 +102,111 @@ export default function Challan(){
                             </a>
                         </div>
                         <div class="col-md-11">
-                        <p>this is hOME</p>
+                        <div class="container-fluid">
+                                <h4>Challan  | 
+                                </h4>
+                                <br></br>
+                                {/* ////////////////////////////Transcript Upper info row//////////////////////////// */}
+                                <div class="HomeTextBox">
+                                    <div class = "HomeHeaderBox">
+                                        <h5 class = "fa fa-money HomeHeaderText"> Challan Details</h5>
+                                    </div>
+                                    <br></br>
+                                    {/* TABLE */}
+                                    <div class="table-responsive">
+                                                <table class="table">
+                                                    <table class="table table-hover">
+                                                        <thead class="TableHeader">
+                                                            <tr>
+                                                            <th scope="col">S No</th>
+                                                            <th scope="col">Semester</th>
+                                                            <th scope="col">Challan No</th>
+                                                            <th scope="col">Instrument Type</th>
+                                                            <th scope="col">Instrument No</th>
+                                                            <th scope="col">Amount</th>
+                                                            <th scope="col">Due Date</th>	
+                                                            <th scope="col">Payment Date</th>
+                                                            <th scope="col">Entered By</th>
+                                                            <th scope="col">Status</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                            <th scope="row">1</th>
+                                                            <td>Fall 2024</td>
+                                                            <td>124247274</td>
+                                                            <td>Paid Bank Challan</td>
+                                                            <td>124247274</td>
+                                                            <td>162,500</td>
+                                                            <td>10-Sep-24</td>
+                                                            <td>5-Sep-24</td>
+                                                            <td>FBL</td>
+                                                            <td><button class='btn' id='SignInSmall'>Posted</button></td>
+                                                            </tr>
+                                                            <tr>
+                                                            <th scope="row">2</th>
+                                                            <td>Fall 2024</td>
+                                                            <td>124247274</td>
+                                                            <td>Paid Bank Challan</td>
+                                                            <td>124247274</td>
+                                                            <td>162,500</td>
+                                                            <td>10-Sep-24</td>
+                                                            <td>5-Sep-24</td>
+                                                            <td>FBL</td>
+                                                            <td><button class='btn' id='SignInSmall'>Posted</button></td>
+                                                            </tr>
+                                                            <tr>
+                                                            <th scope="row">3</th>   
+                                                            <td>Fall 2024</td>
+                                                            <td>124247274</td>
+                                                            <td>Paid Bank Challan</td>
+                                                            <td>124247274</td>
+                                                            <td>162,500</td>
+                                                            <td>10-Sep-24</td>
+                                                            <td>5-Sep-24</td>
+                                                            <td>FBL</td>
+                                                            <td><button class='btn' id='SignInSmall'>Posted</button></td>
+                                                            </tr>
+                                                            <tr>
+                                                            <th scope="row">4</th>
+                                                            <td>Fall 2024</td>
+                                                            <td>124247274</td>
+                                                            <td>Paid Bank Challan</td>
+                                                            <td>124247274</td>
+                                                            <td>162,500</td>
+                                                            <td>10-Sep-24</td>
+                                                            <td>5-Sep-24</td>
+                                                            <td>FBL</td>
+                                                            <td><button class='btn' id='SignInSmall'>Posted</button></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </table>
+                                            </div>
+                                    {/* ///// */}
+                                    <br></br>
+                                </div>
+                                <br></br>
+                                <p><b>Fee can be paid using any one of the following methods:</b><br></br>
+                                <b>1. Via bank account using kuickpay payment gateway.</b><br></br>
+                                <br></br>
+                                <b>Step 1:</b> Sign in to your Internet Banking, Mobile Banking or visit an ATM machine<br></br>
+                                <br></br>
+                                <b>Step 2:</b> Select Bill Payment / Payments and then select ‘kuickpay’ from given categories<br></br>
+                                <br></br>
+                                <b>Step 3:</b> Enter the voucher or invoice number & continue. Make sure to enter Institution ID as prefix (mentioned on challan)<br></br>
+                                <br></br>
+                                <b>Step 4:</b> Confirm your voucher details and proceed to payment. Payment alerts will be received accordingly.<br></br>
+                                <br></br>
+                                <b>*Customers of following Banks can avail Kuickpay service</b><br></br>
+                                    Allied Bank, Askari Bank, Bank Al Habib, Bank Alfalah, Bank Islami, Bank of Punjab, Dubai Islamic Bank, Faysal Bank, First Women Bank, Habib Metro Bank, Habib Bank Limited, JS Bank, MCB Bank, MCB Islamic Bank, Meezan Bank, National Bank, NRSP Bank, SAMBA Bank, Soneri bank, Summit Bank, UBL and Keenu App.<br></br>
+                                    <br></br>
+                                    <b>*Easy paisa and JazzCash can also be used for payment via kuickpay.<br></br>
+                                    (Transaction Limit apply)<br></br>
+                                    <br></br>
+                                    For further clarification, please visit: <a href='#'>https://app.kuickpay.com/PaymentsBillPayment</a><br></br>
+                                    2. Print the challan form and then visit any nearest Faysal bank branch for cash deposit.</b><br></br></p>
+                            </div>
                         </div>
                     </div>
                 </div>
