@@ -1,9 +1,36 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './home.css';
 import { useNavigate } from "react-router-dom";
+import axios from 'axios';
 
 export default function Attendance(){
     let navigate = useNavigate();
+    const [data, setData] = useState([]);
+    
+    const fetchData = async () => {
+        try {
+            const response = await axios.get('http://localhost:5000/api/data');
+            console.log(response.data);
+            setData(response.data);
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    };
+    
+    useEffect(() => {
+        fetchData();
+    }, []);
+
+
+
+
+
+
+
+
+
+
+
     const NavLogin = () => {
           navigate('/');
     };
@@ -122,6 +149,17 @@ export default function Attendance(){
                                     </div>
                                     <div class="col-md-5"></div>
                                 </div>
+                                {/* aheed testing */}
+                                <ul>
+                                {data.map(data=>(
+                                    <tr>
+                                        <td>{data.Std_id}</td>
+                                        <td>{data.Name}</td>
+                                        <td>{data.Email}</td>
+                                    </tr>
+                                ))}
+                                </ul>
+                                {/* aheed testing */}
                                 {/* ///////////////////////////////////////Registered Courses///////////////////////////////////////// */}
                                 <div>
                                     <h2>Registered Courses</h2>
@@ -161,6 +199,13 @@ export default function Attendance(){
                                                             </tr>
                                                         </thead>
                                                         <tbody>
+                                                        {data.map(data=>(
+                                                                <tr>
+                                                                    <td>{data.Std_id}</td>
+                                                                    <td>{data.Name}</td>
+                                                                    <td>{data.Email}</td>
+                                                                </tr>
+                                                            ))}
                                                             <tr>
                                                             <th scope="row">1</th>
                                                             <td>19-Aug-2024</td>
