@@ -102,7 +102,66 @@ export default function Withdraw(){
                             </a>
                         </div>
                         <div class="col-md-11">
-                        <p>this is hOME</p>
+                            <div class="container-fluid">
+                                    <h4>Withdraw  | 
+                                    </h4>
+                                    <br></br>
+                                    <div class="HomeTextBox">
+                                        <div class = "HomeHeaderBox">
+                                            <h5 class = "fa fa-file HomeHeaderText"> Course Withdraw</h5>
+                                        </div>
+                                        <br></br>
+                                        {/* TABLE */}
+                                        <div class="table-responsive">
+                                                    <table class="table">
+                                                        <table class="table table-hover">
+                                                            <thead class="TableHeader">
+                                                                <tr>
+                                                                <th scope="col">S.No</th>
+                                                                <th scope="col">Code</th>
+                                                                <th scope="col">Course Name</th>
+                                                                <th scope="col">Credits</th>
+                                                                <th scope="col">Withdraw</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                <th scope="row">1</th>
+                                                                <td>Fall 2024</td>
+                                                                <td>124247274</td>
+                                                                <td>Paid Bank Challan</td>
+                                                                <td><button class="btn" id = "SignInSmall">Withdraw</button></td>
+                                                                </tr>
+                                                                <tr>
+                                                                <th scope="row">2</th>
+                                                                <td>Fall 2024</td>
+                                                                <td>124247274</td>
+                                                                <td>Paid Bank Challan</td>
+                                                                <td><button class="btn" id = "SignInSmall">Withdraw</button></td>
+                                                                </tr>
+                                                                <tr>
+                                                                <th scope="row">3</th>  
+                                                                <td>Fall 2024</td>
+                                                                <td>124247274</td>
+                                                                <td>Paid Bank Challan</td>
+                                                                <td><button class="btn" id = "SignInSmall">Withdraw</button></td>
+                                                                </tr>
+                                                                <tr>
+                                                                <th scope="row">4</th>
+                                                                <td>Fall 2024</td>
+                                                                <td>124247274</td>
+                                                                <td>Paid Bank Challan</td>
+                                                                <td><button class="btn" id = "SignInSmall">Withdraw</button></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </table>
+                                                </div>
+                                        {/* ///// */}
+                                        <br></br>
+                                    </div>
+                                    <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+                                </div>
                         </div>
                     </div>
                 </div>

@@ -17,11 +17,22 @@ export default function App() {
 
   const handleClick = () => {
     let someCondition = 0;
+    let teacherCondition = 0;
     if (value==="22k-5018" && password==="123") {
       someCondition=1;
     }
+    if (value==="hadi.shahid" && password==="123") {
+      teacherCondition=1;
+    }
     if (someCondition) {
       navigate('/home');
+    }else{
+      console.log('Error');
+      console.log(value);
+      console.log(password);
+    }
+    if (teacherCondition) {
+      navigate('/Thome');
     }else{
       console.log('Error');
       console.log(value);

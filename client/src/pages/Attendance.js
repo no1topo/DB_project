@@ -23,14 +23,6 @@ export default function Attendance(){
 
 
 
-
-
-
-
-
-
-
-
     const NavLogin = () => {
           navigate('/');
     };

@@ -102,7 +102,86 @@ export default function Feedback(){
                             </a>
                         </div>
                         <div class="col-md-11">
-                        <p>this is hOME</p>
+                        <div class="container-fluid">
+                                <h4>Feedback  | 
+                                </h4>
+                                <br></br>
+                                <div class="HomeTextBox">
+                                    <div class = "HomeHeaderBox">
+                                        <h5 class = "fa fa-file-text-o HomeHeaderText"> Course Feedback</h5>
+                                    </div>
+                                    <br></br>
+                                    {/* TABLE */}
+                                    <div class="table-responsive">
+                                                <table class="table">
+                                                    <table class="table table-hover">
+                                                        <thead class="TableHeader">
+                                                            <tr>
+                                                            <th scope="col">S.No</th>
+                                                            <th scope="col">Code</th>
+                                                            <th scope="col">Course Name</th>
+                                                            <th scope="col">Credits</th>
+                                                            <th scope="col">Feedback</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                            <th scope="row">1</th>
+                                                            <td>Fall 2024</td>
+                                                            <td>124247274</td>
+                                                            <td>Paid Bank Challan</td>
+                                                            <td><div class="input-group">
+                                                            <div class="input-group-prepend">
+                                                                <button class="btn" id = "SignInSmall">Submit</button>
+                                                            </div>
+                                                            <textarea class="form-control" aria-label="With textarea"></textarea>
+                                                            </div></td>
+                                                            </tr>
+                                                            <tr>
+                                                            <th scope="row">2</th>
+                                                            <td>Fall 2024</td>
+                                                            <td>124247274</td>
+                                                            <td>Paid Bank Challan</td>
+                                                            <td><div class="input-group">
+                                                            <div class="input-group-prepend">
+                                                                <button class="btn" id = "SignInSmall">Submit</button>
+                                                            </div>
+                                                            <textarea class="form-control" aria-label="With textarea"></textarea>
+                                                            </div></td>
+                                                            </tr>
+                                                            <tr>
+                                                            <th scope="row">3</th>  
+                                                            <td>Fall 2024</td>
+                                                            <td>124247274</td>
+                                                            <td>Paid Bank Challan</td>
+                                                            <td><div class="input-group">
+                                                            <div class="input-group-prepend">
+                                                                <button class="btn" id = "SignInSmall">Submit</button>
+                                                            </div>
+                                                            <textarea class="form-control" aria-label="With textarea"></textarea>
+                                                            </div></td> 
+                                                            </tr>
+                                                            <tr>
+                                                            <th scope="row">4</th>
+                                                            <td>Fall 2024</td>
+                                                            <td>124247274</td>
+                                                            <td>Paid Bank Challan</td>
+                                                            <td><div class="input-group">
+                                                            <div class="input-group-prepend">
+                                                                <button class="btn" id = "SignInSmall">Submit</button>
+                                                            </div>
+                                                            <textarea class="form-control" aria-label="With textarea"></textarea>
+                                                            </div></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </table>
+                                            </div>
+                                    {/* ///// */}
+                                    <br></br>
+                                </div>
+                                <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+                            </div>
                         </div>
                     </div>
                 </div>
