@@ -24,9 +24,6 @@
     position: sticky;
 }
 
-.leftBarAttendance{
-    height: 100vh;
-}
 
 .leftBarButtons:hover{
     color: #b7a25e;

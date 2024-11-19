@@ -65,27 +65,27 @@ export default function MarksReport(){
                             <br></br>
                             <a class="leftBarButtons" href="#" onClick={()=>NavCourseManage()}><span class="fa fa-list-alt HomeIcon">
                             </span>
-                            <p class="FontLeftBar">Course Registration</p>
+                            <p class="FontLeftBar">Manage Courses</p>
                             </a>
                             <br></br>
                             <a class="leftBarButtons" href="#" onClick={()=>NavAttendanceManage()}><span class="fa fa-id-card-o HomeIcon">
                             </span>
-                            <p class="FontLeftBar">Attendance</p>
+                            <p class="FontLeftBar">Manage Attendance</p>
                             </a>
                             <br></br>
                             <a class="leftBarButtons" href="#" onClick={()=>NavMarksDistribution()}><span class="fa fa fa-pencil-square-o HomeIcon">
                             </span>
-                            <p class="FontLeftBar">Marks</p>
+                            <p class="FontLeftBar">Distribute Marks</p>
                             </a>
                             <br></br>
                             <a class="leftBarButtons" href="#" onClick={()=>NavMarksReport()}><span class="fa fa-newspaper-o HomeIcon">
                             </span>
-                            <p class="FontLeftBar">Transcript</p>
+                            <p class="FontLeftBar">Marks Report</p>
                             </a>
                             <br></br>
                             <a class="leftBarButtons" href="#" onClick={()=>NavFeedbackManage()}><span class="fa fa-file-text-o HomeIcon">
                             </span>
-                            <p class="FontLeftBar">Course Feedback</p>
+                            <p class="FontLeftBar">View Feedback</p>
                             </a>
                             <br></br>
                         </div>
