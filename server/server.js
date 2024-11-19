@@ -80,7 +80,17 @@ app.post('/api/register', async (req, res) => {
 // Routes
 app.get('/api/data', async (req, res) => {
     try {
-        const result = await pool.query('SELECT * FROM public."Student";');
+        const result = await pool.query(
+            'SELECT "Lecture_Date"::DATE,"Status","SNo","Duration" FROM public."Attendance";'
+        );
+
+        // Properly loop through result.rows and format the date
+        for (let row of result.rows) {
+            if (row.Lecture_Date) {
+                row.Lecture_Date = row.Lecture_Date.toISOString().split('T')[0];
+            }
+        }
+
         res.json(result.rows);
         // console.log(json(result.rows));
     } catch (error) {

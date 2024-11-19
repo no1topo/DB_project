@@ -141,17 +141,6 @@ export default function Attendance(){
                                     </div>
                                     <div class="col-md-5"></div>
                                 </div>
-                                {/* aheed testing */}
-                                <ul>
-                                {data.map(data=>(
-                                    <tr>
-                                        <td>{data.Std_id}</td>
-                                        <td>{data.Name}</td>
-                                        <td>{data.Email}</td>
-                                    </tr>
-                                ))}
-                                </ul>
-                                {/* aheed testing */}
                                 {/* ///////////////////////////////////////Registered Courses///////////////////////////////////////// */}
                                 <div>
                                     <h2>Registered Courses</h2>
@@ -193,35 +182,12 @@ export default function Attendance(){
                                                         <tbody>
                                                         {data.map(data=>(
                                                                 <tr>
-                                                                    <td>{data.Std_id}</td>
-                                                                    <td>{data.Name}</td>
-                                                                    <td>{data.Email}</td>
+                                                                    <td>{data.SNo}</td>
+                                                                    <td>{data.Lecture_Date}</td>
+                                                                    <td>{data.Duration}</td>
+                                                                    <td>{data.Status}</td>
                                                                 </tr>
                                                             ))}
-                                                            <tr>
-                                                            <th scope="row">1</th>
-                                                            <td>19-Aug-2024</td>
-                                                            <td>3</td>
-                                                            <td>A</td>
-                                                            </tr>
-                                                            <tr>
-                                                            <th scope="row">2</th>
-                                                            <td>20-Aug-2024</td>
-                                                            <td>1</td>
-                                                            <td>P</td>
-                                                            </tr>
-                                                            <tr>
-                                                            <th scope="row">3</th>   
-                                                            <td>21-Aug-2024</td>
-                                                            <td>1.5</td>
-                                                            <td>P</td>
-                                                            </tr>
-                                                            <tr>
-                                                            <th scope="row">1</th>
-                                                            <td>19-Aug-2024</td>
-                                                            <td>3</td>
-                                                            <td>A</td>
-                                                            </tr>
                                                         </tbody>
                                                     </table>
                                                 </table>
@@ -241,24 +207,6 @@ export default function Attendance(){
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                            <tr>
-                                                            <th scope="row">1</th>
-                                                            <td>19-Aug-2024</td>
-                                                            <td>3</td>
-                                                            <td>A</td>
-                                                            </tr>
-                                                            <tr>
-                                                            <th scope="row">2</th>
-                                                            <td>20-Aug-2024</td>
-                                                            <td>1</td>
-                                                            <td>P</td>
-                                                            </tr>
-                                                            <tr>
-                                                            <th scope="row">3</th>   
-                                                            <td>21-Aug-2024</td>
-                                                            <td>1.5</td>
-                                                            <td>P</td>
-                                                            </tr>
                                                         </tbody>
                                                     </table>
                                                 </table>
@@ -278,24 +226,6 @@ export default function Attendance(){
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                            <tr>
-                                                            <th scope="row">1</th>
-                                                            <td>19-Aug-2024</td>
-                                                            <td>3</td>
-                                                            <td>A</td>
-                                                            </tr>
-                                                            <tr>
-                                                            <th scope="row">2</th>
-                                                            <td>20-Aug-2024</td>
-                                                            <td>1</td>
-                                                            <td>P</td>
-                                                            </tr>
-                                                            <tr>
-                                                            <th scope="row">3</th>   
-                                                            <td>21-Aug-2024</td>
-                                                            <td>1.5</td>
-                                                            <td>P</td>
-                                                            </tr>
                                                         </tbody>
                                                     </table>
                                                 </table>
@@ -315,24 +245,6 @@ export default function Attendance(){
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                            <tr>
-                                                            <th scope="row">1</th>
-                                                            <td>19-Aug-2024</td>
-                                                            <td>3</td>
-                                                            <td>A</td>
-                                                            </tr>
-                                                            <tr>
-                                                            <th scope="row">2</th>
-                                                            <td>20-Aug-2024</td>
-                                                            <td>1</td>
-                                                            <td>P</td>
-                                                            </tr>
-                                                            <tr>
-                                                            <th scope="row">3</th>   
-                                                            <td>21-Aug-2024</td>
-                                                            <td>1.5</td>
-                                                            <td>P</td>
-                                                            </tr>
                                                         </tbody>
                                                     </table>
                                                 </table>
