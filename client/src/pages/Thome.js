@@ -65,32 +65,124 @@ export default function THome(){
                             <br></br>
                             <a class="leftBarButtons" href="#" onClick={()=>NavCourseManage()}><span class="fa fa-list-alt HomeIcon">
                             </span>
-                            <p class="FontLeftBar">Course Registration</p>
+                            <p class="FontLeftBar">Manage Courses</p>
                             </a>
                             <br></br>
                             <a class="leftBarButtons" href="#" onClick={()=>NavAttendanceManage()}><span class="fa fa-id-card-o HomeIcon">
                             </span>
-                            <p class="FontLeftBar">Attendance</p>
+                            <p class="FontLeftBar">Manage Attendance</p>
                             </a>
                             <br></br>
                             <a class="leftBarButtons" href="#" onClick={()=>NavMarksDistribution()}><span class="fa fa fa-pencil-square-o HomeIcon">
                             </span>
-                            <p class="FontLeftBar">Marks</p>
+                            <p class="FontLeftBar">Distribute Marks</p>
                             </a>
                             <br></br>
                             <a class="leftBarButtons" href="#" onClick={()=>NavMarksReport()}><span class="fa fa-newspaper-o HomeIcon">
                             </span>
-                            <p class="FontLeftBar">Transcript</p>
+                            <p class="FontLeftBar">Marks Report</p>
                             </a>
                             <br></br>
                             <a class="leftBarButtons" href="#" onClick={()=>NavFeedbackManage()}><span class="fa fa-file-text-o HomeIcon">
                             </span>
-                            <p class="FontLeftBar">Course Feedback</p>
+                            <p class="FontLeftBar">View Feedback</p>
                             </a>
                             <br></br>
                         </div>
                         <div class="col-md-11">
-                            
+                        <div class="container-fluid">
+                                <h4>Teacher Profile  | Home
+                                </h4>
+                                <br></br>
+                                <div class="container-fluid">
+                                    {/* University Information */}
+                                    <div class="HomeTextBox">
+                                        <div class = "HomeHeaderBox">
+                                            <h5 class = "fa fa-university HomeHeaderText"> University Information</h5>
+                                        </div>
+                                        <br></br>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="row">
+                                                    <div class="col-md-2"></div>
+                                                    <div class="col-md-10">
+                                                        <p><b>Roll No:</b> 22K-5024</p>
+                                                        <p><b>Section:</b> BCS-5M</p>
+                                                    </div>
+                                                </div>  
+                                            </div>
+                                            <div class="col-md-4">
+                                                <p><b>Degree:</b> BS(CS) (Robotics & Automation)</p>
+                                                <p><b>Campus:</b> Karachi</p>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <p><b>Batch:</b> Fall 2022</p>
+                                                <p><b>Status:</b> Current</p>
+                                            </div>
+                                        </div>
+                                        <br></br>
+                                    </div>
+                                    {/* Personal Information */}
+                                    <br></br>
+                                    <div class="HomeTextBox">
+                                        <div class = "HomeHeaderBox">
+                                            <h5 class = "fa fa-id-badge HomeHeaderText"> Personal Information</h5>
+                                        </div>
+                                        <br></br>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="row">
+                                                    <div class="col-md-2"></div>
+                                                    <div class="col-md-10">
+                                                        <p><b>Name:</b> Hadi</p>
+                                                        <p><b>Gender:</b> Male</p>
+                                                        <p><b>Email:</b> k225024@nu.edu.pk</p>
+                                                    </div>
+                                                </div>  
+                                            </div>
+                                            <div class="col-md-4">
+                                                <p><b>DOB:</b>  9/6/2002</p>
+                                                <p><b>CNIC:</b> 42000-2232150-3</p>
+                                                <p><b>Mobile No:</b> 0331-3678902</p>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <p><b>Blood Group:</b> 0</p>
+                                                <p><b>Nationality: </b> Pakistani</p>
+                                            </div>
+                                        </div>
+                                        <br></br>
+                                    </div>
+                                    {/* Contact Information */}
+                                    <br></br>
+                                    <div class="HomeTextBox">
+                                        <div class = "HomeHeaderBox">
+                                            <h5 class = "fa fa-mobile HomeHeaderText"> Contact Information</h5>
+                                        </div>
+                                        <br></br>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="row">
+                                                    <div class="col-md-2"></div>
+                                                    <div class="col-md-10">
+                                                        <h4><b>Permanent:</b></h4>
+                                                        <p><b>Address:</b> Nazimbad No 2 2A-6/2A Karachi</p>
+                                                        <p><b>City:</b> Karachi</p>
+                                                        <p><b>Country:</b> Pakistan</p>
+                                                    </div>
+                                                </div>  
+                                            </div>
+                                            <div class="col-md-6">
+                                            <h4><b>Current:</b></h4>
+                                            <p><b>Address:</b> Nazimbad No 2 2A-6/2A Karachi</p>
+                                            <p><b>City:</b> Karachi</p>
+                                            <p><b>Country:</b> Pakistan</p>
+                                            </div>
+                                        </div>
+                                        <br></br>
+                                    </div>
+                                    <br></br><br></br>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

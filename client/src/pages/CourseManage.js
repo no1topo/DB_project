@@ -65,32 +65,91 @@ export default function CourseManage(){
                             <br></br>
                             <a class="leftBarButtons" href="#" onClick={()=>NavCourseManage()}><span class="fa fa-list-alt HomeIcon">
                             </span>
-                            <p class="FontLeftBar">Course Registration</p>
+                            <p class="FontLeftBar">Manage Courses</p>
                             </a>
                             <br></br>
                             <a class="leftBarButtons" href="#" onClick={()=>NavAttendanceManage()}><span class="fa fa-id-card-o HomeIcon">
                             </span>
-                            <p class="FontLeftBar">Attendance</p>
+                            <p class="FontLeftBar">Manage Attendance</p>
                             </a>
                             <br></br>
                             <a class="leftBarButtons" href="#" onClick={()=>NavMarksDistribution()}><span class="fa fa fa-pencil-square-o HomeIcon">
                             </span>
-                            <p class="FontLeftBar">Marks</p>
+                            <p class="FontLeftBar">Distribute Marks</p>
                             </a>
                             <br></br>
                             <a class="leftBarButtons" href="#" onClick={()=>NavMarksReport()}><span class="fa fa-newspaper-o HomeIcon">
                             </span>
-                            <p class="FontLeftBar">Transcript</p>
+                            <p class="FontLeftBar">Marks Report</p>
                             </a>
                             <br></br>
                             <a class="leftBarButtons" href="#" onClick={()=>NavFeedbackManage()}><span class="fa fa-file-text-o HomeIcon">
                             </span>
-                            <p class="FontLeftBar">Course Feedback</p>
+                            <p class="FontLeftBar">View Feedback</p>
                             </a>
                             <br></br>
                         </div>
                         <div class="col-md-11">
-                            
+                        <div class="container-fluid">
+                                    <h4>Withdraw  | 
+                                    </h4>
+                                    <br></br>
+                                    <div class="HomeTextBox">
+                                        <div class = "HomeHeaderBox">
+                                            <h5 class = "fa fa-list-alt HomeHeaderText"> Manage Courses</h5>
+                                        </div>
+                                        <br></br>
+                                        {/* TABLE */}
+                                        <div class="table-responsive">
+                                                    <table class="table">
+                                                        <table class="table table-hover">
+                                                            <thead class="TableHeader">
+                                                                <tr>
+                                                                <th scope="col">S.No</th>
+                                                                <th scope="col">Code</th>
+                                                                <th scope="col">Course Name</th>
+                                                                <th scope="col">Available</th>
+                                                                <th scope="col">Open Registration</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                <th scope="row">1</th>
+                                                                <td>Fall 2024</td>
+                                                                <td>124247274</td>
+                                                                <td>Paid Bank Challan</td>
+                                                                <td><button class="btn" id = "SignInSmall">Register</button></td>
+                                                                </tr>
+                                                                <tr>
+                                                                <th scope="row">2</th>
+                                                                <td>Fall 2024</td>
+                                                                <td>124247274</td>
+                                                                <td>Paid Bank Challan</td>
+                                                                <td><button class="btn" id = "SignInSmall">Register</button></td>
+                                                                </tr>
+                                                                <tr>
+                                                                <th scope="row">3</th>  
+                                                                <td>Fall 2024</td>
+                                                                <td>124247274</td>
+                                                                <td>Paid Bank Challan</td>
+                                                                <td><button class="btn" id = "SignInSmall">Register</button></td>
+                                                                </tr>
+                                                                <tr>
+                                                                <th scope="row">4</th>
+                                                                <td>Fall 2024</td>
+                                                                <td>124247274</td>
+                                                                <td>Paid Bank Challan</td>
+                                                                <td><button class="btn" id = "SignInSmall">Register</button></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </table>
+                                                </div>
+                                        {/* ///// */}
+                                        <br></br>
+                                    </div>
+                                    <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+                                </div>
                         </div>
                     </div>
                 </div>
