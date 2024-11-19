@@ -2,43 +2,50 @@ import React,{Fragment, useState} from 'react';
 import './App.css';
 import logo from '../src/images/Flex.PNG'
 import { useNavigate } from "react-router-dom";
+import axios from 'axios';
 
 
 export default function App() {
   let navigate = useNavigate();
-  const [value, setValue] = useState("");
+  const [username, setUsername] = useState("");
   const [password,setPassword] = useState("");
-  function handleChange(e) {
-    setValue(e.target.value);
-  }
-  function handleChange1(e) {
-    setPassword(e.target.value);
-  }
+  // function handleChange(e) {
+  //   setUsername(e.target.value);
+  // }
+  // function handleChange1(e) {
+  //   setPassword(e.target.value);
+  // }
 
-  const handleClick = () => {
-    let someCondition = 0;
-    let teacherCondition = 0;
-    if (value==="22k-5018" && password==="123") {
-      someCondition=1;
-    }
-    if (value==="hadi.shahid" && password==="123") {
-      teacherCondition=1;
-    }
-    if (someCondition) {
-      navigate('/home');
-    }else{
-      console.log('Error');
-      console.log(value);
-      console.log(password);
-    }
-    if (teacherCondition) {
-      navigate('/Thome');
-    }else{
-      console.log('Error');
-      console.log(value);
-      console.log(password);
-    }
-  };
+  const handleClick = async (e) => {
+    // let teacherCondition = 0;
+    e.preventDefault();
+  
+    try {
+      const response = await axios.post('http://localhost:5000/api/login', {
+          username,
+          password,
+      });
+      // console.log(username,password);
+      // console.log('Response from server:', response.data,response.status,response.message); // Log the response
+      
+      if (response.status===200) {
+        // navigate('/home');
+        navigate('/Thome');
+      }else{
+        console.log('Error');
+        console.log(username);  
+        console.log(password);
+      }
+      // if (teacherCondition) {
+      //   navigate('/Thome');
+      // }else{
+      //   console.log('Error');
+      //   console.log(username);
+      //   console.log(password);
+      // }
+  } catch (error) {
+    console.error('Error during login:', error.response?.data?.message || error.message);
+  }};
   
 
 
@@ -65,14 +72,14 @@ export default function App() {
 
                     </div>
                     <div className="col-md-8">
-                        <form>
+                        <form onSubmit={handleClick}>
                             <div className="form-group">
                               <label htmlFor="exampleInputEmail1">Roll No</label>
                               <div className="input-group">
                                 <div className="input-group-addon" style={{padding: "10px"}}>
                                 <span className="fa fa-user-o"></span> 
                             </div>
-                              <input type="text" value={value} onChange={handleChange} className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Roll Number i.e (17I-1234)"></input>
+                              <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Roll Number i.e (17I-1234)"></input>
                             </div>
                               <small id="emailHelp" className="form-text text-muted">Roll Number i.e (17I-1234)</small>
                             </div>
@@ -82,7 +89,7 @@ export default function App() {
                                 <div className="input-group-addon" style={{padding: "10px"}} >
                                  <span className="fa fa-lock"></span> 
                                 </div>
-                              <input type="password" value={password} onChange={handleChange1} className="form-control" id="exampleInputPassword1" placeholder="Password"></input>
+                              <input type="password" value={password} onChange={(e)=> setPassword(e.target.value)} className="form-control" id="exampleInputPassword1" placeholder="Password"></input>
                               </div>
                             </div>
                             <div className="form-check">
@@ -93,7 +100,7 @@ export default function App() {
                             </div>
                             <br></br><br></br>
                             <div className="text-center">
-                            <button onClick={()=>handleClick()} type="submit" className="btn btn-primary" id="SignIn">Sign In</button>
+                            <button /*onClick={()=>handleClick()}*/ type="submit" className="btn btn-primary" id="SignIn">Sign In</button>
                             </div>
                         </form>
                     </div>

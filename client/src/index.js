@@ -18,6 +18,7 @@ import MarksReport from './pages/MarksReport';
 import AttendanceManage from './pages/AttendanceManage';
 import FeedbackManage from './pages/FeedbackManage';
 import CourseManage from './pages/CourseManage';
+import Register from './pages/Register';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -27,8 +28,10 @@ root.render(
     </BrowserRouter> */}
     <Router>
           <Routes>
-                <Route path="/" element={<App />} />
+                
+                <Route path="/Register" element={<Register />} />
                 <Route path="/Home" element={<Home />} />
+                <Route path="/" element={<App />} />
                 <Route path="/CourseReg" element={<CourseReg />} />
                 <Route path="/Attendance" element={<Attendance />} />
                 <Route path="/Challan" element={<Challan />} />
