@@ -6,21 +6,87 @@ import axios from 'axios';
 export default function Attendance(){
     let navigate = useNavigate();
     const [data, setData] = useState([]);
+    const [stdid, setstdid] = useState('');
+    const [pills, setPills] = useState([]);
     
+    const get_id_student = async () =>{
+        
+        try {
+            const response = await axios.get('http://localhost:5000/api/id');
+            setstdid(response.data[0].Username);
+            // console.log(response.data[0].Username);
+        } catch (error) {
+            console.error('Error fetching string:', error);
+        }
+
+
+    }
+
     const fetchData = async () => {
         try {
             const response = await axios.get('http://localhost:5000/api/data');
-            console.log(response.data);
+            //console.log(pills[0].label);
             setData(response.data);
+            //console.log(response.data);
+            // console.log(data.filter(data => data.Course_ID));
+            const response_couse = await axios.get('http://localhost:5000/api/data/couse');
+           // console.log('First Course ID:', response_couse.data[0]?.Course_ID);
+            setPills(response_couse.data);
+            localStorage.setItem('pills', JSON.stringify(response_couse.data));
+            pills[1]={Course_ID:'CS-401', ID:1};
+            
         } catch (error) {
             console.error('Error fetching data:', error);
         }
     };
+
+    const renderAttendanceTabs = () => {
+        
+        return pills.map((courseId, index) => {
+            // Filter attendance data for the current course ID
+            const courseAttendance = data.filter(
+                (record) => record.Course_ID === courseId.Course_ID
+            );
+    
+            return (
+                <div id={`menu${index + 1}`} className="tab-pane fade" key={index}>
+                    <h3>{courseId.Course_ID}</h3>
+                    <div className="table-responsive">
+                        <table className="table">
+                            <thead className="TableHeader">
+                                <tr>
+                                    <th scope="col">Lecture No</th>
+                                    <th scope="col">Date</th>
+                                    <th scope="col">Duration</th>
+                                    <th scope="col">Presence</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {courseAttendance.map((record, i) => (
+                                    <tr key={i}>
+
+                                        <td>{i+1}</td>
+                                        <td>{record.Lecture_Date}</td>
+                                        <td>{record.Duration}</td>
+                                        <td>{record.Status}</td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            );
+        });
+    };
     
     useEffect(() => {
+        get_id_student();
         fetchData();
     }, []);
 
+    useEffect(() => {
+    }, [pills]);
+    
 
 
     const NavLogin = () => {
@@ -142,13 +208,12 @@ export default function Attendance(){
                                     <div class="col-md-5"></div>
                                 </div>
                                 {/* ///////////////////////////////////////Registered Courses///////////////////////////////////////// */}
-                                <div>
                                     <h2>Registered Courses</h2>
                                     <ul class="nav nav-pills">
-                                        <li class="nav-item" >
-                                        <a class="nav-link active" data-toggle="pill" href="#home" >CL2005</a>
+                                        <li class="nav-item">
+                                        <a class="nav-link active" data-toggle="pill" href="#home">CL2005</a>
                                         </li>
-                                        <li class="nav-item ">
+                                        <li class="nav-item">
                                         <a class="nav-link" data-toggle="pill" href="#menu1">CL2006</a>
                                         </li>
                                         <li class="nav-item">
@@ -253,10 +318,10 @@ export default function Attendance(){
                                     </div>
                                 </div>
                                 {/* ////////////////////////// */}
-                                <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
-                            </div>
+                            <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
                         </div>
                     </div>
+                </div>
                 </div>
             </div>
     );

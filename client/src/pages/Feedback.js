@@ -1,9 +1,103 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './home.css';
 import { useNavigate } from "react-router-dom";
+import axios from 'axios';
 
 export default function Feedback(){
     let navigate = useNavigate();
+    const [data, setData] = useState([]);
+    const [pills, setPills] = useState([]);
+    const [feedback, setFeedback] = useState({});
+
+    const fetchData = async () => {
+        try {
+            
+            const response_couse = await axios.get('http://localhost:5000/api/feedback/course');
+           // console.log('First Course ID:', response_couse.data[0]?.Course_ID);
+            setPills(response_couse.data);
+            localStorage.setItem('pills', JSON.stringify(response_couse.data));
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    };
+
+    const handleInputChange = (id, value) => {
+        setFeedback((prev) => ({
+            ...prev,
+            [id]: value, // Store response by question ID
+        }));
+    };
+
+    const handleSubmit = async () =>{
+        try {
+            const response = await axios.post('http://localhost:5000/api/feedback',feedback);
+            console.log("Feedback submitted successfully:", response.data);
+            //console.log(response.data);
+            // console.log(data.filter(data => data.Course_ID));
+        } catch (error) {
+            console.error("Error submitting feedback:", error);
+            alert("Failed to submit feedback. Please try again.");
+        }
+    };
+
+
+    const renderFeedbackTabs = () =>{
+        return pills.map((couseid,index)=>{
+        
+        return(
+            <tr>
+            <th scope="row">{index+1}</th>
+            <td>{couseid.Courses_Course_ID}</td>
+            <td>{couseid.Course_Name}</td>
+            <td>{null}</td>
+            <td><div class="input-group">
+            
+            <form onSubmit={handleSubmit}>
+            <div className='row' key={couseid.Courses_Course_ID}>
+                <div className='col-md-4' >
+                    <button class="btn" id = "SignInSmall" >Submit</button>
+                </div>
+                
+                <div className='col-md-8'>
+                    <textarea 
+                    class="form-control" 
+                    aria-label="With textarea" 
+                    id={`feedback-${couseid.Courses_Course_ID}`}
+                    value={feedback[couseid.Courses_Course_ID] || ""}
+                    onChange={(e) => handleInputChange(couseid.Courses_Course_ID, e.target.value)}
+                    ></textarea>  
+                </div>
+            </div>
+            </form>
+            </div></td>
+            </tr>
+        );
+
+
+        });
+    };
+
+    useEffect(() => {
+        fetchData();
+    }, []);
+    useEffect(() => {
+    }, [pills]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     const NavLogin = () => {
           navigate('/');
     };
@@ -125,6 +219,7 @@ export default function Feedback(){
                                                             </tr>
                                                         </thead>
                                                         <tbody>
+<<<<<<< HEAD
                                                             <tr>
                                                             <th scope="row">1</th>
                                                             <td>Fall 2024</td>
@@ -179,6 +274,10 @@ export default function Feedback(){
                                                             <textarea class="form-control" aria-label="With textarea"></textarea>
                                                             </div></td>
                                                             </tr>
+=======
+                                                            {renderFeedbackTabs()}
+                                                            
+>>>>>>> 6bca6507bd1a662619bbdd6c2204da95519ea66e
                                                         </tbody>
                                                     </table>
                                                 </table>
