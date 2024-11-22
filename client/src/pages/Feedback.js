@@ -1,9 +1,103 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './home.css';
 import { useNavigate } from "react-router-dom";
+import axios from 'axios';
 
 export default function Feedback(){
     let navigate = useNavigate();
+    const [data, setData] = useState([]);
+    const [pills, setPills] = useState([]);
+    const [feedback, setFeedback] = useState({});
+
+    const fetchData = async () => {
+        try {
+            
+            const response_couse = await axios.get('http://localhost:5000/api/feedback/course');
+           // console.log('First Course ID:', response_couse.data[0]?.Course_ID);
+            setPills(response_couse.data);
+            localStorage.setItem('pills', JSON.stringify(response_couse.data));
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    };
+
+    const handleInputChange = (id, value) => {
+        setFeedback((prev) => ({
+            ...prev,
+            [id]: value, // Store response by question ID
+        }));
+    };
+
+    const handleSubmit = async () =>{
+        try {
+            const response = await axios.post('http://localhost:5000/api/feedback',feedback);
+            console.log("Feedback submitted successfully:", response.data);
+            //console.log(response.data);
+            // console.log(data.filter(data => data.Course_ID));
+        } catch (error) {
+            console.error("Error submitting feedback:", error);
+            alert("Failed to submit feedback. Please try again.");
+        }
+    };
+
+
+    const renderFeedbackTabs = () =>{
+        return pills.map((couseid,index)=>{
+        
+        return(
+            <tr>
+            <th scope="row">{index+1}</th>
+            <td>{couseid.Courses_Course_ID}</td>
+            <td>{couseid.Course_Name}</td>
+            <td>{null}</td>
+            <td><div class="input-group">
+            
+            <form onSubmit={handleSubmit}>
+            <div className='row' key={couseid.Courses_Course_ID}>
+                <div className='col-md-4' >
+                    <button class="btn" id = "SignInSmall" >Submit</button>
+                </div>
+                
+                <div className='col-md-8'>
+                    <textarea 
+                    class="form-control" 
+                    aria-label="With textarea" 
+                    id={`feedback-${couseid.Courses_Course_ID}`}
+                    value={feedback[couseid.Courses_Course_ID] || ""}
+                    onChange={(e) => handleInputChange(couseid.Courses_Course_ID, e.target.value)}
+                    ></textarea>  
+                </div>
+            </div>
+            </form>
+            </div></td>
+            </tr>
+        );
+
+
+        });
+    };
+
+    useEffect(() => {
+        fetchData();
+    }, []);
+    useEffect(() => {
+    }, [pills]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     const NavLogin = () => {
           navigate('/');
     };
@@ -125,54 +219,8 @@ export default function Feedback(){
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                            <tr>
-                                                            <th scope="row">1</th>
-                                                            <td>Fall 2024</td>
-                                                            <td>124247274</td>
-                                                            <td>Paid Bank Challan</td>
-                                                            <td><div class="input-group">
-                                                            <div class="input-group-prepend">
-                                                                <button class="btn" id = "SignInSmall">Submit</button>
-                                                            </div>
-                                                            <textarea class="form-control" aria-label="With textarea"></textarea>
-                                                            </div></td>
-                                                            </tr>
-                                                            <tr>
-                                                            <th scope="row">2</th>
-                                                            <td>Fall 2024</td>
-                                                            <td>124247274</td>
-                                                            <td>Paid Bank Challan</td>
-                                                            <td><div class="input-group">
-                                                            <div class="input-group-prepend">
-                                                                <button class="btn" id = "SignInSmall">Submit</button>
-                                                            </div>
-                                                            <textarea class="form-control" aria-label="With textarea"></textarea>
-                                                            </div></td>
-                                                            </tr>
-                                                            <tr>
-                                                            <th scope="row">3</th>  
-                                                            <td>Fall 2024</td>
-                                                            <td>124247274</td>
-                                                            <td>Paid Bank Challan</td>
-                                                            <td><div class="input-group">
-                                                            <div class="input-group-prepend">
-                                                                <button class="btn" id = "SignInSmall">Submit</button>
-                                                            </div>
-                                                            <textarea class="form-control" aria-label="With textarea"></textarea>
-                                                            </div></td> 
-                                                            </tr>
-                                                            <tr>
-                                                            <th scope="row">4</th>
-                                                            <td>Fall 2024</td>
-                                                            <td>124247274</td>
-                                                            <td>Paid Bank Challan</td>
-                                                            <td><div class="input-group">
-                                                            <div class="input-group-prepend">
-                                                                <button class="btn" id = "SignInSmall">Submit</button>
-                                                            </div>
-                                                            <textarea class="form-control" aria-label="With textarea"></textarea>
-                                                            </div></td>
-                                                            </tr>
+                                                            {renderFeedbackTabs()}
+                                                            
                                                         </tbody>
                                                     </table>
                                                 </table>
