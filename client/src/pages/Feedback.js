@@ -134,7 +134,9 @@ export default function Feedback(){
                                                             <div class="input-group-prepend">
                                                                 <button class="btn" id = "SignInSmall">Submit</button>
                                                             </div>
+                                                            <form>
                                                             <textarea class="form-control" aria-label="With textarea"></textarea>
+                                                            </form>
                                                             </div></td>
                                                             </tr>
                                                             <tr>
@@ -146,7 +148,9 @@ export default function Feedback(){
                                                             <div class="input-group-prepend">
                                                                 <button class="btn" id = "SignInSmall">Submit</button>
                                                             </div>
-                                                            <textarea class="form-control" aria-label="With textarea"></textarea>
+                                                            <form>
+                                                            <textarea class="form-control" aria-label="With textarea" width="100"></textarea>
+                                                            </form>
                                                             </div></td>
                                                             </tr>
                                                             <tr>
@@ -158,7 +162,9 @@ export default function Feedback(){
                                                             <div class="input-group-prepend">
                                                                 <button class="btn" id = "SignInSmall">Submit</button>
                                                             </div>
+                                                            <form>
                                                             <textarea class="form-control" aria-label="With textarea"></textarea>
+                                                            </form>
                                                             </div></td> 
                                                             </tr>
                                                             <tr>
