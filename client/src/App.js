@@ -29,8 +29,8 @@ export default function App() {
       // console.log('Response from server:', response.data,response.status,response.message); // Log the response
       
       if (response.status===200) {
-        // navigate('/home');
-        navigate('/Thome');
+        navigate('/home');
+        // navigate('/Thome');
       }else{
         console.log('Error');
         console.log(username);  

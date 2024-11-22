@@ -145,10 +145,10 @@ export default function Attendance(){
                                 <div>
                                     <h2>Registered Courses</h2>
                                     <ul class="nav nav-pills">
-                                        <li class="nav-item">
-                                        <a class="nav-link active" data-toggle="pill" href="#home">CL2005</a>
+                                        <li class="nav-item" >
+                                        <a class="nav-link active" data-toggle="pill" href="#home" >CL2005</a>
                                         </li>
-                                        <li class="nav-item">
+                                        <li class="nav-item ">
                                         <a class="nav-link" data-toggle="pill" href="#menu1">CL2006</a>
                                         </li>
                                         <li class="nav-item">
