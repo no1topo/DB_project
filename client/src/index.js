@@ -19,6 +19,7 @@ import AttendanceManage from './pages/AttendanceManage';
 import FeedbackManage from './pages/FeedbackManage';
 import CourseManage from './pages/CourseManage';
 import Register from './pages/Register';
+import Timetable from './pages/Timetable';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -28,7 +29,7 @@ root.render(
     </BrowserRouter> */}
     <Router>
           <Routes>
-                
+                <Route path="/Timetable" element={<Timetable />} />
                 <Route path="/Register" element={<Register />} />
                 <Route path="/Home" element={<Home />} />
                 <Route path="/" element={<App />} />

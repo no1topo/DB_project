@@ -112,7 +112,7 @@ export default function Marks(){
                 (record) => record.Course_ID === couseid.Course_ID
             );
         return(
-            <div id={`menu${index + 1}`} class="tab-pane fade">
+            <div id={`menu${index + 1}`} class="tab-pane fade active">
             
             {/* ///////////////collapsible box////////////////////// */}
             <div>
@@ -385,6 +385,7 @@ export default function Marks(){
                             </div>
                         </div>
                     </div>
+                    
                     {/* /////////////////// */}
                 </div>
             );
@@ -448,6 +449,9 @@ export default function Marks(){
     };
     const NavWithdraw = () => {
         navigate('/Withdraw');
+    };
+    const NavTimetable = () => {
+        navigate('/Timetable');
     };
     return(
         // __________________________________NAVBAR____________________________________________//       
@@ -518,6 +522,12 @@ export default function Marks(){
                             </span>
                             <p class="FontLeftBar">Course Withdraw</p>
                             </a>
+                            <br></br>
+                            <a class="leftBarButtons" href="#" onClick={()=>NavTimetable()}><span class="fa fa-calendar HomeIcon">
+                            </span>
+                            <p class="FontLeftBar">Timetable</p>
+                            </a>
+                            <br></br>
                         </div>
                         <div class="col-md-11">
                             <div class="container-fluid">
@@ -553,16 +563,10 @@ export default function Marks(){
                                         </ul>
                                         
                                         <div class="tab-content">
-                                            
                                         {rendereverything()}
-
-
-                                            
-                                            
-                                            
-                                            
+                                        
                                         </div>
-                                    </div>
+                                    </div>          
                                     {/* ////////////////////////// */}
                                 </div>
                         </div>

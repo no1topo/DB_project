@@ -87,7 +87,7 @@ export default function THome(){
                             </span>
                             <p class="FontLeftBar">View Feedback</p>
                             </a>
-                            <br></br>
+                            <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
                         </div>
                         <div class="col-md-11">
                         <div class="container-fluid">
@@ -106,17 +106,14 @@ export default function THome(){
                                                 <div class="row">
                                                     <div class="col-md-2"></div>
                                                     <div class="col-md-10">
-                                                        <p><b>Roll No:</b> 22K-5024</p>
-                                                        <p><b>Section:</b> BCS-5M</p>
+                                                        <p><b>Instructor ID:</b> 22K-5024</p>
                                                     </div>
                                                 </div>  
                                             </div>
                                             <div class="col-md-4">
-                                                <p><b>Degree:</b> BS(CS) (Robotics & Automation)</p>
                                                 <p><b>Campus:</b> Karachi</p>
                                             </div>
                                             <div class="col-md-4">
-                                                <p><b>Batch:</b> Fall 2022</p>
                                                 <p><b>Status:</b> Current</p>
                                             </div>
                                         </div>
@@ -180,7 +177,7 @@ export default function THome(){
                                         </div>
                                         <br></br>
                                     </div>
-                                    <br></br><br></br>
+                                    
                                 </div>
                             </div>
                         </div>

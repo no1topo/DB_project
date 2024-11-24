@@ -87,7 +87,7 @@ export default function CourseManage(){
                             </span>
                             <p class="FontLeftBar">View Feedback</p>
                             </a>
-                            <br></br>
+                            <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
                         </div>
                         <div class="col-md-11">
                         <div class="container-fluid">
@@ -148,7 +148,7 @@ export default function CourseManage(){
                                         {/* ///// */}
                                         <br></br>
                                     </div>
-                                    <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+                                    
                                 </div>
                         </div>
                     </div>

@@ -27,7 +27,7 @@ export default function AttendanceManage(){
     };
     const NavChangePassword = () => {
         navigate('/ChangePassword');
-    };
+    };   
     return(
         // __________________________________NAVBAR____________________________________________//       
             <div>
@@ -87,7 +87,7 @@ export default function AttendanceManage(){
                             </span>
                             <p class="FontLeftBar">View Feedback</p>
                             </a>
-                            <br></br>
+                            <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
                         </div>
                         <div class="col-md-11">
                         <div class="container-fluid">
@@ -115,108 +115,69 @@ export default function AttendanceManage(){
                                     <h2>Teaching Courses</h2>
                                     <ul class="nav nav-pills">
                                         <li class="nav-item">
-                                        <a class="nav-link active" data-toggle="pill" href="#home">CL2005</a>
+                                        <a class="nav-link" data-toggle="pill" href="#menu1">CL2005 Section BCS-5M</a>
                                         </li>
                                         <li class="nav-item">
-                                        <a class="nav-link" data-toggle="pill" href="#menu1">CL2006</a>
+                                        <a class="nav-link" data-toggle="pill" href="#menu2">CL2006 Section BCS-5M</a>
                                         </li>
-                                        <li class="nav-item">
-                                        <a class="nav-link" data-toggle="pill" href="#menu2">CL2007</a>
-                                        </li>
-                                        <li class="nav-item">
-                                        <a class="nav-link" data-toggle="pill" href="#menu3">CL2008</a>
-                                        </li>
-                                        <li class="nav-item">
-                                        <a class="nav-link" data-toggle="pill" href="#menu3">CL3004</a>
-                                        </li>
-                                        <li class="nav-item">
-                                        <a class="nav-link" data-toggle="pill" href="#menu3">CL3009</a>
-                                        </li>
+                                        <form>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Enter Date Here"></input>
+                                            <button className='btn' id='SignInSmall'>Enter</button>
+                                        </div>
+                                        </form>
                                     </ul>
                                     
                                     <div class="tab-content">
-                                        <div id="home" class="tab-pane fade show active">
-                                            <h3>CL2005</h3>
-                                            <div class="table-responsive">
-                                                <table class="table">
-                                                    <table class="table table-hover">
-                                                        <thead class="TableHeader">
-                                                            <tr>
-                                                            <th scope="col">Lecture No</th>
-                                                            <th scope="col">Date</th>
-                                                            <th scope="col">Duration</th>
-                                                            <th scope="col">Presence</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                            <th scope="row">1</th>
-                                                            <td>19-Aug-2024</td>
-                                                            <td>3</td>
-                                                            <td>A</td>
-                                                            </tr>
-                                                            <tr>
-                                                            <th scope="row">2</th>
-                                                            <td>20-Aug-2024</td>
-                                                            <td>1</td>
-                                                            <td>P</td>
-                                                            </tr>
-                                                            <tr>
-                                                            <th scope="row">3</th>   
-                                                            <td>21-Aug-2024</td>
-                                                            <td>1.5</td>
-                                                            <td>P</td>
-                                                            </tr>
-                                                            <tr>
-                                                            <th scope="row">1</th>
-                                                            <td>19-Aug-2024</td>
-                                                            <td>3</td>
-                                                            <td>A</td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </table>
-                                            </div>
-                                        </div>
                                         <div id="menu1" class="tab-pane fade">
-                                        <h3>CL2005</h3>
+                                            <h3>CL2005 Section BCS-5M</h3>
                                             <div class="table-responsive">
                                                 <table class="table">
                                                     <table class="table table-hover">
                                                         <thead class="TableHeader">
                                                             <tr>
-                                                            <th scope="col">Lecture No</th>
-                                                            <th scope="col">Date</th>
-                                                            <th scope="col">Duration</th>
-                                                            <th scope="col">Presence</th>
+                                                            <th scope="col">Student ID</th>
+                                                            <th scope="col">Student Name</th>
+                                                            <th scope="col">11/23/2024</th>
+                                                            <th scope="col">12/23/2024</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
                                                             <tr>
-                                                            <th scope="row">1</th>
-                                                            <td>19-Aug-2024</td>
-                                                            <td>3</td>
-                                                            <td>A</td>
-                                                            </tr>
-                                                            <tr>
-                                                            <th scope="row">2</th>
-                                                            <td>20-Aug-2024</td>
-                                                            <td>1</td>
-                                                            <td>P</td>
-                                                            </tr>
-                                                            <tr>
-                                                            <th scope="row">3</th>   
-                                                            <td>21-Aug-2024</td>
-                                                            <td>1.5</td>
-                                                            <td>P</td>
-                                                            </tr>
+                                                                <td>22k5024</td>
+                                                                <td>Hadi</td>
+                                                                <td>
+                                                                <form>
+                                                                    <div class="form-group">
+                                                                        <input type="text" class="form-control" placeholder="-" id="AttendanceStatus"></input>
+                                                                    </div>
+                                                                </form>
+                                                                {/* <div class="dropdown">
+                                                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                        -
+                                                                    </button>
+                                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                                        <button class="dropdown-item">A</button>
+                                                                        <button class="dropdown-item">P</button>
+                                                                    </div>
+                                                                    </div> */}
+                                                                </td>
+                                                                <td>
+                                                                <form>
+                                                                    <div class="form-group">
+                                                                        <input type="text" class="form-control" placeholder="-" id="AttendanceStatus"></input>
+                                                                    </div>
+                                                                </form>
+                                                                </td>
+                                                                </tr>
                                                         </tbody>
                                                     </table>
                                                 </table>
                                             </div>
                                         </div>
+                                        {/* sadasdad */}
                                         <div id="menu2" class="tab-pane fade">
-                                        <h3>CL2005</h3>
+                                            <h3>CL2006 Section BCS-5M</h3>
                                             <div class="table-responsive">
                                                 <table class="table">
                                                     <table class="table table-hover">
@@ -230,65 +191,13 @@ export default function AttendanceManage(){
                                                         </thead>
                                                         <tbody>
                                                             <tr>
-                                                            <th scope="row">1</th>
-                                                            <td>19-Aug-2024</td>
-                                                            <td>3</td>
-                                                            <td>A</td>
-                                                            </tr>
-                                                            <tr>
-                                                            <th scope="row">2</th>
-                                                            <td>20-Aug-2024</td>
-                                                            <td>1</td>
-                                                            <td>P</td>
-                                                            </tr>
-                                                            <tr>
-                                                            <th scope="row">3</th>   
-                                                            <td>21-Aug-2024</td>
-                                                            <td>1.5</td>
-                                                            <td>P</td>
                                                             </tr>
                                                         </tbody>
                                                     </table>
                                                 </table>
                                             </div>
                                         </div>
-                                        <div id="menu3" class="tab-pane fade">
-                                        <h3>CL2005</h3>
-                                            <div class="table-responsive">
-                                                <table class="table">
-                                                    <table class="table table-hover">
-                                                        <thead class="TableHeader">
-                                                            <tr>
-                                                            <th scope="col">Lecture No</th>
-                                                            <th scope="col">Date</th>
-                                                            <th scope="col">Duration</th>
-                                                            <th scope="col">Presence</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                            <th scope="row">1</th>
-                                                            <td>19-Aug-2024</td>
-                                                            <td>3</td>
-                                                            <td>A</td>
-                                                            </tr>
-                                                            <tr>
-                                                            <th scope="row">2</th>
-                                                            <td>20-Aug-2024</td>
-                                                            <td>1</td>
-                                                            <td>P</td>
-                                                            </tr>
-                                                            <tr>
-                                                            <th scope="row">3</th>   
-                                                            <td>21-Aug-2024</td>
-                                                            <td>1.5</td>
-                                                            <td>P</td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </table>
-                                            </div>
-                                        </div>
+                                        {/* sadasdasd */}
                                     </div>
                                 </div>
                                 {/* ////////////////////////// */}

@@ -34,6 +34,9 @@ export default function Home(){
     const NavChangePassword = () => {
         navigate('/ChangePassword');
     };
+    const NavTimetable = () => {
+        navigate('/Timetable');
+    };
     return(
         // __________________________________NAVBAR____________________________________________//       
             <div>
@@ -49,8 +52,8 @@ export default function Home(){
                                 <span class= "HelloMr">Hello Mr,    </span><span class= "Name">Muhammad Hadi Shahid</span>  <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/fox.jpg" width="40" height="40" class="rounded-circle"></img>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                                <a onClick={()=>NavHome()} class="dropdown-item" href="#">My Profile</a>
-                                <a onClick={()=>NavChangePassword()} class="dropdown-item" href="#">Change Password</a>
+                                <a class="dropdown-item" href="#">My Profile</a>
+                                <a class="dropdown-item" onClick={()=>NavChangePassword()} >Change Password</a>
                                 <div class="dropdown-divider"></div>
                                 <button onClick={()=>NavLogin()} type="submit" className="btn btn-primary fa fa-power-off" id="SignIn">          Log Out</button>
                                 </div>
@@ -103,6 +106,12 @@ export default function Home(){
                             </span>
                             <p class="FontLeftBar">Course Withdraw</p>
                             </a>
+                            <br></br>
+                            <a class="leftBarButtons" href="#" onClick={()=>NavTimetable()}><span class="fa fa-calendar HomeIcon">
+                            </span>
+                            <p class="FontLeftBar">Timetable</p>
+                            </a>
+                            <br></br>
                         </div>
                         <div class="col-md-11">
                             <div class="container-fluid">

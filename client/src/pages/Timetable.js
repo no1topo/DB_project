@@ -1,9 +1,94 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './home.css';
 import { useNavigate } from "react-router-dom";
+import axios from 'axios';
 
-export default function ChangePassword(){
+export default function Timetable(){
     let navigate = useNavigate();
+    const [data, setData] = useState([]);
+    const [stdid, setstdid] = useState('');
+    const [pills, setPills] = useState([]);
+    
+    const get_id_student = async () =>{
+        
+        try {
+            const response = await axios.get('http://localhost:5000/api/id');
+            setstdid(response.data[0].Username);
+            // console.log(response.data[0].Username);
+        } catch (error) {
+            console.error('Error fetching string:', error);
+        }
+
+
+    }
+
+    const fetchData = async () => {
+        try {
+            const response = await axios.get('http://localhost:5000/api/data');
+            //console.log(pills[0].label);
+            setData(response.data);
+            //console.log(response.data);
+            // console.log(data.filter(data => data.Course_ID));
+            const response_couse = await axios.get('http://localhost:5000/api/data/couse');
+           // console.log('First Course ID:', response_couse.data[0]?.Course_ID);
+            setPills(response_couse.data);
+            localStorage.setItem('pills', JSON.stringify(response_couse.data));
+            pills[1]={Course_ID:'CS-401', ID:1};
+            
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    };
+
+    const renderAttendanceTabs = () => {
+        
+        return pills.map((courseId, index) => {
+            // Filter attendance data for the current course ID
+            const courseAttendance = data.filter(
+                (record) => record.Course_ID === courseId.Course_ID
+            );
+    
+            return (
+                <div id={`menu${index + 1}`} className="tab-pane fade" key={index}>
+                    <h3>{courseId.Course_ID}</h3>
+                    <div className="table-responsive">
+                        <table className="table">
+                            <thead className="TableHeader">
+                                <tr>
+                                    <th scope="col">Lecture No</th>
+                                    <th scope="col">Date</th>
+                                    <th scope="col">Duration</th>
+                                    <th scope="col">Presence</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {courseAttendance.map((record, i) => (
+                                    <tr key={i}>
+
+                                        <td>{i+1}</td>
+                                        <td>{record.Lecture_Date}</td>
+                                        <td>{record.Duration}</td>
+                                        <td>{record.Status}</td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            );
+        });
+    };
+    
+    useEffect(() => {
+        get_id_student();
+        fetchData();
+    }, []);
+
+    useEffect(() => {
+    }, [pills]);
+    
+
+
     const NavLogin = () => {
           navigate('/');
     };
@@ -112,47 +197,29 @@ export default function ChangePassword(){
                         </div>
                         <div class="col-md-11">
                         <div class="container-fluid">
-                                <h4>Change Password  | 
-                                </h4>
-                                <br></br>
-                                <div class="container-fluid">
-                                    {/* University Information */}
-                                    <div class="HomeTextBox">
-                                        <div class = "HomeHeaderBox">
-                                            <h5 class = "fa fa-lock HomeHeaderText"> Change Password</h5>
+                                <h4>Timetable  |</h4>
+                                <br></br><br></br>
+                                {/* ///////////////////////////////////////Registered Courses///////////////////////////////////////// */}
+                                    <h2>Timetable</h2>
+                                        <div>
+                                        <ul class="nav nav-pills">     
+                                        {pills.map((data,index)=>(           
+                                            <li class="nav-item" key={index}>
+                                            <a class="nav-link" data-toggle="pill" href={`#menu${index + 1}`}>
+                                                <b>{data.Course_ID}</b></a>
+                                            </li>
+                                        ))}      
+                                        </ul>
+                                        <div class="tab-content">  
+                                        {renderAttendanceTabs()}
                                         </div>
-                                        <br></br>
-                                        <div class="row">
-                                            <div class="col-md-4"></div>
-                                            <div class="col-md-4">
-                                            <form>
-                                            <div class="form-group">
-                                                <label for="exampleInputEmail1">Old Password</label>
-                                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"></input>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="exampleInputPassword1">New Password</label>
-                                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"></input>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="exampleInputPassword1">Repeat New Password</label>
-                                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"></input>
-                                            </div>
-                                            <button type="submit" class="btn btn-primary" id="SignIn">Submit</button>
-                                            </form>
-                                            </div>
-                                            <div class="col-md-4"></div>
-                                        </div>
-                                        <br></br>
-                                    </div>
-                                </div>
-                                
-                            </div>
+                                    </div>    
+                                {/* ////////////////////////// */}
                         </div>
                     </div>
                 </div>
+                </div>
             </div>
-            
     );
 };
 

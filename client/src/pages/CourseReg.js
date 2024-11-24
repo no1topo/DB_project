@@ -31,6 +31,9 @@ export default function CourseReg(){
     const NavWithdraw = () => {
         navigate('/Withdraw');
     };
+    const NavTimetable = () => {
+        navigate('/Timetable');
+    };
     return(
         // __________________________________NAVBAR____________________________________________//       
             <div>
@@ -100,9 +103,53 @@ export default function CourseReg(){
                             </span>
                             <p class="FontLeftBar">Course Withdraw</p>
                             </a>
+                            <br></br>
+                            <a class="leftBarButtons" href="#" onClick={()=>NavTimetable()}><span class="fa fa-calendar HomeIcon">
+                            </span>
+                            <p class="FontLeftBar">Timetable</p>
+                            </a>
+                            <br></br>
                         </div>
                         <div class="col-md-11">
-                            <p>this is Attendance</p>
+                        <div class="container-fluid">
+                                    <h4>Course Registration  | 
+                                    </h4>
+                                    <br></br>
+                                    <div class="HomeTextBox">
+                                        <div class = "HomeHeaderBox">
+                                            <h5 class = "fa fa-list-alt HomeHeaderText"> Course Registration</h5>
+                                        </div>
+                                        <br></br>
+                                        {/* TABLE */}
+                                        <div class="table-responsive">
+                                                    <table class="table">
+                                                        <table class="table table-hover">
+                                                            <thead class="TableHeader">
+                                                                <tr>
+                                                                <th scope="col">S.No</th>
+                                                                <th scope="col">Code</th>
+                                                                <th scope="col">Course Name</th>
+                                                                <th scope="col">Credits</th>
+                                                                <th scope="col">Register</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                <th scope="row">1</th>
+                                                                <td>Fall 2024</td>
+                                                                <td>124247274</td>
+                                                                <td>Paid Bank Challan</td>
+                                                                <td><button class="btn" id = "SignInSmall">Register</button></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </table>
+                                                </div>
+                                        {/* ///// */}
+                                        <br></br>
+                                    </div>
+                                    <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+                                </div>
                         </div>
                     </div>
                 </div>

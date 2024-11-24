@@ -116,6 +116,9 @@ export default function Attendance(){
     const NavWithdraw = () => {
         navigate('/Withdraw');
     };
+    const NavTimetable = () => {
+        navigate('/Timetable');
+    };
     return(
         // __________________________________NAVBAR____________________________________________//       
             <div>
@@ -144,7 +147,7 @@ export default function Attendance(){
                 {/* //______________________________________BODY___________________________________________// */}
                 <div class="container-fluid BodyDiv">
                     <div class="row">
-                        <div class="col-md-1 text-center leftBar leftBarAttendance" >
+                        <div class="col-md-1 text-center leftBar" >
                             <br></br>
                             <a class="leftBarButtons" href="#" onClick={()=>NavHome()}><span class="fa fa-home HomeIcon">
                             </span>
@@ -185,6 +188,12 @@ export default function Attendance(){
                             </span>
                             <p class="FontLeftBar">Course Withdraw</p>
                             </a>
+                            <br></br>
+                            <a class="leftBarButtons" href="#" onClick={()=>NavTimetable()}><span class="fa fa-calendar HomeIcon">
+                            </span>
+                            <p class="FontLeftBar">Timetable</p>
+                            </a>
+                            <br></br>
                         </div>
                         <div class="col-md-11">
                         <div class="container-fluid">
@@ -209,116 +218,20 @@ export default function Attendance(){
                                 </div>
                                 {/* ///////////////////////////////////////Registered Courses///////////////////////////////////////// */}
                                     <h2>Registered Courses</h2>
-                                    <ul class="nav nav-pills">
-                                        <li class="nav-item">
-                                        <a class="nav-link active" data-toggle="pill" href="#home">CL2005</a>
-                                        </li>
-                                        <li class="nav-item">
-                                        <a class="nav-link" data-toggle="pill" href="#menu1">CL2006</a>
-                                        </li>
-                                        <li class="nav-item">
-                                        <a class="nav-link" data-toggle="pill" href="#menu2">CL2007</a>
-                                        </li>
-                                        <li class="nav-item">
-                                        <a class="nav-link" data-toggle="pill" href="#menu3">CL2008</a>
-                                        </li>
-                                        <li class="nav-item">
-                                        <a class="nav-link" data-toggle="pill" href="#menu3">CL3004</a>
-                                        </li>
-                                        <li class="nav-item">
-                                        <a class="nav-link" data-toggle="pill" href="#menu3">CL3009</a>
-                                        </li>
-                                    </ul>
-                                    
-                                    <div class="tab-content">
-                                        <div id="home" class="tab-pane fade show active">
-                                            <h3>CL2005</h3>
-                                            <div class="table-responsive">
-                                                <table class="table">
-                                                    <table class="table table-hover">
-                                                        <thead class="TableHeader">
-                                                            <tr>
-                                                            <th scope="col">Lecture No</th>
-                                                            <th scope="col">Date</th>
-                                                            <th scope="col">Duration</th>
-                                                            <th scope="col">Presence</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                        {data.map(data=>(
-                                                                <tr>
-                                                                    <td>{data.SNo}</td>
-                                                                    <td>{data.Lecture_Date}</td>
-                                                                    <td>{data.Duration}</td>
-                                                                    <td>{data.Status}</td>
-                                                                </tr>
-                                                            ))}
-                                                        </tbody>
-                                                    </table>
-                                                </table>
-                                            </div>
+                                        <div>
+                                        <ul class="nav nav-pills">     
+                                        {pills.map((data,index)=>(           
+                                            <li class="nav-item" key={index}>
+                                            <a class="nav-link" data-toggle="pill" href={`#menu${index + 1}`}>
+                                                <b>{data.Course_ID}</b></a>
+                                            </li>
+                                        ))}      
+                                        </ul>
+                                        <div class="tab-content">  
+                                        {renderAttendanceTabs()}
                                         </div>
-                                        <div id="menu1" class="tab-pane fade">
-                                        <h3>CL2005</h3>
-                                            <div class="table-responsive">
-                                                <table class="table">
-                                                    <table class="table table-hover">
-                                                        <thead class="TableHeader">
-                                                            <tr>
-                                                            <th scope="col">Lecture No</th>
-                                                            <th scope="col">Date</th>
-                                                            <th scope="col">Duration</th>
-                                                            <th scope="col">Presence</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                        </tbody>
-                                                    </table>
-                                                </table>
-                                            </div>
-                                        </div>
-                                        <div id="menu2" class="tab-pane fade">
-                                        <h3>CL2005</h3>
-                                            <div class="table-responsive">
-                                                <table class="table">
-                                                    <table class="table table-hover">
-                                                        <thead class="TableHeader">
-                                                            <tr>
-                                                            <th scope="col">Lecture No</th>
-                                                            <th scope="col">Date</th>
-                                                            <th scope="col">Duration</th>
-                                                            <th scope="col">Presence</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                        </tbody>
-                                                    </table>
-                                                </table>
-                                            </div>
-                                        </div>
-                                        <div id="menu3" class="tab-pane fade">
-                                        <h3>CL2005</h3>
-                                            <div class="table-responsive">
-                                                <table class="table">
-                                                    <table class="table table-hover">
-                                                        <thead class="TableHeader">
-                                                            <tr>
-                                                            <th scope="col">Lecture No</th>
-                                                            <th scope="col">Date</th>
-                                                            <th scope="col">Duration</th>
-                                                            <th scope="col">Presence</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                        </tbody>
-                                                    </table>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                    </div>    
                                 {/* ////////////////////////// */}
-                            <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
                         </div>
                     </div>
                 </div>

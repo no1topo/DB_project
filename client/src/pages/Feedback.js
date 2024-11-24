@@ -49,27 +49,27 @@ export default function Feedback(){
             <th scope="row">{index+1}</th>
             <td>{couseid.Courses_Course_ID}</td>
             <td>{couseid.Course_Name}</td>
-            <td>{null}</td>
-            <td><div class="input-group">
-            
-            <form onSubmit={handleSubmit}>
-            <div className='row' key={couseid.Courses_Course_ID}>
-                <div className='col-md-4' >
-                    <button class="btn" id = "SignInSmall" >Submit</button>
+            <td>
+                <div class="input-group">
+                <form onSubmit={handleSubmit}>
+                <div className='row' key={couseid.Courses_Course_ID}>
+                    <div className='col-md-4' >
+                        <button class="btn" id = "SignInSmall" >Submit</button>
+                    </div>
+                    
+                    <div className='col-md-8'>
+                        <textarea 
+                        class="form-control textareaFeedback" 
+                        aria-label="With textarea" 
+                        id={`feedback-${couseid.Courses_Course_ID}`}
+                        value={feedback[couseid.Courses_Course_ID] || ""}
+                        onChange={(e) => handleInputChange(couseid.Courses_Course_ID, e.target.value)}
+                        ></textarea>  
+                    </div>
                 </div>
-                
-                <div className='col-md-8'>
-                    <textarea 
-                    class="form-control" 
-                    aria-label="With textarea" 
-                    id={`feedback-${couseid.Courses_Course_ID}`}
-                    value={feedback[couseid.Courses_Course_ID] || ""}
-                    onChange={(e) => handleInputChange(couseid.Courses_Course_ID, e.target.value)}
-                    ></textarea>  
+                </form>
                 </div>
-            </div>
-            </form>
-            </div></td>
+            </td>
             </tr>
         );
 
@@ -82,21 +82,6 @@ export default function Feedback(){
     }, []);
     useEffect(() => {
     }, [pills]);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     const NavLogin = () => {
           navigate('/');
@@ -124,6 +109,9 @@ export default function Feedback(){
     };
     const NavWithdraw = () => {
         navigate('/Withdraw');
+    };
+    const NavTimetable = () => {
+        navigate('/Timetable');
     };
     return(
         // __________________________________NAVBAR____________________________________________//       
@@ -194,6 +182,12 @@ export default function Feedback(){
                             </span>
                             <p class="FontLeftBar">Course Withdraw</p>
                             </a>
+                            <br></br>
+                            <a class="leftBarButtons" href="#" onClick={()=>NavTimetable()}><span class="fa fa-calendar HomeIcon">
+                            </span>
+                            <p class="FontLeftBar">Timetable</p>
+                            </a>
+                            <br></br>
                         </div>
                         <div class="col-md-11">
                         <div class="container-fluid">
@@ -214,70 +208,11 @@ export default function Feedback(){
                                                             <th scope="col">S.No</th>
                                                             <th scope="col">Code</th>
                                                             <th scope="col">Course Name</th>
-                                                            <th scope="col">Credits</th>
                                                             <th scope="col">Feedback</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-<<<<<<< HEAD
-                                                            <tr>
-                                                            <th scope="row">1</th>
-                                                            <td>Fall 2024</td>
-                                                            <td>124247274</td>
-                                                            <td>Paid Bank Challan</td>
-                                                            <td><div class="input-group">
-                                                            <div class="input-group-prepend">
-                                                                <button class="btn" id = "SignInSmall">Submit</button>
-                                                            </div>
-                                                            <form>
-                                                            <textarea class="form-control" aria-label="With textarea"></textarea>
-                                                            </form>
-                                                            </div></td>
-                                                            </tr>
-                                                            <tr>
-                                                            <th scope="row">2</th>
-                                                            <td>Fall 2024</td>
-                                                            <td>124247274</td>
-                                                            <td>Paid Bank Challan</td>
-                                                            <td><div class="input-group">
-                                                            <div class="input-group-prepend">
-                                                                <button class="btn" id = "SignInSmall">Submit</button>
-                                                            </div>
-                                                            <form>
-                                                            <textarea class="form-control" aria-label="With textarea" width="100"></textarea>
-                                                            </form>
-                                                            </div></td>
-                                                            </tr>
-                                                            <tr>
-                                                            <th scope="row">3</th>  
-                                                            <td>Fall 2024</td>
-                                                            <td>124247274</td>
-                                                            <td>Paid Bank Challan</td>
-                                                            <td><div class="input-group">
-                                                            <div class="input-group-prepend">
-                                                                <button class="btn" id = "SignInSmall">Submit</button>
-                                                            </div>
-                                                            <form>
-                                                            <textarea class="form-control" aria-label="With textarea"></textarea>
-                                                            </form>
-                                                            </div></td> 
-                                                            </tr>
-                                                            <tr>
-                                                            <th scope="row">4</th>
-                                                            <td>Fall 2024</td>
-                                                            <td>124247274</td>
-                                                            <td>Paid Bank Challan</td>
-                                                            <td><div class="input-group">
-                                                            <div class="input-group-prepend">
-                                                                <button class="btn" id = "SignInSmall">Submit</button>
-                                                            </div>
-                                                            <textarea class="form-control" aria-label="With textarea"></textarea>
-                                                            </div></td>
-                                                            </tr>
-=======
                                                             {renderFeedbackTabs()}
-                                                            
->>>>>>> 6bca6507bd1a662619bbdd6c2204da95519ea66e
                                                         </tbody>
                                                     </table>
                                                 </table>
@@ -285,7 +220,6 @@ export default function Feedback(){
                                     {/* ///// */}
                                     <br></br>
                                 </div>
-                                <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
                             </div>
                         </div>
                     </div>

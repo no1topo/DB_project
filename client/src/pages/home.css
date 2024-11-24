@@ -72,3 +72,11 @@
     color: whitesmoke;
     background-color: #4481eb;
 }
+
+.textareaFeedback{
+    width: 300%;
+}
+
+#AttendanceStatus{
+    width: 8%;
+}
