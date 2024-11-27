@@ -1,9 +1,71 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './home.css';
 import { useNavigate } from "react-router-dom";
+import axios from 'axios';
 
 export default function Withdraw(){
     let navigate = useNavigate();
+    const [pills, setPills] = useState([]);
+
+const fetchData = async () => {
+    try {
+        const response_couse = await axios.get('http://localhost:5000/api/feedback/course');
+        setPills(response_couse.data);
+        localStorage.setItem('pills', JSON.stringify(response_couse.data));
+    } catch (error) {
+        console.error('Error fetching data:', error);
+    }
+};
+
+const handleSubmit = async (e, courseId) => {
+    e.preventDefault();
+    try {
+        const response = await axios.post('http://localhost:5000/api/withdraw', {
+            courseId, 
+        });
+
+        console.log(`Server Response:`, response.data);
+        alert(`Successfully withdrew from course: ${courseId}`);
+    } catch (error) {
+        console.error('Error withdrawing from course:', error);
+        alert(`Failed to withdraw from course: ${courseId}`);
+    }
+};
+
+const renderFeedbackTabs = () => {
+    return pills.map((course, index) => (
+        <tr key={course.Courses_Course_ID}>
+            <th scope="row">{index + 1}</th>
+            <td>{course.Courses_Course_ID}</td>
+            <td>{course.Course_Name}</td>
+            <td>
+                <button
+                    onClick={(event) => handleSubmit(event, course.Courses_Course_ID)}
+                    className="btn"
+                    id="SignInSmall"
+                >
+                    Withdraw
+                </button>
+            </td>
+        </tr>
+    ));
+};
+
+useEffect(() => {
+    fetchData(); // Fetch courses when the component loads
+}, []);
+
+
+
+
+
+    useEffect(() => {
+        fetchData();
+    }, []);
+    useEffect(() => {
+    }, [pills]);
+
+
     const NavLogin = () => {
           navigate('/');
     };
@@ -129,39 +191,12 @@ export default function Withdraw(){
                                                                 <th scope="col">S.No</th>
                                                                 <th scope="col">Code</th>
                                                                 <th scope="col">Course Name</th>
-                                                                <th scope="col">Credits</th>
                                                                 <th scope="col">Withdraw</th>
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
-                                                                <tr>
-                                                                <th scope="row">1</th>
-                                                                <td>Fall 2024</td>
-                                                                <td>124247274</td>
-                                                                <td>Paid Bank Challan</td>
-                                                                <td><button class="btn" id = "SignInSmall">Withdraw</button></td>
-                                                                </tr>
-                                                                <tr>
-                                                                <th scope="row">2</th>
-                                                                <td>Fall 2024</td>
-                                                                <td>124247274</td>
-                                                                <td>Paid Bank Challan</td>
-                                                                <td><button class="btn" id = "SignInSmall">Withdraw</button></td>
-                                                                </tr>
-                                                                <tr>
-                                                                <th scope="row">3</th>  
-                                                                <td>Fall 2024</td>
-                                                                <td>124247274</td>
-                                                                <td>Paid Bank Challan</td>
-                                                                <td><button class="btn" id = "SignInSmall">Withdraw</button></td>
-                                                                </tr>
-                                                                <tr>
-                                                                <th scope="row">4</th>
-                                                                <td>Fall 2024</td>
-                                                                <td>124247274</td>
-                                                                <td>Paid Bank Challan</td>
-                                                                <td><button class="btn" id = "SignInSmall">Withdraw</button></td>
-                                                                </tr>
+                                                                {renderFeedbackTabs()}
+                                                                
                                                             </tbody>
                                                         </table>
                                                     </table>

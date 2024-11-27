@@ -5,7 +5,6 @@ import axios from 'axios';
 
 export default function Feedback(){
     let navigate = useNavigate();
-    const [data, setData] = useState([]);
     const [pills, setPills] = useState([]);
     const [feedback, setFeedback] = useState({});
 
@@ -22,21 +21,28 @@ export default function Feedback(){
     };
 
     const handleInputChange = (id, value) => {
+        
         setFeedback((prev) => ({
             ...prev,
             [id]: value, // Store response by question ID
         }));
     };
 
-    const handleSubmit = async () =>{
+    const handleSubmit = async (e, courseId) =>{
+        e.preventDefault();
+        const specificFeedback = { [courseId]: feedback[courseId] };
+        if (!specificFeedback[courseId] || specificFeedback[courseId].trim() === "") {
+            alert("Feedback cannot be empty for course: " + courseId);
+            return;
+        }
+        
         try {
-            const response = await axios.post('http://localhost:5000/api/feedback',feedback);
+            const response = await axios.post('http://localhost:5000/api/feedback',specificFeedback);
             console.log("Feedback submitted successfully:", response.data);
-            //console.log(response.data);
-            // console.log(data.filter(data => data.Course_ID));
+        alert("Feedback submitted successfully for course: " + courseId);
         } catch (error) {
             console.error("Error submitting feedback:", error);
-            alert("Failed to submit feedback. Please try again.");
+        alert("Failed to submit feedback for course: " + courseId);
         }
     };
 
@@ -51,7 +57,7 @@ export default function Feedback(){
             <td>{couseid.Course_Name}</td>
             <td>
                 <div class="input-group">
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={(event) => handleSubmit(event, couseid.Courses_Course_ID)}>
                 <div className='row' key={couseid.Courses_Course_ID}>
                     <div className='col-md-4' >
                         <button class="btn" id = "SignInSmall" >Submit</button>

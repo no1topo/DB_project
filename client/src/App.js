@@ -26,24 +26,20 @@ export default function App() {
           password,
       });
       // console.log(username,password);
-      // console.log('Response from server:', response.data,response.status,response.message); // Log the response
+      console.log('Response from server:', response.data.message,response.status,response.message); 
       
       if (response.status===200) {
         navigate('/home');
-         navigate('/home');
-        // navigate('/Thome');
+        
+        
+      }else if(response.status===201){
+        navigate('/Thome');
       }else{
         console.log('Error');
         console.log(username);  
         console.log(password);
       }
-      // if (teacherCondition) {
-      //   navigate('/Thome');
-      // }else{
-      //   console.log('Error');
-      //   console.log(username);
-      //   console.log(password);
-      // }
+      
   } catch (error) {
     console.error('Error during login:', error.response?.data?.message || error.message);
   }};

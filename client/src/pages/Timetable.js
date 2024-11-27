@@ -24,16 +24,16 @@ export default function Timetable(){
 
     const fetchData = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/api/data');
+            const response = await axios.get('http://localhost:5000/api/timetable');
             //console.log(pills[0].label);
             setData(response.data);
-            //console.log(response.data);
+            console.log(response.data);
             // console.log(data.filter(data => data.Course_ID));
-            const response_couse = await axios.get('http://localhost:5000/api/data/couse');
+            const response_day = await axios.get('http://localhost:5000/api/timetable/days');
            // console.log('First Course ID:', response_couse.data[0]?.Course_ID);
-            setPills(response_couse.data);
-            localStorage.setItem('pills', JSON.stringify(response_couse.data));
-            pills[1]={Course_ID:'CS-401', ID:1};
+            setPills(response_day.data);
+            console.log(response_day.data);
+            localStorage.setItem('pills', JSON.stringify(response_day.data));
             
         } catch (error) {
             console.error('Error fetching data:', error);
@@ -45,20 +45,21 @@ export default function Timetable(){
         return pills.map((courseId, index) => {
             // Filter attendance data for the current course ID
             const courseAttendance = data.filter(
-                (record) => record.Course_ID === courseId.Course_ID
+                (record) => record.Day === courseId.Day
             );
     
             return (
                 <div id={`menu${index + 1}`} className="tab-pane fade" key={index}>
-                    <h3>{courseId.Course_ID}</h3>
+                    
                     <div className="table-responsive">
                         <table className="table">
                             <thead className="TableHeader">
                                 <tr>
-                                    <th scope="col">Lecture No</th>
-                                    <th scope="col">Date</th>
-                                    <th scope="col">Duration</th>
-                                    <th scope="col">Presence</th>
+                                    <th scope="col">S.NO</th>
+                                    <th scope="col">Instructor Name</th>
+                                    <th scope="col">Course Name</th>
+                                    <th scope="col">Start Time</th>
+                                    <th scope="col">End Time</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -66,9 +67,10 @@ export default function Timetable(){
                                     <tr key={i}>
 
                                         <td>{i+1}</td>
-                                        <td>{record.Lecture_Date}</td>
-                                        <td>{record.Duration}</td>
-                                        <td>{record.Status}</td>
+                                        <td>{record.Instructor_Name}</td>
+                                        <td>{record.Course_Name}</td>
+                                        <td>{record.Start_time}</td>
+                                        <td>{record.End_time}</td>
                                     </tr>
                                 ))}
                             </tbody>
@@ -206,7 +208,7 @@ export default function Timetable(){
                                         {pills.map((data,index)=>(           
                                             <li class="nav-item" key={index}>
                                             <a class="nav-link" data-toggle="pill" href={`#menu${index + 1}`}>
-                                                <b>{data.Course_ID}</b></a>
+                                                <b>{data.Day}</b></a>
                                             </li>
                                         ))}      
                                         </ul>

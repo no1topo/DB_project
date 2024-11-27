@@ -27,9 +27,17 @@ app.post('/api/login', async (req, res) => {
             if (err) {
                 res.status(500).json({ error: 'Internal server error' });
               } else if (result) {
-                global = username; 
-                console.log(global);
-                res.status(200).json({ message: 'Login successful' });
+                if (user.Role===1) {
+                    global = username;
+                    console.log(global,user.Role);
+                    res.status(201).json({ message: 'Login successful' });
+                } else if(user.Role===0){
+                    global = username; 
+                    console.log(global,user.Role);
+                    res.status(200).json({ message: 'Login successful' });
+                } else{
+                    res.status(401).json({ error: 'Invalid username or password' });
+                }
               } else {
                 res.status(401).json({ error: 'Invalid username or password' });
               }
@@ -253,7 +261,7 @@ app.post('/api/feedback', async (req, res) => {
                 
             );
             
-            console.log(`Course ID: ${key}, Feedback: ${value}, instructor: ${instructor_id_result[0].Instructor_Instructor_ID}`);
+            // console.log(`Course ID: ${key}, Feedback: ${value}, instructor: ${instructor_id_result[0].Instructor_Instructor_ID}`);
             return res.status(201);
         } catch (error) {
             console.error(error);
@@ -278,6 +286,159 @@ app.get('/api/feedback/course', async (req, res) => {
     } catch (error) {
         console.error(error.message);
         res.status(500).send('Server Error');
+    }
+});
+
+
+//TimeTable
+
+app.get('/api/timetable', async (req, res) => {
+    try {
+        const result = await pool.query(
+            `Select C."Std_id",C."Day",I."Instructor_Name",D."Course_Name",C."Start_time",C."End_time" From public."Classes" C
+            join public."Instructor" I on I."Instructor_ID" = C."Instructor_ID"
+            join public."Courses" D on D."Course_ID" = C."Course_ID"
+            WHERE "Std_id"=$1
+            group by "Std_id","Day",I."Instructor_Name",D."Course_Name","Start_time","End_time";`,[global]
+        );
+        
+        res.json(result.rows);
+        // console.log(json(result.rows));
+    } catch (error) {
+        console.error(error.message);
+        res.status(500).send('Server Error');
+    }
+});
+
+app.get('/api/timetable/days', async (req, res) => {
+    try {
+        const result = await pool.query(
+            `Select DISTINCT "Day" From public."Classes" 
+            WHERE "Std_id"=$1;`,[global]
+        );
+        
+        res.json(result.rows);
+        // console.log(json(result.rows));
+    } catch (error) {
+        console.error(error.message);
+        res.status(500).send('Server Error');
+    }
+});
+
+//withdraw
+
+app.post('/api/withdraw', async (req, res) => {
+    const withdraw = req.body; // Assuming body-parser or equivalent is used
+    
+        try {
+            await pool.query(
+                `
+                delete from public."Student_Courses" 
+                where "Student_Std_id" = $1 and "Courses_Course_ID"= $2;
+                `,
+                [global, withdraw.courseId]
+                
+            );
+            
+            return res.status(200);
+        } catch (error) {
+            console.error(error);
+            return res.status(500);
+        }
+});
+
+//<TEACHER___________________________________________________________________________>
+
+//Attendance
+app.get('/api/teacher/courses', async (req, res) => {
+        try {
+            const result = await pool.query(
+                `
+                select DISTINCT * from public."Instructor_Courses" 
+                where "Instructor_Instructor_ID"=$1;
+                `,
+                [global]
+            );
+            
+            res.json(result.rows);
+        } catch (error) {
+            console.error(error.message);
+            res.status(500).send('Server Error');
+        }
+});
+
+app.get("/api/teacher/sections/:courseId", async (req, res) => {
+    const { courseId } = req.params;
+    try {
+      const result = await pool.query(
+        `SELECT "Section_ID" FROM public."Section" 
+        WHERE "Course_ID" = $1 AND "Instructor_ID" = $2;`,
+        [courseId,global]
+      );
+      res.json(result.rows);
+    } catch (error) {
+      console.error("Error fetching sections:", error);
+      res.status(500).json({ error: "Error fetching sections" });
+    }
+  });
+
+app.get("/api/teacher/students/:sectionId", async (req, res) => {
+    const { sectionId } = req.params;
+    try {
+      const result = await pool.query(
+        `SELECT "Std_id" FROM public."Section" WHERE "Section_ID" = $1`,
+        [sectionId]
+      );
+      res.json(result.rows);
+    } catch (error) {
+      console.error("Error fetching students:", error);
+      res.status(500).json({ error: "Error fetching students" });
+    }
+});
+
+  // Save attendance
+app.post("/api/teacher/attendance", async (req, res) => {
+    const { courseId, sectionId, date, records } = req.body;
+  
+    if (!courseId || !sectionId || !date || !records || records.length === 0) {
+      return res.status(400).json({ error: "Invalid or missing attendance data" });
+    }
+  
+    try {
+      const client = await pool.connect();
+  
+      // Start a transaction
+      await client.query("BEGIN");
+  
+      // Insert or update attendance records
+      for (const record of records) {
+        const { studentId, status } = record;
+        await client.query(
+          `
+          INSERT INTO public."Attendance" ("Lecture_Date", "Status", "Std_id", "Course_ID", "Duration")
+          VALUES ($1, $2, $3, $4, 1)
+          ON CONFLICT ("Lecture_Date", "Std_id", "Course_ID")
+          DO UPDATE SET "Status" = EXCLUDED."Status"
+          `,
+          [date,status,studentId,courseId]
+        );
+      }
+  
+      // Commit transaction
+      await client.query("COMMIT");
+      client.release();
+  
+      res.json({ message: "Attendance saved successfully" });
+    } catch (error) {
+      console.error("Error saving attendance:", error);
+  
+      // Rollback transaction in case of error
+      if (client) {
+        await client.query("ROLLBACK");
+        client.release();
+      }
+  
+      res.status(500).json({ error: "Error saving attendance" });
     }
 });
 

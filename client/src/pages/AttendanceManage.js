@@ -1,9 +1,89 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './home.css';
 import { useNavigate } from "react-router-dom";
+import axios from 'axios';
 
 export default function AttendanceManage(){
     let navigate = useNavigate();
+    const [courses, setCourses] = useState([]);
+    const [selectedCourse, setSelectedCourse] = useState(null);
+    const [sections, setSections] = useState([]);
+    const [selectedSection, setSelectedSection] = useState(null);
+    const [students, setStudents] = useState([]);
+    const [attendance, setAttendance] = useState({});
+    const [attendanceDate, setAttendanceDate] = useState("");
+
+    const fetchData = async () => {
+        try {
+            
+            const response = await axios.get("http://localhost:5000/api/teacher/courses");
+            setCourses(response.data);
+            localStorage.setItem('pills', JSON.stringify(response.data));
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    };
+
+    const fetchSections = async (courseId) => {
+        try {
+          const response = await axios.get(`http://localhost:5000/api/teacher/sections/${courseId}`);
+          setSections(response.data);
+          setSelectedSection(null); // Reset section when course changes
+          setStudents([]); // Reset students when course changes
+        } catch (error) {
+          console.error("Error fetching sections:", error);
+        }
+    };
+
+    const fetchStudents = async (sectionId) => {
+        try {
+          const response = await axios.get(`http://localhost:5000/api/teacher/students/${sectionId}`);
+          setStudents(response.data);
+          setAttendance({}); // Reset attendance when section changes
+        } catch (error) {
+          console.error("Error fetching students:", error);
+        }
+    };
+
+    const handleAttendanceChange = (studentId, status) => {
+        setAttendance((prev) => ({
+          ...prev,
+          [studentId]: status,
+        }));
+    };
+
+    const saveAttendance = async () => {
+        if (!attendanceDate) {
+          alert("Please enter the attendance date.");
+          return;
+        }
+    
+        const attendanceData = {
+          courseId: selectedCourse,
+          sectionId: selectedSection,
+          date: attendanceDate,
+          records: Object.entries(attendance).map(([studentId, status]) => ({
+            studentId,
+            status,
+          })),
+        };
+    
+        try {
+          const response = await axios.post("http://localhost:5000/api/teacher/attendance", attendanceData);
+          alert("Attendance saved successfully!");
+        } catch (error) {
+          console.error("Error saving attendance:", error);
+          alert("Failed to save attendance. Please try again.");
+        }
+    };
+
+
+    useEffect(() => {
+        fetchData();
+    }, []);
+    useEffect(() => {
+    }, [courses]);
+
     const NavLogin = () => {
           navigate('/');
     };
@@ -28,6 +108,7 @@ export default function AttendanceManage(){
     const NavChangePassword = () => {
         navigate('/ChangePassword');
     };   
+    
     return(
         // __________________________________NAVBAR____________________________________________//       
             <div>
@@ -113,7 +194,7 @@ export default function AttendanceManage(){
                                 {/* ///////////////////////////////////////Registered Courses///////////////////////////////////////// */}
                                 <div>
                                     <h2>Teaching Courses</h2>
-                                    <ul class="nav nav-pills">
+                                    {/* <ul class="nav nav-pills">
                                         <li class="nav-item">
                                         <a class="nav-link" data-toggle="pill" href="#menu1">CL2005 Section BCS-5M</a>
                                         </li>
@@ -126,79 +207,104 @@ export default function AttendanceManage(){
                                             <button className='btn' id='SignInSmall'>Enter</button>
                                         </div>
                                         </form>
-                                    </ul>
+                                    </ul> */}
+                                    <div>
+                                    <h2>Select Course</h2>
+                                    <select
+                                    className="form-control"
+                                    onChange={(e) => {
+                                        const courseId = e.target.value;
+                                        setSelectedCourse(courseId);
+                                        fetchSections(courseId);
+                                    }}
+                                    value={selectedCourse || ""}
+                                    >
+                                    <option value="" disabled>
+                                        -- Select Course --
+                                    </option>
+                                    {courses.map((course) => (
+                                        <option key={course.Courses_Course_ID} value={course.Courses_Course_ID}>
+                                        {course.Courses_Course_ID}
+                                        </option>
+                                    ))}
+                                    </select>
+                                </div>
                                     
-                                    <div class="tab-content">
-                                        <div id="menu1" class="tab-pane fade">
-                                            <h3>CL2005 Section BCS-5M</h3>
-                                            <div class="table-responsive">
-                                                <table class="table">
-                                                    <table class="table table-hover">
-                                                        <thead class="TableHeader">
-                                                            <tr>
-                                                            <th scope="col">Student ID</th>
-                                                            <th scope="col">Student Name</th>
-                                                            <th scope="col">11/23/2024</th>
-                                                            <th scope="col">12/23/2024</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>22k5024</td>
-                                                                <td>Hadi</td>
-                                                                <td>
-                                                                <form>
-                                                                    <div class="form-group">
-                                                                        <input type="text" class="form-control" placeholder="-" id="AttendanceStatus"></input>
-                                                                    </div>
-                                                                </form>
-                                                                {/* <div class="dropdown">
-                                                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                                        -
-                                                                    </button>
-                                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                                        <button class="dropdown-item">A</button>
-                                                                        <button class="dropdown-item">P</button>
-                                                                    </div>
-                                                                    </div> */}
-                                                                </td>
-                                                                <td>
-                                                                <form>
-                                                                    <div class="form-group">
-                                                                        <input type="text" class="form-control" placeholder="-" id="AttendanceStatus"></input>
-                                                                    </div>
-                                                                </form>
-                                                                </td>
-                                                                </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </table>
-                                            </div>
-                                        </div>
-                                        {/* sadasdad */}
-                                        <div id="menu2" class="tab-pane fade">
-                                            <h3>CL2006 Section BCS-5M</h3>
-                                            <div class="table-responsive">
-                                                <table class="table">
-                                                    <table class="table table-hover">
-                                                        <thead class="TableHeader">
-                                                            <tr>
-                                                            <th scope="col">Lecture No</th>
-                                                            <th scope="col">Date</th>
-                                                            <th scope="col">Duration</th>
-                                                            <th scope="col">Presence</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </table>
-                                            </div>
-                                        </div>
-                                        {/* sadasdasd */}
+                                {selectedCourse && (
+                                <div>
+                                <h2>Select Section</h2>
+                                <select
+                                    className="form-control"
+                                    onChange={(e) => {
+                                    const sectionId = e.target.value;
+                                    setSelectedSection(sectionId);
+                                    fetchStudents(sectionId);
+                                    }}
+                                    value={selectedSection || ""}
+                                >
+                                    <option value="" disabled>
+                                    -- Select Section --
+                                    </option>
+                                    {sections.map((section) => (
+                                    <option key={section.Section_ID} value={section.Section_ID}>
+                                        {section.Section_ID}
+                                    </option>
+                                    ))}
+                                </select>
+                                </div>
+                                )}
+
+                                {/* Attendance Date */}
+                                {selectedSection && (
+                                    <div>
+                                    <h2>Enter Attendance Date</h2>
+                                    <input
+                                        type="date"
+                                        className="form-control"
+                                        value={attendanceDate}
+                                        onChange={(e) => setAttendanceDate(e.target.value)}
+                                    />
                                     </div>
+                                )}
+
+                                {/* Student List */}
+                                {students.length > 0 && (
+                                    <div>
+                                    <h2>Mark Attendance</h2>
+                                    <table className="table table-bordered">
+                                        <thead>
+                                        <tr>
+                                            <th>Student ID</th>
+                                            {/* <th>Name</th> */}
+                                            <th>Attendance</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        {students.map((student) => (
+                                            <tr key={student.Std_id}>
+                                            <td>{student.Std_id}</td>
+                                            {/* <td>{student.name}</td> */}
+                                            <td>
+                                                <select
+                                                className="form-control"
+                                                value={attendance[student.Std_id] || "-"}
+                                                onChange={(e) => handleAttendanceChange(student.Std_id, e.target.value)}
+                                                >
+                                                <option value="-">-</option>
+                                                <option value="P">P</option>
+                                                <option value="A">A</option>
+                                                </select>
+                                            </td>
+                                            </tr>
+                                        ))}
+                                        </tbody>
+                                    </table>
+                                    <button className="btn btn-primary" onClick={saveAttendance}>
+                                        Save Attendance
+                                    </button>
+                                    </div>
+                                )}
+                                    
                                 </div>
                                 {/* ////////////////////////// */}
                                 <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
