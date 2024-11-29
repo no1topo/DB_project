@@ -89,12 +89,6 @@ export default function App() {
                               <input type="password" value={password} onChange={(e)=> setPassword(e.target.value)} className="form-control" id="exampleInputPassword1" placeholder="Password"></input>
                               </div>
                             </div>
-                            <div className="form-check">
-                                <input className="form-check-input" type="checkbox" value="" id="defaultCheck1"></input>
-                                <label className="form-check-label" htmlFor="defaultCheck1">
-                                  Remember Me
-                                </label>
-                            </div>
                             <br></br><br></br>
                             <div className="text-center">
                             <button /*onClick={()=>handleClick()}*/ type="submit" className="btn btn-primary" id="SignIn">Sign In</button>

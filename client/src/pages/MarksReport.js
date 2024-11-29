@@ -80,17 +80,57 @@ export default function MarksReport(){
                             <br></br>
                             <a class="leftBarButtons" href="#" onClick={()=>NavMarksReport()}><span class="fa fa-newspaper-o HomeIcon">
                             </span>
-                            <p class="FontLeftBar">Marks Report</p>
+                            <p class="FontLeftBar">Open Courses</p>
                             </a>
                             <br></br>
                             <a class="leftBarButtons" href="#" onClick={()=>NavFeedbackManage()}><span class="fa fa-file-text-o HomeIcon">
                             </span>
                             <p class="FontLeftBar">View Feedback</p>
                             </a>
-                            <br></br>
+                            <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
                         </div>
                         <div class="col-md-11">
-                            
+                        <div class="container-fluid">
+                                <h4>Manage Courses  | 
+                                </h4>
+                                <br></br>
+                                <div class="container-fluid">
+                                    {/* University Information */}
+                                    <div class="HomeTextBox">
+                                        <div class = "HomeHeaderBox">
+                                            <h5 class = "fa fa-newspaper-o HomeHeaderText"> Manage Course</h5>
+                                        </div>
+                                        <br></br>
+                                        <div class="row">
+                                            <div class="col-md-4"></div>
+                                            <div class="col-md-4">
+                                            <form>
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">Course Name</label>
+                                                <input type="text" class="form-control" placeholder="e.g. Database Systems"></input>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="exampleInputPassword1">Enter Course Code</label>
+                                                <input type="text" class="form-control"  placeholder="e.g. CS-101"></input>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="exampleInputPassword1">Enter Course Credits</label>
+                                                <input type="text" class="form-control" placeholder="1 to 3"></input>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary" id="SignIn">Add Course</button>
+                                            <button type="submit" class="btn btn-primary" id="SignInRed">Remove Course</button>
+                                            </form>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <br></br>
+                                                
+                                            </div>
+                                        </div>
+                                        <br></br>
+                                    </div>
+                                </div>
+                                
+                            </div>
                         </div>
                     </div>
                 </div>

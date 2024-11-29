@@ -80,7 +80,7 @@ export default function CourseManage(){
                             <br></br>
                             <a class="leftBarButtons" href="#" onClick={()=>NavMarksReport()}><span class="fa fa-newspaper-o HomeIcon">
                             </span>
-                            <p class="FontLeftBar">Marks Report</p>
+                            <p class="FontLeftBar">Open Courses</p>
                             </a>
                             <br></br>
                             <a class="leftBarButtons" href="#" onClick={()=>NavFeedbackManage()}><span class="fa fa-file-text-o HomeIcon">
@@ -91,12 +91,12 @@ export default function CourseManage(){
                         </div>
                         <div class="col-md-11">
                         <div class="container-fluid">
-                                    <h4>Withdraw  | 
+                                    <h4>Course Registration | 
                                     </h4>
                                     <br></br>
                                     <div class="HomeTextBox">
                                         <div class = "HomeHeaderBox">
-                                            <h5 class = "fa fa-list-alt HomeHeaderText"> Manage Courses</h5>
+                                            <h5 class = "fa fa-list-alt HomeHeaderText"> Course Registration</h5>
                                         </div>
                                         <br></br>
                                         {/* TABLE */}
@@ -108,8 +108,8 @@ export default function CourseManage(){
                                                                 <th scope="col">S.No</th>
                                                                 <th scope="col">Code</th>
                                                                 <th scope="col">Course Name</th>
-                                                                <th scope="col">Available</th>
-                                                                <th scope="col">Open Registration</th>
+                                                                <th scope="col">Credits</th>
+                                                                <th scope="col">Register</th>
                                                                 </tr>
                                                             </thead>
                                                             <tbody>

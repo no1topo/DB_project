@@ -161,7 +161,7 @@ export default function AttendanceManage(){
                             <br></br>
                             <a class="leftBarButtons" href="#" onClick={()=>NavMarksReport()}><span class="fa fa-newspaper-o HomeIcon">
                             </span>
-                            <p class="FontLeftBar">Marks Report</p>
+                            <p class="FontLeftBar">Open Courses</p>
                             </a>
                             <br></br>
                             <a class="leftBarButtons" href="#" onClick={()=>NavFeedbackManage()}><span class="fa fa-file-text-o HomeIcon">
@@ -192,26 +192,17 @@ export default function AttendanceManage(){
                                     <div class="col-md-5"></div>
                                 </div>
                                 {/* ///////////////////////////////////////Registered Courses///////////////////////////////////////// */}
-                                <div>
-                                    <h2>Teaching Courses</h2>
-                                    {/* <ul class="nav nav-pills">
-                                        <li class="nav-item">
-                                        <a class="nav-link" data-toggle="pill" href="#menu1">CL2005 Section BCS-5M</a>
-                                        </li>
-                                        <li class="nav-item">
-                                        <a class="nav-link" data-toggle="pill" href="#menu2">CL2006 Section BCS-5M</a>
-                                        </li>
-                                        <form>
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Enter Date Here"></input>
-                                            <button className='btn' id='SignInSmall'>Enter</button>
-                                        </div>
-                                        </form>
-                                    </ul> */}
+                                <div class="HomeTextBox">
+                                    <div class = "HomeHeaderBox">
+                                    <h2 class = "fa fa-list-alt HomeHeaderText"> Teaching Courses</h2>
+                                    </div>
+                                    <br></br>
+                                    <div style={{padding: "23px"}}>
                                     <div>
-                                    <h2>Select Course</h2>
+                                    <h2 className="animate-charcter" style={{fontSize: "150%"}}>Select Course</h2>
                                     <select
                                     className="form-control"
+                                    id="AtendanceSection"
                                     onChange={(e) => {
                                         const courseId = e.target.value;
                                         setSelectedCourse(courseId);
@@ -232,9 +223,11 @@ export default function AttendanceManage(){
                                     
                                 {selectedCourse && (
                                 <div>
-                                <h2>Select Section</h2>
+                                <h2 className="animate-charcter" style={{fontSize: "150%"}}>Select Section</h2>
+                                <br></br>
                                 <select
                                     className="form-control"
+                                    id="AtendanceSection"
                                     onChange={(e) => {
                                     const sectionId = e.target.value;
                                     setSelectedSection(sectionId);
@@ -257,8 +250,10 @@ export default function AttendanceManage(){
                                 {/* Attendance Date */}
                                 {selectedSection && (
                                     <div>
-                                    <h2>Enter Attendance Date</h2>
+                                    <h2 className="animate-charcter" style={{fontSize: "150%"}}>Enter Attendance Date</h2>
+                                    <br></br>
                                     <input
+                                        id="AtendanceSection"
                                         type="date"
                                         className="form-control"
                                         value={attendanceDate}
@@ -270,22 +265,22 @@ export default function AttendanceManage(){
                                 {/* Student List */}
                                 {students.length > 0 && (
                                     <div>
-                                    <h2>Mark Attendance</h2>
-                                    <table className="table table-bordered">
+                                    <h2 className="animate-charcter" style={{fontSize: "150%"}}>Mark Attendance</h2>
+                                    <br></br>
+                                    <table className="table table-bordered table-hover">
                                         <thead>
-                                        <tr>
+                                        <tr id="SignIn">
                                             <th>Student ID</th>
-                                            {/* <th>Name</th> */}
                                             <th>Attendance</th>
                                         </tr>
                                         </thead>
                                         <tbody>
                                         {students.map((student) => (
-                                            <tr key={student.Std_id}>
+                                            <tr key={student.Std_id} className='SignIn'>
                                             <td>{student.Std_id}</td>
-                                            {/* <td>{student.name}</td> */}
                                             <td>
                                                 <select
+                                                id="AtendanceSection"
                                                 className="form-control"
                                                 value={attendance[student.Std_id] || "-"}
                                                 onChange={(e) => handleAttendanceChange(student.Std_id, e.target.value)}
@@ -299,12 +294,13 @@ export default function AttendanceManage(){
                                         ))}
                                         </tbody>
                                     </table>
-                                    <button className="btn btn-primary" onClick={saveAttendance}>
+                                    <button className="btn btn-primary" id="SignIn" onClick={saveAttendance}>
                                         Save Attendance
                                     </button>
                                     </div>
                                 )}
                                     
+                                </div>
                                 </div>
                                 {/* ////////////////////////// */}
                                 <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>

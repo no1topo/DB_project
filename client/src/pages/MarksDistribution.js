@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 export default function MarksDistribution(){
     let navigate = useNavigate();
+    
     const NavLogin = () => {
           navigate('/');
     };
@@ -80,7 +81,7 @@ export default function MarksDistribution(){
                             <br></br>
                             <a class="leftBarButtons" href="#" onClick={()=>NavMarksReport()}><span class="fa fa-newspaper-o HomeIcon">
                             </span>
-                            <p class="FontLeftBar">Marks Report</p>
+                            <p class="FontLeftBar">Open Courses</p>
                             </a>
                             <br></br>
                             <a class="leftBarButtons" href="#" onClick={()=>NavFeedbackManage()}><span class="fa fa-file-text-o HomeIcon">

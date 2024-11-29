@@ -52,7 +52,7 @@ export default function Attendance(){
                 <div id={`menu${index + 1}`} className="tab-pane fade" key={index}>
                     <h3>{courseId.Course_ID}</h3>
                     <div className="table-responsive">
-                        <table className="table">
+                        <table className="table table-hover">
                             <thead className="TableHeader">
                                 <tr>
                                     <th scope="col">Lecture No</th>
