@@ -91,7 +91,84 @@ export default function FeedbackManage(){
                             <br></br>
                         </div>
                         <div class="col-md-11">
-                            
+                        <div class="container-fluid">
+                                <h4>Feedback Manage  |</h4>
+                                {/* ////////////////////////////////////dropdown button////////////////////////////////////// */}
+                                <br></br>
+                                <div class="row">
+                                    <div class="col-md-5"></div>
+                                    <div class="col-md-2">
+                                        <div class="dropdown btn">
+                                            <button class="btn btn-secondary dropdown-toggle" type="button" id="SignIn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                Fall 2024
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                <a class="dropdown-item" href="#">Fall 2024</a>
+                                                <a class="dropdown-item" href="#">Summer 2024</a>
+                                                <a class="dropdown-item" href="#">Spring 2024</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5"></div>
+                                </div>
+                                {/* ///////////////////////////////////////Registered Courses///////////////////////////////////////// */}
+                                <div class="HomeTextBox">
+                                        <div class = "HomeHeaderBox">
+                                            <h2 class = "fa fa-file-text-o HomeHeaderText"> Feedback Viewer</h2>
+                                        </div>
+                                        <br></br>
+                                    <div style={{padding: "23px"}}>
+                                        <div>
+                                        <h2 className="animate-charcter" style={{fontSize: "150%"}}>Select Course</h2>
+                                        <select className="form-control" id="AtendanceSection">
+                                        <option value="">
+                                            -- Select Course --
+                                        </option>
+                                        <option>
+                                            CS-101
+                                        </option>
+                                        </select>
+                                        </div>                                 
+                                    <div>
+                                        <h2 className="animate-charcter" style={{fontSize: "150%"}}>Select Section</h2>
+                                        <br></br>
+                                        <select
+                                            className="form-control"
+                                            id="AtendanceSection">
+                                            <option value="">
+                                            -- Select Section --
+                                            </option>                                  
+                                            <option>
+                                                A-4
+                                            </option>
+                                        </select>
+                                    </div>
+                                    {/* Student List */}
+                                        <div>
+                                        <h2 className="animate-charcter" style={{fontSize: "150%"}}>Feedbacks</h2>
+                                        <br></br>
+                                        <table className="table table-bordered table-hover">
+                                            <thead>
+                                            <tr id="SignIn">
+                                                <th>Student ID</th>
+                                                <th>Feedback</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr  className='SignIn'>
+                                                <td>22k-5024</td>
+                                                <td>
+                                                    great course!!
+                                                </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                {/* ////////////////////////// */}
+                                <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+                            </div>
                         </div>
                     </div>
                 </div>
