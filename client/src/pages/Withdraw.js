@@ -51,13 +51,6 @@ const renderFeedbackTabs = () => {
     ));
 };
 
-useEffect(() => {
-    fetchData(); // Fetch courses when the component loads
-}, []);
-
-
-
-
 
     useEffect(() => {
         fetchData();

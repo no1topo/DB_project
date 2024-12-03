@@ -1,9 +1,70 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './home.css';
 import { useNavigate } from "react-router-dom";
+import axios from 'axios';
 
 export default function CourseManage(){
     let navigate = useNavigate();
+    const [pills, setPills] = useState([]);
+    const [isLoading, setIsLoading] = useState(false);
+
+    const fetchData = async () => {
+        try {
+            const response = await axios.get('http://localhost:5000/api/teacher/coursemanage');
+            setPills(response.data);
+            localStorage.setItem('pills', JSON.stringify(response.data));
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    };
+
+    const handleSubmit = async (e, courseId) => {
+        e.preventDefault();
+        setIsLoading(true); // Set loading state
+        try {
+            const response = await axios.post('http://localhost:5000/api/teacher/courseaccpet', {
+                courseId, 
+            });
+            await fetchData();
+            console.log(`Server Response:`, response.data);
+            
+        } catch (error) {
+            console.error('Error withdrawing from course:', error);
+            
+        } finally{
+            setIsLoading(false); // Reset loading state
+        }
+    };
+    
+    const renderCourseTabs = () => {
+        return pills.map((course, index) => (
+            <tr key={course.Course_ID}>
+                <th scope="row">{index + 1}</th>
+                <td>{course.Course_ID}</td>
+                <td>{course.Course_Name}</td>
+                <td>
+                    <button
+                        onClick={(event) => handleSubmit(event, course.Course_ID)}
+                        disabled={isLoading}
+                        className="btn"
+                        id="SignInSmall"
+                    >
+                        {isLoading ? 'Registering...' : 'Register'}
+                    </button>
+                </td>
+            </tr>
+        ));
+    };
+
+    useEffect(() => {
+        fetchData();
+    }, []);
+    useEffect(() => {
+    }, [pills]);
+
+
+
+
     const NavLogin = () => {
           navigate('/');
     };
@@ -108,39 +169,11 @@ export default function CourseManage(){
                                                                 <th scope="col">S.No</th>
                                                                 <th scope="col">Code</th>
                                                                 <th scope="col">Course Name</th>
-                                                                <th scope="col">Credits</th>
                                                                 <th scope="col">Register</th>
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
-                                                                <tr>
-                                                                <th scope="row">1</th>
-                                                                <td>Fall 2024</td>
-                                                                <td>124247274</td>
-                                                                <td>Paid Bank Challan</td>
-                                                                <td><button class="btn" id = "SignInSmall">Register</button></td>
-                                                                </tr>
-                                                                <tr>
-                                                                <th scope="row">2</th>
-                                                                <td>Fall 2024</td>
-                                                                <td>124247274</td>
-                                                                <td>Paid Bank Challan</td>
-                                                                <td><button class="btn" id = "SignInSmall">Register</button></td>
-                                                                </tr>
-                                                                <tr>
-                                                                <th scope="row">3</th>  
-                                                                <td>Fall 2024</td>
-                                                                <td>124247274</td>
-                                                                <td>Paid Bank Challan</td>
-                                                                <td><button class="btn" id = "SignInSmall">Register</button></td>
-                                                                </tr>
-                                                                <tr>
-                                                                <th scope="row">4</th>
-                                                                <td>Fall 2024</td>
-                                                                <td>124247274</td>
-                                                                <td>Paid Bank Challan</td>
-                                                                <td><button class="btn" id = "SignInSmall">Register</button></td>
-                                                                </tr>
+                                                            {renderCourseTabs()}
                                                             </tbody>
                                                         </table>
                                                     </table>

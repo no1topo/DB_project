@@ -1,10 +1,67 @@
-
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './home.css';
 import { useNavigate } from "react-router-dom";
+import axios from 'axios';
 
 export default function FeedbackManage(){
     let navigate = useNavigate();
+    const [courses, setCourses] = useState([]);
+    const [selectedCourse, setSelectedCourse] = useState(null);
+    const [sections, setSections] = useState([]);
+    const [selectedSection, setSelectedSection] = useState(null);
+    const [students, setStudents] = useState([]);
+    const [feedback, setFeedback] = useState([]);
+
+    const fetchData = async () => {
+        try {
+            
+            const response = await axios.get("http://localhost:5000/api/teacher/courses");
+            setCourses(response.data);
+            localStorage.setItem('pills', JSON.stringify(response.data));
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    };
+
+    const fetchSections = async (courseId) => {
+        try {
+          const response = await axios.get(`http://localhost:5000/api/teacher/sections/${courseId}`);
+          setSections(response.data);
+          setSelectedSection(null); // Reset section when course changes
+          setStudents([]); // Reset students when course changes
+        } catch (error) {
+          console.error("Error fetching sections:", error);
+        }
+    };
+
+    const fetchStudents = async (sectionId) => {
+        try {
+          const response = await axios.get(`http://localhost:5000/api/teacher/students/${sectionId}`);
+          setStudents(response.data);
+          setFeedback([]); // Reset attendance when section changes
+        } catch (error) {
+          console.error("Error fetching students:", error);
+        }
+    };
+
+    const fetchFeedback = async (sectionId) => {
+        
+        try {
+          const response = await axios.get(`http://localhost:5000/api/teacher/feedback/${sectionId}/${courses[0].Courses_Course_ID}`);
+          
+          setFeedback(response.data); // Reset attendance when section changes
+        } catch (error) {
+          console.error("Error fetching students:", error);
+        }
+    };
+
+    useEffect(() => {
+        fetchData();
+    }, []);
+    useEffect(() => {
+    }, [courses]);
+
+
     const NavLogin = () => {
           navigate('/');
     };
@@ -120,29 +177,52 @@ export default function FeedbackManage(){
                                     <div style={{padding: "23px"}}>
                                         <div>
                                         <h2 className="animate-charcter" style={{fontSize: "150%"}}>Select Course</h2>
-                                        <select className="form-control" id="AtendanceSection">
-                                        <option value="">
+                                        <select
+                                        className="form-control"
+                                        id="AtendanceSection"
+                                        onChange={(e) => {
+                                            const courseId = e.target.value;
+                                            setSelectedCourse(courseId);
+                                            fetchSections(courseId);
+                                        }}
+                                        value={selectedCourse || ""}
+                                        >
+                                        <option value="" disabled>
                                             -- Select Course --
                                         </option>
-                                        <option>
-                                            CS-101
-                                        </option>
+                                        {courses.map((course) => (
+                                            <option key={course.Courses_Course_ID} value={course.Courses_Course_ID}>
+                                            {course.Courses_Course_ID}
+                                            </option>
+                                        ))}
                                         </select>
                                         </div>                                 
-                                    <div>
+                                        {selectedCourse && (
+                                        <div>
                                         <h2 className="animate-charcter" style={{fontSize: "150%"}}>Select Section</h2>
                                         <br></br>
                                         <select
                                             className="form-control"
-                                            id="AtendanceSection">
-                                            <option value="">
+                                            id="AtendanceSection"
+                                            onChange={(e) => {
+                                            const sectionId = e.target.value;
+                                            setSelectedSection(sectionId);
+                                            fetchStudents(sectionId);
+                                            fetchFeedback(sectionId);
+                                            }}
+                                            value={selectedSection || ""}
+                                        >
+                                            <option value="" disabled>
                                             -- Select Section --
-                                            </option>                                  
-                                            <option>
-                                                A-4
                                             </option>
+                                            {sections.map((section) => (
+                                            <option key={section.Section_ID} value={section.Section_ID}>
+                                                {section.Section_ID}
+                                            </option>
+                                            ))}
                                         </select>
-                                    </div>
+                                        </div>
+                                        )}
                                     {/* Student List */}
                                         <div>
                                         <h2 className="animate-charcter" style={{fontSize: "150%"}}>Feedbacks</h2>
@@ -156,10 +236,20 @@ export default function FeedbackManage(){
                                             </thead>
                                             <tbody>
                                                 <tr  className='SignIn'>
-                                                <td>22k-5024</td>
-                                                <td>
-                                                    great course!!
-                                                </td>
+                                            {students.map((record,i)=>(
+                                                
+                                                <td>{record.Std_id}</td>
+                                                
+                                            ))}
+                                            
+                                            {feedback.map((feedback,i)=>(
+                                                
+                                                    <td>
+                                                        {feedback.Feedback}
+                                                    </td>
+                                                
+                                            ))}
+                                            
                                                 </tr>
                                             </tbody>
                                         </table>

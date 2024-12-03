@@ -1,9 +1,75 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './home.css';
 import { useNavigate } from "react-router-dom";
+import axios from 'axios';
 
 export default function THome(){
     let navigate = useNavigate();
+    const [pills, setPills] = useState([]);
+    const [selectedFile, setSelectedFile] = useState(null);
+    const [profileImage, setProfileImage] = useState(null);
+
+    const fetchData = async () => {
+        try {
+            
+            const response = await axios.get('http://localhost:5000/api/teacher/user_data');
+           // console.log('First Course ID:', response_couse.data[0]?.Course_ID);
+            setPills(response.data);
+            localStorage.setItem('pills', JSON.stringify(response.data));
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    };
+
+    const fetchProfileImage = async () => {
+        try {
+            const response = await axios.get('http://localhost:5000/api/user/profile-image', {
+                responseType: 'arraybuffer', // To handle binary data
+            });
+            const base64Image = btoa(
+                new Uint8Array(response.data).reduce((data, byte) => data + String.fromCharCode(byte), '')
+            );
+            setProfileImage(`data:image/jpeg;base64,${base64Image}`);
+        } catch (error) {
+            console.error('Error fetching profile image:', error);
+        }
+    };
+
+
+    const handleFileChange = (e) => {
+        setSelectedFile(e.target.files[0]);
+    };
+
+    const handleUpload = async () => {
+        if (!selectedFile) return alert('Please select a file first.');
+
+        const formData = new FormData();
+        formData.append('image', selectedFile);
+
+        try {
+            await axios.post('http://localhost:5000/api/user/upload-profile-image', formData, {
+                headers: {
+                    'Content-Type': 'multipart/form-data',
+                },
+            });
+            alert('Image uploaded successfully.');
+            fetchProfileImage(); // Refresh the profile image
+        } catch (error) {
+            console.error('Error uploading image:', error);
+            alert('Failed to upload image. Please try again.');
+        }
+    };
+
+
+
+    useEffect(() => {
+        fetchData();
+        fetchProfileImage();
+    }, []);
+    useEffect(() => {
+    }, [pills]);
+
+
     const NavLogin = () => {
           navigate('/');
     };
@@ -40,10 +106,16 @@ export default function THome(){
                             <ul class="navbar-nav ml-auto">
                                 <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class= "HelloMr">Hello Mr,    </span><span class= "Name">Muhammad Hadi Shahid</span>  <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/fox.jpg" width="40" height="40" class="rounded-circle"></img>
+                                <span class= "HelloMr">Hello Mr,    </span><span class= "Name">{pills.length > 0 && pills[0] ? pills[0].Instructor_Name : "Loading..."}</span>  <img src={profileImage ?profileImage:"https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/fox.jpg"} width="40" height="40" class="rounded-circle"></img>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                                 <a onClick={()=>NavTHome()} class="dropdown-item" href="#">My Profile</a>
+                                <div>
+
+                                    <input type="file" accept="image/*" onChange={handleFileChange} />
+                                    <button onClick={handleUpload}>Upload</button>
+
+                                </div>
                                 <a onClick={()=>NavChangePassword()} class="dropdown-item" href="#">Change Password</a>
                                 <div class="dropdown-divider"></div>
                                 <button onClick={()=>NavLogin()} type="submit" className="btn btn-primary fa fa-power-off" id="SignIn">          Log Out</button>
@@ -106,7 +178,7 @@ export default function THome(){
                                                 <div class="row">
                                                     <div class="col-md-2"></div>
                                                     <div class="col-md-10">
-                                                        <p><b>Instructor ID:</b> 22K-5024</p>
+                                                        <p><b>Instructor ID:</b> {pills.length > 0 && pills[0] ? pills[0].Instructor_ID : "Loading..."}</p>
                                                     </div>
                                                 </div>  
                                             </div>

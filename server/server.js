@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const pool = require('./db');
 const bcrypt = require('bcrypt');
+const multer = require('multer');
 
 const app = express();
 
@@ -52,6 +53,7 @@ app.post('/api/login', async (req, res) => {
 // Registration endpoint
 app.post('/api/register', async (req, res) => {
     const { username, password } = req.body;
+    
 
     try {
         // Check if the username already exists
@@ -77,6 +79,111 @@ app.post('/api/register', async (req, res) => {
     }
 });
 
+//ChangePassword
+
+app.post('/api/change_pass', async (req, res) => {
+    const {password,oldpassword}  = req.body;
+    try {
+    const response = await pool.query('SELECT * FROM public."User" WHERE "Username" = $1', [global]);
+    const user = response.rows[0];
+    const result = await bcrypt.compare(oldpassword, user.Password_hash);
+    if (result) {
+        const hashedPassword = await bcrypt.hash(password, 10);
+
+        // Update the database
+        await pool.query(
+            'UPDATE public."User" SET "Password_hash" = $2 WHERE "Username" = $1;',
+            [global, hashedPassword]
+        );
+
+        res.status(201).json({ message: 'Password Changed' });
+    } else {
+        res.status(401).json({ error: 'Invalid username or password' });
+    }
+} catch (err) {
+    // Catch and handle errors
+    console.error(err); // For debugging purposes
+    res.status(500).json({ error: 'Internal server error' });
+}
+    
+});
+
+//profile picture
+const storage = multer.memoryStorage();
+const upload = multer({ storage: storage });
+// API to upload profile image
+
+app.post('/api/user/upload-profile-image', upload.single('image'), async (req, res) => {
+    const { buffer } = req.file;
+    const userId = global; // Replace with actual user ID from session/auth
+
+    try {
+        // Check if the user already has a profile image
+        const existing = await pool.query('SELECT * FROM public."User" WHERE "Username" = $1', [userId]);
+
+        if (existing.rows.length > 0) {
+            // Update the existing image
+            await pool.query('UPDATE public."User" SET "pic" = $1 WHERE "Username" = $2', [buffer, userId]);
+        } else {
+            // Insert a new image
+            await pool.query('INSERT INTO public."User" ("Username", "pic") VALUES ($1, $2)', [userId, buffer]);
+        }
+
+        res.status(200).send('Image uploaded successfully.');
+    } catch (error) {
+        console.error('Error saving image to database:', error);
+        res.status(500).send('Failed to upload image.');
+    }
+});
+
+// API to fetch profile image
+app.get('/api/user/profile-image', async (req, res) => {
+    const userId = global; // Replace with actual user ID from session/auth
+
+    try {
+        const result = await pool.query('SELECT "pic" FROM public."User" WHERE "Username" = $1', [userId]);
+
+        if (result.rows.length > 0) {
+            const imageData = result.rows[0].pic;
+            res.set('Content-Type', 'image/jpeg');
+            res.send(imageData);
+        } else {
+            res.status(404).send('No profile image found.');
+        }
+    } catch (error) {
+        console.error('Error fetching profile image:', error);
+        res.status(500).send('Failed to fetch image.');
+    }
+});
+
+
+
+
+
+//User_data
+app.get('/api/user_data', async (req,res)=>{
+
+    try {
+        const result = await pool.query(
+            'select * from public."Student" where "Std_id"=$1;',[global]
+        );
+        for (let row of result.rows) {
+            if (row.Date_Of_Birth) {
+                row.Date_Of_Birth = row.Date_Of_Birth.toISOString().split('T')[0];
+            }
+        }
+        
+        res.json(result.rows);
+    } catch (error) {
+        console.error(error);
+        return res.status(500).json({ message: 'Internal server error' });
+    }
+})
+
+
+
+
+
 //get_std_id
 
 app.get('/api/id', async (req,res)=>{
@@ -85,6 +192,8 @@ app.get('/api/id', async (req,res)=>{
         const result = await pool.query(
             'SELECT "Username" FROM public."User" WHERE "Username" = $1',[global]
         );
+
+        
         res.json(result.rows);
     } catch (error) {
         console.error(error);
@@ -347,6 +456,34 @@ app.post('/api/withdraw', async (req, res) => {
         }
 });
 
+//Challan
+
+app.get('/api/challan', async (req, res) => {
+    try {
+        const result = await pool.query(
+            `select * from public."Challan" where "Std_id"=$1;`,[global]
+        );
+        
+        for (let row of result.rows) {
+            if (row.Due_date) {
+                row.Due_date = row.Due_date.toISOString().split('T')[0];
+                
+            }
+            if (row.Generated_on) {
+                row.Generated_on = row.Generated_on.toISOString().split('T')[0];
+            }
+        }
+
+        res.json(result.rows);
+        // console.log(json(result.rows));
+    } catch (error) {
+        console.error(error.message);
+        res.status(500).send('Server Error');
+    }
+});
+
+
+
 //<TEACHER___________________________________________________________________________>
 
 //Attendance
@@ -441,6 +578,125 @@ app.post("/api/teacher/attendance", async (req, res) => {
       res.status(500).json({ error: "Error saving attendance" });
     }
 });
+
+//Add Course
+app.post('/api/add_course/register', async (req, res) => {
+    const withdraw = req.body; // Assuming body-parser or equivalent is used
+    
+        try {
+            await pool.query(
+                `
+                INSERT INTO public."Courses" ("Course_ID", "Course_Name")
+                VALUES ($2, $1)
+                on conflict ("Course_ID") do nothing;
+                `,
+                [withdraw.Course_name, withdraw.course_code]
+                
+            );
+            
+            return res.status(200);
+        } catch (error) {
+            console.error(error);
+            return res.status(500);
+        }
+});
+
+//Remove Course
+app.post('/api/remove_course/register', async (req, res) => {
+    const withdraw = req.body; // Assuming body-parser or equivalent is used
+    
+        try {
+            await pool.query(
+                `
+                delete from public."Courses" where "Course_ID" = $2 AND "Course_Name"=$1;
+                `,
+                [withdraw.Course_name, withdraw.course_code]
+                
+            );
+            
+            return res.status(200);
+        } catch (error) {
+            console.error(error);
+            return res.status(500);
+        }
+});
+
+
+//feedback
+app.get('/api/teacher/feedback/:sectionId/:courseId', async (req, res) => {
+    const { sectionId,courseId } = req.params;
+    try {
+      const students = await pool.query(
+        `select public."Feedback"."Std_id",public."Feedback"."Feedback" from public."Feedback"
+        join public."Section" on public."Section"."Std_id"=public."Feedback"."Std_id"
+        where public."Feedback"."Course_ID" = $1 AND public."Feedback"."Instructor_ID"=$2
+         AND public."Section"."Section_ID"=$3;`,
+        [courseId,global,sectionId]
+      );
+  
+      res.json(students.rows)
+    } catch (err) {
+      console.error(err.message);
+      res.status(500).send('Server Error');
+    }
+  });
+
+//Course_management
+app.get('/api/teacher/coursemanage', async (req, res) => {
+    try {
+      const response = await pool.query(
+        `select "Course_ID","Course_Name" from public."Courses"
+        left join public."Instructor_Courses" 
+        on public."Instructor_Courses"."Courses_Course_ID"=public."Courses"."Course_ID"
+        where "Instructor_Instructor_ID" is null;`
+      );
+  
+      res.json(response.rows)
+    } catch (err) {
+      console.error(err.message);
+      res.status(500).send('Server Error');
+    }
+  });
+
+app.post('/api/teacher/courseaccpet', async (req, res) => {
+    const accept = req.body; // Assuming body-parser or equivalent is used
+        
+        try {
+            await pool.query(
+                `
+                INSERT INTO public."Instructor_Courses" VALUES 
+                ($1, $2);
+                `,
+                [global, accept.courseId]
+                
+            );
+            
+            return res.status(200).json({ message: 'Course accepted successfully.' });
+        } catch (error) {
+            console.error(error);
+            return res.status(500).json({ error: 'Failed to accept course.' });
+        }
+});
+
+//teacher_Data
+app.get('/api/teacher/user_data', async (req,res)=>{
+
+    try {
+        const result = await pool.query(
+            'select * from public."Instructor" where "Instructor_ID"=$1;',[global]
+        );
+        // for (let row of result.rows) {
+        //     if (row.Date_Of_Birth) {
+        //         row.Date_Of_Birth = row.Date_Of_Birth.toISOString().split('T')[0];
+        //     }
+        // }
+        
+        res.json(result.rows);
+    } catch (error) {
+        console.error(error);
+        return res.status(500).json({ message: 'Internal server error' });
+    }
+})
 
 // Start the server
 const PORT = 5000;

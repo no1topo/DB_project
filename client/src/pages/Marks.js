@@ -393,9 +393,6 @@ export default function Marks(){
     };
 
 
-
-
-
     useEffect(() => {
         fetchData();
         
@@ -409,20 +406,6 @@ export default function Marks(){
     }, [pills,min,max,avg,std]);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
     const NavLogin = () => {
           navigate('/');
     };

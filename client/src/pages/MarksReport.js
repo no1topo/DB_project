@@ -1,9 +1,41 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './home.css';
 import { useNavigate } from "react-router-dom";
+import axios from 'axios';
 
 export default function MarksReport(){
     let navigate = useNavigate();
+    const [Course_name, setCourse_name] = useState('');
+    const [course_code, setCourse_code] = useState('');
+    const [hours,setHours] = useState('');
+    const [message,setMessage] = useState('');
+    
+    const Add_course = async (e) =>{
+        e.preventDefault();
+        try {
+            const response = await axios.post('http://localhost:5000/api/add_course/register',{
+            Course_name,
+            course_code});
+            
+        } catch (error) {
+            setMessage(error.response?.data?.message || 'An error Occurred')
+        }
+    }
+
+    const Remove_course = async (e) =>{
+        e.preventDefault();
+        try {
+            const response = await axios.post('http://localhost:5000/api/remove_course/register',{
+            Course_name,
+            course_code,
+            });
+            
+        } catch (error) {
+            setMessage(error.response?.data?.message || 'An error Occurred');
+        }
+    }
+
+
     const NavLogin = () => {
           navigate('/');
     };
@@ -107,18 +139,18 @@ export default function MarksReport(){
                                             <form>
                                             <div class="form-group">
                                                 <label for="exampleInputEmail1">Course Name</label>
-                                                <input type="text" class="form-control" placeholder="e.g. Database Systems"></input>
+                                                <input value={Course_name} onChange={(e)=> setCourse_name(e.target.value)} type="text" class="form-control" placeholder="e.g. Database Systems"></input>
                                             </div>
                                             <div class="form-group">
                                                 <label for="exampleInputPassword1">Enter Course Code</label>
-                                                <input type="text" class="form-control"  placeholder="e.g. CS-101"></input>
+                                                <input value={course_code} onChange={(e)=> setCourse_code(e.target.value)} type="text" class="form-control"  placeholder="e.g. CS-101"></input>
                                             </div>
                                             <div class="form-group">
                                                 <label for="exampleInputPassword1">Enter Course Credits</label>
-                                                <input type="text" class="form-control" placeholder="1 to 3"></input>
+                                                <input value={hours} onChange={(e)=> setHours(e.target.value)} type="text" class="form-control" placeholder="1 to 3"></input>
                                             </div>
-                                            <button type="submit" class="btn btn-primary" id="SignIn">Add Course</button>
-                                            <button type="submit" class="btn btn-primary" id="SignInRed">Remove Course</button>
+                                            <button onClick={Add_course} type="submit" class="btn btn-primary" id="SignIn">Add Course</button>
+                                            <button onClick={Remove_course} type="submit" class="btn btn-primary" id="SignInRed">Remove Course</button>
                                             </form>
                                             </div>
                                             <div class="col-md-4">

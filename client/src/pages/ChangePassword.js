@@ -1,9 +1,39 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './home.css';
 import { useNavigate } from "react-router-dom";
+import axios from 'axios';
 
 export default function ChangePassword(){
     let navigate = useNavigate();
+    const [password, setPassword] = useState('');
+    const [oldpassword, setOldpassword] = useState('');
+    const [newpassword, setNewpassword] = useState('');
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        console.log(password,oldpassword);
+        if (password!=newpassword) {
+            alert('Password and new Password can not be different');
+        } else {
+            try {
+                const response = await axios.post('http://localhost:5000/api/change_pass', {
+                    password,
+                    oldpassword,
+                });
+                console.log(response.message);
+            } catch (error) {
+                
+            }
+        }
+    };
+
+
+
+
+
+
+
+
     const NavLogin = () => {
           navigate('/');
     };
@@ -128,17 +158,36 @@ export default function ChangePassword(){
                                             <form>
                                             <div class="form-group">
                                                 <label>Old Password</label>
-                                                <input type="text" class="form-control" placeholder="Enter Old password"></input>
+                                                <input type="text" 
+                                                class="form-control" 
+                                                placeholder="Enter Old password"
+                                                value={oldpassword}
+                                                onChange={(e) => setOldpassword(e.target.value)}
+                                                ></input>
                                             </div>
                                             <div class="form-group">
                                                 <label for="exampleInputPassword1">New Password</label>
-                                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"></input>
+                                                <input type="password" 
+                                                class="form-control" 
+                                                id="exampleInputPassword1" 
+                                                placeholder="Password"
+                                                value={password}
+                                                onChange={(e) => setPassword(e.target.value)}
+                                                ></input>
                                             </div>
                                             <div class="form-group">
                                                 <label for="exampleInputPassword1">Repeat New Password</label>
-                                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"></input>
+                                                <input type="password" 
+                                                class="form-control" 
+                                                id="exampleInputPassword2" 
+                                                placeholder="Password"
+                                                value={newpassword}
+                                                onChange={(e) => setNewpassword(e.target.value)}
+                                                ></input>
                                             </div>
-                                            <button type="submit" class="btn btn-primary" id="SignIn">Submit</button>
+                                            <button 
+                                            onClick={(event) => handleSubmit(event)}
+                                            type="submit" class="btn btn-primary" id="SignIn">Submit</button>
                                             </form>
                                             </div>
                                             <div class="col-md-4"></div>

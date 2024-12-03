@@ -5,6 +5,17 @@ import axios from 'axios';
 
 export default function Challan(){
     let navigate = useNavigate();
+    const [pills, setPills] = useState([]);
+    
+    const fetchData = async () => {
+        try {
+            const response_couse = await axios.get('http://localhost:5000/api/challan');
+            setPills(response_couse.data);
+            localStorage.setItem('pills', JSON.stringify(response_couse.data));
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    };
 
 
 
@@ -15,9 +26,11 @@ export default function Challan(){
 
 
 
-
-
-
+    useEffect(() => {
+        fetchData();
+    }, []);
+    useEffect(() => {
+    }, [pills]);
 
     
     const NavLogin = () => {
@@ -156,54 +169,20 @@ export default function Challan(){
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                            <tr>
-                                                            <th scope="row">1</th>
+                                                        {pills.map((record,i) =>(
+                                                            <tr key={i}>
+                                                            <th scope="row">{i+1}</th>
                                                             <td>Fall 2024</td>
-                                                            <td>124247274</td>
+                                                            <td>{record.Challan_ID}</td>
                                                             <td>Paid Bank Challan</td>
                                                             <td>124247274</td>
-                                                            <td>162,500</td>
-                                                            <td>10-Sep-24</td>
-                                                            <td>5-Sep-24</td>
+                                                            <td>{record.Amount}</td>
+                                                            <td>{record.Due_date}</td>
+                                                            <td>{record.Generated_on}</td>
                                                             <td>FBL</td>
                                                             <td><button class='btn' id='SignInSmall'>Posted</button></td>
                                                             </tr>
-                                                            <tr>
-                                                            <th scope="row">2</th>
-                                                            <td>Fall 2024</td>
-                                                            <td>124247274</td>
-                                                            <td>Paid Bank Challan</td>
-                                                            <td>124247274</td>
-                                                            <td>162,500</td>
-                                                            <td>10-Sep-24</td>
-                                                            <td>5-Sep-24</td>
-                                                            <td>FBL</td>
-                                                            <td><button class='btn' id='SignInSmall'>Posted</button></td>
-                                                            </tr>
-                                                            <tr>
-                                                            <th scope="row">3</th>   
-                                                            <td>Fall 2024</td>
-                                                            <td>124247274</td>
-                                                            <td>Paid Bank Challan</td>
-                                                            <td>124247274</td>
-                                                            <td>162,500</td>
-                                                            <td>10-Sep-24</td>
-                                                            <td>5-Sep-24</td>
-                                                            <td>FBL</td>
-                                                            <td><button class='btn' id='SignInSmall'>Posted</button></td>
-                                                            </tr>
-                                                            <tr>
-                                                            <th scope="row">4</th>
-                                                            <td>Fall 2024</td>
-                                                            <td>124247274</td>
-                                                            <td>Paid Bank Challan</td>
-                                                            <td>124247274</td>
-                                                            <td>162,500</td>
-                                                            <td>10-Sep-24</td>
-                                                            <td>5-Sep-24</td>
-                                                            <td>FBL</td>
-                                                            <td><button class='btn' id='SignInSmall'>Posted</button></td>
-                                                            </tr>
+                                                        ))}
                                                         </tbody>
                                                     </table>
                                                 </table>
