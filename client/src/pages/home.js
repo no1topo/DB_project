@@ -114,21 +114,19 @@ export default function Home(){
                         <div class="collapse navbar-collapse" id="navbar-list-4">
                             <ul class="navbar-nav ml-auto">
                                 <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class= "HelloMr">Hello,    </span><span class= "Name">{pills.length > 0 && pills[0] ? pills[0].first_name+" "+pills[0].last_name : "Loading..."}</span>  <img src={profileImage ?profileImage:"https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/fox.jpg"} width="40" height="40" class="rounded-circle"></img>
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="#">My Profile</a>
-                                <div>
-
-                                <input type="file" accept="image/*" onChange={handleFileChange} />
-                                <button onClick={handleUpload}>Upload</button>
-
-                                </div>
-                                <a class="dropdown-item" onClick={()=>NavChangePassword()} >Change Password</a>
-                                <div class="dropdown-divider"></div>
-                                <button onClick={()=>NavLogin()} type="submit" className="btn btn-primary fa fa-power-off" id="SignIn">          Log Out</button>
-                                </div>
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class= "HelloMr">Hello,    </span><span class= "Name">{pills.length > 0 && pills[0] ? pills[0].first_name+" "+pills[0].last_name : "Loading..."}</span>  <img src={profileImage ?profileImage:"https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/fox.jpg"} width="40" height="40" class="rounded-circle"></img>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                                        <a class="dropdown-item" href="#">My Profile</a>                               
+                                        <a class="dropdown-item" onClick={()=>NavChangePassword()} >Change Password</a>
+                                        <div class="dropdown-divider"></div>
+                                        <label for="file-upload" class="dropdown-item" >Change Profile Picture</label>
+                                        <input id="file-upload" type="file" accept="image/*" onChange={handleFileChange} />
+                                        <button class="dropdown-item" onClick={handleUpload}>Upload Picture</button>
+                                        <div class="dropdown-divider"></div>
+                                        <button onClick={()=>NavLogin()} type="submit" className="btn btn-primary fa fa-power-off" id="SignIn">          Log Out</button>
+                                    </div>
                                 </li>
                             </ul>
                         </div>

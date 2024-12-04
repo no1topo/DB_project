@@ -126,4 +126,19 @@ input {
     caret-color: #4481eb;
 }
 
+.ImageInput{
+    background-color: #2b363c; 
+    box-shadow: none;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+    color: whitesmoke;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+  }
 
